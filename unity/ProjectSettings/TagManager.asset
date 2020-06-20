@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SafiePTZ
+  - SafiePtzCamera
+  - ExcavatorCamera
+  - SafiePtzPan
+  - SafiePtzTilt
+  - RU5G
+  - NoReaction
+  - "\u30E6\u30F3\u30DC\u53F3\u5074\u9762"
+  - "\u30E6\u30F3\u30DC\u5DE6\u5074\u9762"
+  - "\u30E6\u30F3\u30DC\u5F8C\u65B9"
+  - "\u30E6\u30F3\u30DC\u524D\u65B9"
+  - "\u843D\u4E0B\u624B\u524D"
+  - "\u30E6\u30F3\u30DC\u53F3\u5F8C\u65B9\u89D2"
+  - "\u30E6\u30F3\u30DC\u5DE6\u5F8C\u65B9\u89D2"
+  - "\u30E6\u30F3\u30DC\u53F3\u524D\u65B9\u89D2"
+  - Menu
+  - "\u521D\u671F\u753B\u9762"
+  - "\u30E6\u30F3\u30DC\u901A\u904E\u4F4D\u7F6E"
+  - "\u30E6\u30F3\u30DC\u901A\u904E\u9699\u9593"
+  - "\u30E6\u30F3\u30DC"
+  - "\u30E6\u30F3\u30DC\u521D\u671F\u4F4D\u7F6E"
+  - "\u30D5\u30C3\u30AF"
+  - "\u30AF\u30EC\u30FC\u30F3\u4E0B\u4F5C\u696D\u54E1"
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
