@@ -43,6 +43,14 @@ F: Swing left
 
 Use the left and right joysticks. Push B button to switch between the operation lever mode and the travel lever mode.
 
+## Cameras
+
+The excavator is equipped with four cameras:
+- operator view
+- three rear cameras (initially disabled)
+
+The rear cameras support mirror view.
+
 ## Mathematics and Physics
 
 I have applied IK to bucket positioning: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
