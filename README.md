@@ -2,15 +2,43 @@
 
 This project is a cumulation of my weekend works on Unity, to operate an 3D model excavator on Unity.
 
-
 ![scene](./scene.png)
 
-I am using Blender to make 3D models these days, but blender files of the models used in this project are not included in this project.
-
-Note: I am working on Windows10 for this creation.
+Note: I am working on Windows10 for this creation. I have used Blender to create the 3D model of excavator.
 
 ## Requirements
 
 - Unity 2018.4
 - Standard Assets
 - Optional: Logicool Gamepad F310
+
+## Operation
+
+### PC keyboard
+
+```
+
+[Travel levers]
+O: Right track reverse
+U: Right track forward
+Y: Left track forward
+R: Left track reverse
+
+      RTUYIOP
+      FGH LJI
+  
+[Operation levers]
+I: Boom roll in
+K: Boom roll out
+L: Bucket roll out
+J: Bucket roll in
+T: Arm roll out
+G: Arm roll in
+H: Swing right
+F: Swing left
+
+```
+
+## Logicool Gamepad F310
+
+Use the left and right joysticks. Push B button to switch between the operation lever mode and the travel lever mode.
