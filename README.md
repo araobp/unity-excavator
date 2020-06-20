@@ -1,6 +1,6 @@
 # unity-excavator
 
- Excavator simulator
+This project is a cumulation of my weekend works on Unity, to operate an 3D model excavator on Unity.
 
 Note: I am working on Windows10 for this creation.
 
