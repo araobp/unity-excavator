@@ -51,6 +51,12 @@ I attached Rigidbody and colliders to the excavator with Gravity enabled.
 
 TODO: Autonoumous driving is to be supported soon.
 
+## Working with point cloud
+
+It is possible to replace the virtual terrain with real terrain by importing poing cloud data.
+
+I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS poing cloud data to FBX, then use Unity's Raycast API to convert FBX mesh to Terrain.
+
 ## The reason why I open this project
 
 I am migrating from Unity to Unreal Engine for some reasons, but I continue using Unity on weekend works as my hobby. Unity and C#/VisualStudio are greate tools for creating 3D mobile apps.
