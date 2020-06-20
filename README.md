@@ -39,6 +39,14 @@ F: Swing left
 
 ```
 
-## Logicool Gamepad F310
+### Logicool Gamepad F310
 
 Use the left and right joysticks. Push B button to switch between the operation lever mode and the travel lever mode.
+
+## Mathematics and Physics
+
+I have applied IK to bucket positioning: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
+
+I attached Rigidbody and colliders to the excavator with Gravity enabled.
+
+TODO: Autonoumous driving is to be supported soon.
