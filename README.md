@@ -2,6 +2,8 @@
 
  Excavator simulator
 
+Note: I am working on Windows10 for this creation.
+
 ## Requirements
 
 - Unity 2018.4
