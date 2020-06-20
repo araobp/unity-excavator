@@ -1,6 +1,6 @@
 # unity-excavator
 
-This project is a cumulation of my weekend works on Unity, to operate an 3D model excavator on Unity.
+This project is a cumulation of my weekend works on Unity, to operate a 3D model excavator on Unity.
 
 ![scene](./scene.png)
 
