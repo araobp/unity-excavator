@@ -43,6 +43,10 @@ F: Swing left
 
 Use the left and right joysticks. Push B button to switch between the operation lever mode and the travel lever mode.
 
+### Autonoumous driving (experimental)
+
+Press "1", "2", "3", "4", "5" or "6" key on the PC keyboard.
+
 ## Cameras
 
 The excavator is equipped with four cameras:
@@ -56,8 +60,6 @@ The rear cameras support mirror view.
 I have applied IK to bucket positioning: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
 
 I attached Rigidbody and colliders to the excavator with Gravity enabled.
-
-TODO: Autonoumous driving is to be supported soon.
 
 ## Working with point cloud
 
