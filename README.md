@@ -63,6 +63,8 @@ I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
 Regarding autonomous driving/construction, it is just about caliculation of the bucket's orbit by using Classical Dynamics.
 
+However, it will also be a good experiment to apply Unity ML-Agents to the caliculation: Physics vs Statistics.
+
 ## Working with point cloud
 
 It is possible to replace the virtual terrain with real terrain by importing poing cloud data.
