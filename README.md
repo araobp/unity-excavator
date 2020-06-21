@@ -57,7 +57,7 @@ The rear cameras support mirror view.
 
 ## Mathematics and Physics
 
-I have applied IK to bucket positioning: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
+I have applied IK to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
 
 I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
