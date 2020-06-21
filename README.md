@@ -61,6 +61,8 @@ I have applied IK to bucket positioning for autonomous driving/construction: Eul
 
 I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
+Regarding autonomous driving/construction, it is just about orbit calicuation by Classical Dynamics.
+
 ## Working with point cloud
 
 It is possible to replace the virtual terrain with real terrain by importing poing cloud data.
