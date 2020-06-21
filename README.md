@@ -70,7 +70,3 @@ I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS point cloud da
 I sometimes download point cloud data from this site for some experiments on Unity: https://pointcloud.pref.shizuoka.jp/lasmap/ankenmap
 
 Note: Unreal Engine 4 supports "LiDAR Point Cloud" plugin that can import LAS data into a level on Unreal Engine.
-
-## The reason why I open this project
-
-I am migrating from Unity to Unreal Engine for some reasons, but I continue using Unity on weekend works as my hobby. Unity and C#/VisualStudio are greate tools for creating 3D mobile apps.
