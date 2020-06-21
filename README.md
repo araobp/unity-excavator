@@ -67,7 +67,9 @@ It is possible to replace the virtual terrain with real terrain by importing poi
 
 I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS poing cloud data to FBX mesh, then use Unity's Raycast APIs to convert FBX mesh to Terrain. Refer to this wiki: https://wiki.unity3d.com/index.php/Object2Terrain
 
-I sometimes download point cloud data from this site for some experiments on Unity or Unreal Engine: https://pointcloud.pref.shizuoka.jp/lasmap/ankenmap
+I sometimes download point cloud data from this site for some experiments on Unity: https://pointcloud.pref.shizuoka.jp/lasmap/ankenmap
+
+Note: Unreal Engine 4 supports "LiDAR Point Cloud" plugin that can import LAS data into a level on Unreal Engine.
 
 ## The reason why I open this project
 
