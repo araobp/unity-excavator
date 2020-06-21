@@ -61,7 +61,7 @@ I have applied IK to bucket positioning for autonomous driving/construction: Eul
 
 I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
-Regarding autonomous driving/construction, it is just about orbit calicuation by Classical Dynamics.
+Regarding autonomous driving/construction, it is just about caliculation of the bucket's orbit by using Classical Dynamics.
 
 ## Working with point cloud
 
