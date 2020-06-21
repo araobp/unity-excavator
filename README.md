@@ -65,7 +65,7 @@ I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
 It is possible to replace the virtual terrain with real terrain by importing poing cloud data.
 
-I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS poing cloud data to FBX mesh, then use Unity's Raycast APIs to convert FBX mesh to Terrain. Refer to this wiki: https://wiki.unity3d.com/index.php/Object2Terrain
+I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS point cloud data to FBX mesh, then use Unity's Raycast APIs to convert FBX mesh to Terrain. Refer to this wiki: https://wiki.unity3d.com/index.php/Object2Terrain
 
 I sometimes download point cloud data from this site for some experiments on Unity: https://pointcloud.pref.shizuoka.jp/lasmap/ankenmap
 
