@@ -9,7 +9,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 ## Requirements
 
 - Unity 2018.4
-- Standard Assets
+- [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
 - Optional: Logicool Gamepad F310
 
 ## Operation
