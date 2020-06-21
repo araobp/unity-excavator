@@ -230,13 +230,11 @@ public class ExcavatorController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Alpha5))
         {
-            //StartCoroutine(excavator.Reset());
             GameObject target5 = GameObject.FindWithTag("Target5");
             StartCoroutine(excavator.MoveToTarget(target5, 10F, 10F));
         }
         if (Input.GetKey(KeyCode.Alpha6))
         {
-            //StartCoroutine(excavator.Reset());
             GameObject target6 = GameObject.FindWithTag("Target6");
             StartCoroutine(excavator.MoveToTarget(target6, 10F, 140F));
         }

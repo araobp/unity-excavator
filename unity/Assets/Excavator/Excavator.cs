@@ -348,25 +348,22 @@ public class Excavator
 
     public void swingRotate(float value)
     {
-        swingAxis.Rotate(0, value, 0);
+        swingAngle += value;
     }
 
     public void boomRotate(float value)
     {
-        boomAxis.Rotate(value, 0, 0);
-        OrientBoomCylinder();
+        boomAngle += value;
     }
 
     public void armRotate(float value)
     {
-        armAxis.Rotate(value, 0, 0);
-        OrientArmCylinder();
+        armAngle -= value;
     }
 
     public void bucketRotate(float value)
     {
-        bucketAxis.Rotate(value, 0, 0);
-        OrientBucketCylinder();
+        bucketAngle += value;
     }
 
     public float swingAngle
@@ -378,7 +375,6 @@ public class Excavator
         }
         get
         {
-            //float angle = Quaternion.Angle(swingAxisInitialQ, swingAxis.localRotation);
             float angle = Vector3.SignedAngle(excavatorForwardAxis.right, swingAxis.right, swingAxis.up);
             Debug.Log($"swing angle = {angle}");
             return angle;
@@ -389,9 +385,13 @@ public class Excavator
     {
         set
         {
-            boomAxis.localRotation = boomAxisInitialQ;
-            boomAxis.Rotate(value, 0, 0);
-            OrientBoomCylinder();
+            if (value >= 0F && value <= 56F)
+            {
+                boomAxis.localRotation = boomAxisInitialQ;
+                boomAxis.Rotate(value, 0, 0);
+                OrientBoomCylinder();
+            }
+            Debug.Log($"boomAngle: {boomAngle}");
         }
         get
         {
@@ -403,9 +403,13 @@ public class Excavator
     {
         set
         {
-            armAxis.localRotation = armAxisInitialQ;
-            armAxis.Rotate(-value, 0, 0);
-            OrientArmCylinder();
+            if (value >= 0F && value <= 120F)
+            {
+                armAxis.localRotation = armAxisInitialQ;
+                armAxis.Rotate(-value, 0, 0);
+                OrientArmCylinder();
+            }
+            Debug.Log($"armAngle: {armAngle}");
         }
         get
         {
@@ -417,9 +421,13 @@ public class Excavator
     {
         set
         {
-            bucketAxis.localRotation = bucketAxisInitialQ;
-            bucketAxis.Rotate(value, 0, 0);
-            OrientBucketCylinder();
+            if (value >= 0F && value <= 160F)
+            {
+                bucketAxis.localRotation = bucketAxisInitialQ;
+                bucketAxis.Rotate(value, 0, 0);
+                OrientBucketCylinder();
+            }
+            Debug.Log($"bucketAngle: {bucketAngle}");
         }
         get
         {
@@ -529,23 +537,6 @@ public class Excavator
     public void EnableCuttingEdges(bool enable)
     {
         bucket.GetComponent<MeshCollider>().enabled = enable;
-        /*
-        Transform tf = bucketCuttingEdges.transform;
-        Physics.Raycast(tf.position, -tf.right, out hit, 10F);
-        float distance = (hit.point - tf.position).magnitude;
-        tf = bucketPosition;
-        Physics.Raycast(tf.position, -tf.right, out hit, 10F);
-        float distance2 = (hit.point - tf.position).magnitude;
-        Debug.Log($"Distance to the ground = {distance}, {distance2}");
-        MeshCollider mc = bucket.GetComponent<MeshCollider>();
-        if (distance < 0.1F)
-        {
-            mc.enabled = false;
-        } else if (distance2 > 2F)
-        {
-            mc.enabled = true;
-        }
-        */
     }
 
     public bool useHook
