@@ -10,6 +10,8 @@ TagManager:
   - Target4
   - Target5
   - Target6
+  - TravelIndicator
+  - OperationIndicator
   layers:
   - Default
   - TransparentFX

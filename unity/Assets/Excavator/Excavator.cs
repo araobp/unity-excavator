@@ -168,6 +168,9 @@ public class Excavator
     GameObject rightTrack;
     GameObject leftTrack;
 
+    const float INITIAL_ACCELERATION = 900000F;
+    const float CONTINOUS_ACCELERATION = 15000F;
+
     public Excavator(GameObject excavator)
     {
         this.excavator = excavator;
@@ -660,12 +663,12 @@ public class Excavator
             yield return null;
         }
 
-        accel = 900000F;  // Initial acceleration
+        accel = INITIAL_ACCELERATION;
         while (true)
         {
             try
             {
-                bool cont = Move(target.transform, 15000F, 2F);
+                bool cont = Move(target.transform, CONTINOUS_ACCELERATION, 2F);
                 if (!cont) break;
             }
             catch (Exception e)

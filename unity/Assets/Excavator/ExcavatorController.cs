@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LeverAngles
 {
@@ -102,6 +103,8 @@ public class ExcavatorController : MonoBehaviour
     private Excavator excavator;
 
     bool travel = false;
+    Image travelIndicator;
+    Image operationIndicator;
 
     private void ProcessGamepadEvents(InputEvents inputEvents)
     {
@@ -110,6 +113,11 @@ public class ExcavatorController : MonoBehaviour
         if (modeChange)
         {
             travel = !travel;
+            float travelGreen = 0F;
+            float operationGreen = 0F;
+            if (travel) travelGreen = 1F;  else operationGreen = 1F;
+            travelIndicator.color = new Color(0, travelGreen, 0);
+            operationIndicator.color = new Color(0, operationGreen, 0);
         }
 
         if (!travel)
@@ -185,6 +193,12 @@ public class ExcavatorController : MonoBehaviour
     void Start()
     {
         excavator = new Excavator(transform.root.gameObject);
+
+        travelIndicator = GameObject.FindWithTag("TravelIndicator").GetComponent<Image>();
+        operationIndicator = GameObject.FindWithTag("OperationIndicator").GetComponent<Image>();
+        travelIndicator.color = new Color(0, 0, 0);
+        operationIndicator.color = new Color(0, 1F, 0);
+
         if (useHook) excavator.useHook = true;
     }
 
@@ -199,8 +213,9 @@ public class ExcavatorController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        excavator.OrientHook();
+        excavator.OrientHook();  // TODO: add hook operations
 
+        //--- Code for autonomous operations from this line ---
         if (Input.GetKey(KeyCode.Alpha1))
         {
             excavator.EnableCuttingEdges(true);
@@ -239,6 +254,7 @@ public class ExcavatorController : MonoBehaviour
             StartCoroutine(excavator.MoveToTarget(target6, 10F, 140F));
         }
 
+        //--- Code for manual operations from this line ---
         var delta = Time.deltaTime * 30F;
 
         if (leftOperationLeverAngles.isOperated() || rightOperationLeverAngles.isOperated())
