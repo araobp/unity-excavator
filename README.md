@@ -59,7 +59,7 @@ The rear cameras support mirror view.
 
 I have applied IK to bucket positioning: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
 
-I attached Rigidbody and colliders to the excavator with Gravity enabled.
+I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
 ## Working with point cloud
 
