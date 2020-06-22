@@ -9,8 +9,8 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 ## Requirements
 
 - Unity 2018.4
-- Standard Assets
-- Optional: Logicool Gamepad F310
+- [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
+- Optional: [Logicool Gamepad F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html)
 
 ## Operation
 
@@ -43,7 +43,7 @@ F: Swing left
 
 Use the left and right joysticks. Push B button to switch between the operation lever mode and the travel lever mode.
 
-### Autonoumous driving (experimental)
+### Autonoumous driving/construction (experimental)
 
 Press "1", "2", "3", "4", "5" or "6" key on the PC keyboard.
 
@@ -57,16 +57,20 @@ The rear cameras support mirror view.
 
 ## Mathematics and Physics
 
-I have applied IK to bucket positioning: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
+I have applied IK to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
 
-I attached Rigidbody and colliders to the excavator with Gravity enabled.
+I attached Rigidbody and Colliders to the excavator with Gravity enabled.
+
+Regarding autonomous driving/construction, it is just about caliculation of the bucket's orbit by using Classical Dynamics.
+
+However, it will also be a good experiment to apply Unity ML-Agents to the caliculation: Physics vs Statistics.
 
 ## Working with point cloud
 
 It is possible to replace the virtual terrain with real terrain by importing poing cloud data.
 
-I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS poing cloud data to FBX, then use Unity's Raycast API to convert FBX mesh to Terrain.
+I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS point cloud data to FBX mesh, then use Unity's Raycast APIs to convert FBX mesh to Terrain. Refer to this wiki: https://wiki.unity3d.com/index.php/Object2Terrain
 
-## The reason why I open this project
+I sometimes download point cloud data from this site for some experiments on Unity: https://pointcloud.pref.shizuoka.jp/lasmap/ankenmap
 
-I am migrating from Unity to Unreal Engine for some reasons, but I continue using Unity on weekend works as my hobby. Unity and C#/VisualStudio are greate tools for creating 3D mobile apps.
+Note: Unreal Engine 4 supports "LiDAR Point Cloud" plugin that can import LAS data into a level on Unreal Engine.
