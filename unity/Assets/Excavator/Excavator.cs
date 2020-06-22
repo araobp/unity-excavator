@@ -120,7 +120,7 @@ public class DriveParams
         get { return _maxAccel;  }
     }
 
-    public float deltaSwing
+    public float deltaDirection
     {
         get { return _deltaSwing;  }
     }
@@ -228,10 +228,13 @@ public class Excavator
     GameObject rightTrack;
     GameObject leftTrack;
 
+    Rigidbody rb;
+
     public Excavator(GameObject excavator)
     {
         this.excavator = excavator;
         Transform transform = excavator.transform;
+        rb = transform.GetComponent<Rigidbody>();
 
         excavatorForwardAxis = transform.Find(excavatorForwardPath);
         swingAxis = transform.Find(swingAxisPath);
@@ -530,6 +533,22 @@ public class Excavator
 
     float accel = 0;
 
+    public void Move(float rotation, float accel, DriveParams driveParams)
+    {
+        if (Mathf.Abs(rotation) > driveParams.deltaDirection) rotation = Mathf.Sign(rotation) * driveParams.deltaDirection;
+        transform.Rotate(0, rotation, 0);
+
+        Vector3 forwardDirection = (excavatorForwardAxis.rotation * Vector3.right).normalized;
+
+        if (rb.velocity.magnitude <= driveParams.maxSpeed)
+        {
+            float force = driveParams.mass * accel;  // F = m * a
+            rb.AddForceAtPosition(forwardDirection * force, transform.position, ForceMode.Force);
+            Debug.Log($"Force: {driveParams.mass * accel}");
+        }
+
+    }
+
     private bool Move(Transform target, DriveParams driveParams)
     {
 
@@ -537,8 +556,6 @@ public class Excavator
         if (up < 40F || up >= 140F) throw new Exception();
 
         //Debug.Log($"up = {Vector3.Angle(excavatorForwardAxis.rotation*Vector3.up, Vector3.up)}");
-
-        Rigidbody rb = transform.GetComponent<Rigidbody>();
 
         Vector3 directionToTarget = target.position - transform.position;
         Vector3 forwardDirection = excavatorForwardAxis.rotation * Vector3.right;
@@ -550,14 +567,14 @@ public class Excavator
         {
             float angle = Vector3.SignedAngle(forwardDirection, directionToTarget, Vector3.up);
             //Debug.Log(angle);
-            if (Mathf.Abs(angle) > driveParams.deltaSwing)
+            if (Mathf.Abs(angle) > driveParams.deltaDirection)
             {
                 if (angle > 0)
                 {
-                    transform.Rotate(0, driveParams.deltaSwing, 0);
+                    transform.Rotate(0, driveParams.deltaDirection, 0);
                 } else
                 {
-                    transform.Rotate(0, -driveParams.deltaSwing, 0);
+                    transform.Rotate(0, -driveParams.deltaDirection, 0);
                 }
             }
             forwardDirection = (excavatorForwardAxis.rotation * Vector3.right).normalized;

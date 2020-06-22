@@ -531,7 +531,7 @@ MonoBehaviour:
   initialAccel: 30
   deltaAccel: 0.5
   maxAccel: 55
-  deltaSwing: 2
+  deltaDirection: 2
   useHook: 0
 --- !u!54 &608665126
 Rigidbody:

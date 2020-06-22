@@ -101,7 +101,7 @@ public class ExcavatorController : MonoBehaviour
     public float initialAccel = 30F;
     public float deltaAccel = 0.5F;
     public float maxAccel = 55F;
-    public float deltaSwing = 2F;
+    public float deltaDirection = 2F;
 
     public bool useHook = false;
 
@@ -208,7 +208,7 @@ public class ExcavatorController : MonoBehaviour
         travelIndicator.color = new Color(0, 0, 0);
         operationIndicator.color = new Color(0, 1F, 0);
         float mass = gameObject.GetComponent<Rigidbody>().mass;
-        driveParams = new DriveParams(mass, maxSpeed, creepSpeed, initialAccel, deltaAccel, maxAccel, deltaSwing);
+        driveParams = new DriveParams(mass, maxSpeed, creepSpeed, initialAccel, deltaAccel, maxAccel, deltaDirection);
 
         excavator.useHook = useHook;
     }
@@ -327,19 +327,17 @@ public class ExcavatorController : MonoBehaviour
                 rightOperationLeverAngles.leftRight = 5F * inputEvents.bucket;
             }
 
-            /* Track right */
-            if (inputEvents.trackRight != 0F)
+            /* Tracks */
+            if (inputEvents.trackRight != 0F || inputEvents.trackLeft != 0F)
             {
-                excavator.transform.Rotate(new Vector3(0, -delta * 1.2F * inputEvents.trackRight, 0));
-                excavator.transform.Translate(new Vector3(delta * 0.04F * inputEvents.trackRight, 0, 0));
+                float rotationRight = -delta * 1.2F * inputEvents.trackRight;
+                float rotationLeft = delta * 1.2F * inputEvents.trackLeft;
+                float rotation = rotationRight + rotationLeft;
+                float input = inputEvents.trackRight + inputEvents.trackLeft;
+                if (input > 1F) input = 1F;
+                float accel = driveParams.maxAccel * input;
+                excavator.Move(rotation, accel, driveParams);
                 rightTravelLeverAngles.upDown = 5F * inputEvents.trackRight;
-            }
-
-            /* Track left */
-            if (inputEvents.trackLeft != 0F)
-            {
-                excavator.transform.Rotate(new Vector3(0, delta * 1.2F * inputEvents.trackLeft, 0));
-                excavator.transform.Translate(new Vector3(delta * 0.04F * inputEvents.trackLeft, 0, 0));
                 leftTravelLeverAngles.upDown = 5F * inputEvents.trackLeft;
             }
 
