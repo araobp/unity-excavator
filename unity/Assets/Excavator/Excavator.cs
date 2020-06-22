@@ -66,6 +66,66 @@ public class Position
     public float boomArmHookAngleZero;
 }
 
+public class DriveParams
+{
+    private float _mass;
+
+    private float _maxSpeed;
+    private float _creepSpeed;
+
+    private float _initialAccel;
+    private float _deltaAccel;
+    private float _maxAccel;
+
+    private float _deltaSwing;
+
+    public DriveParams(float mass, float maxSpeed, float creepSpeed, float initialAccel, float deltaAccel, float maxAccel, float deltaSwing)
+    {
+        _mass = mass;
+        _maxSpeed = maxSpeed;
+        _creepSpeed = creepSpeed;
+        _initialAccel = initialAccel;
+        _deltaAccel = deltaAccel;
+        _maxAccel = maxAccel;
+        _deltaSwing = deltaSwing;
+    }
+
+    public float mass
+    {
+        get { return _mass; }
+    }
+
+    public float maxSpeed
+    {
+        get { return _maxSpeed;  }
+    }
+
+    public float creepSpeed
+    {
+        get { return _creepSpeed; }
+    }
+
+    public float initialAccel
+    {
+        get { return _initialAccel;  }
+    }
+
+    public float deltaAccel
+    {
+        get { return _deltaAccel;  }
+    }
+
+    public float maxAccel
+    {
+        get { return _maxAccel;  }
+    }
+
+    public float deltaSwing
+    {
+        get { return _deltaSwing;  }
+    }
+}
+
 public class Excavator
 {
 
@@ -167,9 +227,6 @@ public class Excavator
     GameObject cabin;
     GameObject rightTrack;
     GameObject leftTrack;
-
-    const float INITIAL_ACCELERATION = 900000F;
-    const float CONTINOUS_ACCELERATION = 15000F;
 
     public Excavator(GameObject excavator)
     {
@@ -473,7 +530,7 @@ public class Excavator
 
     float accel = 0;
 
-    private bool Move(Transform target, float deltaAccel, float deltaAngle)
+    private bool Move(Transform target, DriveParams driveParams)
     {
 
         float up = Mathf.Abs(Vector3.Angle(excavatorForwardAxis.rotation * Vector3.up, Vector3.up));
@@ -484,8 +541,8 @@ public class Excavator
         Rigidbody rb = transform.GetComponent<Rigidbody>();
 
         Vector3 directionToTarget = target.position - transform.position;
-            Vector3 forwardDirection = excavatorForwardAxis.rotation * Vector3.right;
-            float distance = new Vector2(directionToTarget.x, directionToTarget.z).magnitude;
+        Vector3 forwardDirection = excavatorForwardAxis.rotation * Vector3.right;
+        float distance = new Vector2(directionToTarget.x, directionToTarget.z).magnitude;
         directionToTarget.y = 0F;
         forwardDirection.y = 0;
 
@@ -493,26 +550,36 @@ public class Excavator
         {
             float angle = Vector3.SignedAngle(forwardDirection, directionToTarget, Vector3.up);
             //Debug.Log(angle);
-            if (Mathf.Abs(angle) > deltaAngle)
+            if (Mathf.Abs(angle) > driveParams.deltaSwing)
             {
                 if (angle > 0)
                 {
-                    transform.Rotate(0, deltaAngle, 0);
+                    transform.Rotate(0, driveParams.deltaSwing, 0);
                 } else
                 {
-                    transform.Rotate(0, -deltaAngle, 0);
+                    transform.Rotate(0, -driveParams.deltaSwing, 0);
                 }
             }
             forwardDirection = (excavatorForwardAxis.rotation * Vector3.right).normalized;
-            if (distance <= 5F)
+            if (distance <= 5F)  // reverse traveling range
             {
                 forwardDirection = -forwardDirection;
             }
-            float velocity = 2F;
-            if (distance < 15F) velocity = 1F;
-            if (rb.velocity.magnitude < velocity) this.accel += deltaAccel;
-            else this.accel -= deltaAccel;
-                rb.AddForceAtPosition(forwardDirection * this.accel, transform.position, ForceMode.Force);
+            float maxSpeed = driveParams.maxSpeed;
+            if (distance < 15F) maxSpeed = driveParams.creepSpeed;  // slow down range
+            if (rb.velocity.magnitude < maxSpeed && this.accel + driveParams.deltaAccel < driveParams.maxAccel)
+            {
+                this.accel += driveParams.deltaAccel;
+            }
+            else
+            {
+                this.accel -= driveParams.deltaAccel;
+            }
+
+            float force = driveParams.mass * this.accel;  // F = m * a
+            rb.AddForceAtPosition(forwardDirection * force, transform.position, ForceMode.Force);
+            Debug.Log($"Force: {driveParams.mass * this.accel}");
+
             return true;
         }
 
@@ -539,7 +606,7 @@ public class Excavator
 
     public void EnableCuttingEdges(bool enable)
     {
-        bucket.GetComponent<MeshCollider>().enabled = enable;
+        bucket.GetComponent<MeshCollider>().enabled = !enable;
     }
 
     public bool useHook
@@ -641,7 +708,7 @@ public class Excavator
         coroutineIsRunning = false;
     }
 
-    public IEnumerator MoveToTarget(GameObject target, float startBucketAngle, float finishBucketAngle)
+    public IEnumerator MoveToTarget(GameObject target, DriveParams driveParams, float startBucketAngle, float finishBucketAngle)
     {
 
         while (coroutineIsRunning)
@@ -663,12 +730,12 @@ public class Excavator
             yield return null;
         }
 
-        accel = INITIAL_ACCELERATION;
+        accel = driveParams.initialAccel;
         while (true)
         {
             try
             {
-                bool cont = Move(target.transform, CONTINOUS_ACCELERATION, 2F);
+                bool cont = Move(target.transform, driveParams);
                 if (!cont) break;
             }
             catch (Exception e)

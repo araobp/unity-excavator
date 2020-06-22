@@ -96,7 +96,16 @@ public class InputEvents
 
 public class ExcavatorController : MonoBehaviour
 {
+    public float maxSpeed = 3F;
+    public float creepSpeed = 1F;
+    public float initialAccel = 30F;
+    public float deltaAccel = 0.5F;
+    public float maxAccel = 55F;
+    public float deltaSwing = 2F;
+
     public bool useHook = false;
+
+    private DriveParams driveParams;
 
     private InputEvents inputEvents = new InputEvents();
 
@@ -198,17 +207,16 @@ public class ExcavatorController : MonoBehaviour
         operationIndicator = GameObject.FindWithTag("OperationIndicator").GetComponent<Image>();
         travelIndicator.color = new Color(0, 0, 0);
         operationIndicator.color = new Color(0, 1F, 0);
+        float mass = gameObject.GetComponent<Rigidbody>().mass;
+        driveParams = new DriveParams(mass, maxSpeed, creepSpeed, initialAccel, deltaAccel, maxAccel, deltaSwing);
 
-        if (useHook) excavator.useHook = true;
+        excavator.useHook = useHook;
     }
-
 
     private LeverAngles rightOperationLeverAngles = new LeverAngles(0F, 0F);
     private LeverAngles leftOperationLeverAngles = new LeverAngles(0F, 0F);
     private LeverAngles rightTravelLeverAngles = new LeverAngles(0F, 0F);
     private LeverAngles leftTravelLeverAngles = new LeverAngles(0F, 0F);
-
-    private bool operationLeverOperated = false;
 
     // Update is called once per frame
     void Update()
@@ -218,40 +226,43 @@ public class ExcavatorController : MonoBehaviour
         //--- Code for autonomous operations from this line ---
         if (Input.GetKey(KeyCode.Alpha1))
         {
-            excavator.EnableCuttingEdges(true);
+            excavator.EnableCuttingEdges(false);
             StartCoroutine(excavator.Reset());
-            GameObject target = GameObject.FindWithTag("Target");
-            StartCoroutine(excavator.MoveToTarget(target, 40F, 40F));
+            GameObject target = GameObject.FindWithTag("Target1");
+            StartCoroutine(excavator.MoveToTarget(target, driveParams, 40F, 40F));
         }
         if (Input.GetKey(KeyCode.Alpha2)) {
-            excavator.EnableCuttingEdges(true);
+            excavator.EnableCuttingEdges(false);
             StartCoroutine(excavator.Reset());
             GameObject target2 = GameObject.FindWithTag("Target2");
-            StartCoroutine(excavator.MoveToTarget(target2, 40F, 40F));
+            StartCoroutine(excavator.MoveToTarget(target2, driveParams, 40F, 40F));
         }
         if (Input.GetKey(KeyCode.Alpha3))
         {
             excavator.EnableCuttingEdges(true);
             StartCoroutine(excavator.Reset());
             GameObject target3 = GameObject.FindWithTag("Target3");
-            StartCoroutine(excavator.MoveToTarget(target3, 40F, 40F));
+            StartCoroutine(excavator.MoveToTarget(target3, driveParams, 40F, 40F));
         }
         if (Input.GetKey(KeyCode.Alpha4))
         {
             excavator.EnableCuttingEdges(false);
             StartCoroutine(excavator.Reset());
             GameObject target4 = GameObject.FindWithTag("Target4");
-            StartCoroutine(excavator.MoveToTarget(target4, 140F, 10F));
+            StartCoroutine(excavator.MoveToTarget(target4, driveParams, 50F, 50F));
         }
         if (Input.GetKey(KeyCode.Alpha5))
         {
+            excavator.EnableCuttingEdges(true);
+            StartCoroutine(excavator.Reset());
             GameObject target5 = GameObject.FindWithTag("Target5");
-            StartCoroutine(excavator.MoveToTarget(target5, 10F, 10F));
+            StartCoroutine(excavator.MoveToTarget(target5, driveParams, 140F, 40F));
         }
         if (Input.GetKey(KeyCode.Alpha6))
         {
+            excavator.EnableCuttingEdges(true);
             GameObject target6 = GameObject.FindWithTag("Target6");
-            StartCoroutine(excavator.MoveToTarget(target6, 10F, 140F));
+            StartCoroutine(excavator.MoveToTarget(target6, driveParams, 40F, 140F));
         }
 
         //--- Code for manual operations from this line ---
