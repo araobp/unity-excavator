@@ -51,9 +51,9 @@ public class Geometry {
 
 }
 
-public class Position
+public class IkPosture
 {
-    public float R;
+    //public float R;
     public float E;
     public float S;
     public float A;
@@ -683,19 +683,21 @@ public class Excavator
     /**
      * Inverse Kinematic for swing, boom and arm.
      */
-    public Position IK(Vector3 target)
+    public IkPosture IK(Vector3 target)
     {
-
+        // Swing angle
         Vector3 directionToTarget = target - swingAxis.position;
         Vector3 forwardDirection = excavatorForwardAxis.right;
         float D = Vector2.SignedAngle(new Vector2(directionToTarget.x, directionToTarget.z), new Vector2(forwardDirection.x, forwardDirection.z));
 
-        float R = Mathf.Sqrt(Mathf.Pow(target.x - swingAxis.position.x, 2f) + Mathf.Pow(target.z - swingAxis.position.z,  2f));
-
-        float E = Mathf.Atan2(R, (boomAxis.position.y - target.y)) * Mathf.Rad2Deg;
-        float S = Mathf.Sqrt(Mathf.Pow(R, 2f) + Mathf.Pow(boomAxis.position.y - target.y, 2F));
+        // A vector from the boom axis to the target
+        Vector3 upDirection = swingAxis.up;
+        Vector3 boomAxisToTarget = target - boomAxis.position;
+        float S = boomAxisToTarget.magnitude;
+        float E = Vector3.Angle(-upDirection, boomAxisToTarget);
         float S2 = Mathf.Pow(S, 2F);
 
+        // Calculate interior angles of the triangle based on Cosine Theorem
         float A;
         float B;
         float C;
@@ -712,14 +714,7 @@ public class Excavator
             C = Mathf.Acos((armLength2 + S2 - boomLength2) / (2F * armLength * S)) * Mathf.Rad2Deg;
         }
 
-        //Debug.Log($"boomLength={boomLength}, armLength={armLength}");
-
-        //Debug.Log($"target.x={target.x}, turnAxis.position.x={swingAxis.position.x}, target.z={target.z}, turnAxis.position.z={swingAxis.position.z}");
-
-        //Debug.Log($"A={A}, B={B}, C={C}, D={D}, E={E}, R={R}");
-
-        Position p = new Position();
-        p.R = R;
+        IkPosture p = new IkPosture();
         p.D = D;
         p.E = E;
         p.S = S;
@@ -732,8 +727,6 @@ public class Excavator
         p.boomArmHookAngleZero = boomArmHookAngleZero;
 
         return p;
-
-
     }
 
     private bool coroutineIsRunning = false;
@@ -805,7 +798,7 @@ public class Excavator
 
         if (!emergency)
         {
-            Position p = IK(target.transform.position);
+            IkPosture p = IK(target.transform.position);
 
 
             float Adash = p.A + p.E + p.verticalAngleZero - 180F;
