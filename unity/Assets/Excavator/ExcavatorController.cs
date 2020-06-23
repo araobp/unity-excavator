@@ -339,6 +339,7 @@ public class ExcavatorController : MonoBehaviour
                 float rotation = rotationRight + rotationLeft;
                 float input = inputEvents.trackRight + inputEvents.trackLeft;
                 if (input > 1F) input = 1F;
+                else if (input < -1F) input = -1F;
                 float accel = driveParams.maxAccel * input;
                 excavator.Move(rotation, accel, driveParams);
                 rightTravelLeverAngles.upDown = 5F * inputEvents.trackRight;
