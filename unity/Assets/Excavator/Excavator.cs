@@ -230,11 +230,20 @@ public class Excavator
 
     Rigidbody rb;
 
+    Camera operatorViewCamera;
+    Camera rearRightCamera;
+    Camera rearCenterCamera;
+    Camera rearLeftCamera;
+    Camera mainCamera;
+
     public Excavator(GameObject excavator)
     {
         this.excavator = excavator;
         Transform transform = excavator.transform;
+        excavator.AddComponent<Rigidbody>();
         rb = transform.GetComponent<Rigidbody>();
+        rb.mass = 20000;  // 20,000 Kg
+        rb.useGravity = true;
 
         excavatorForwardAxis = transform.Find(excavatorForwardPath);
         swingAxis = transform.Find(swingAxisPath);
@@ -344,6 +353,17 @@ public class Excavator
         leftTrack = transform.Find("TrackLeft").gameObject;
         rightTrack = transform.Find("TrackRight").gameObject;
 
+        operatorViewCamera = transform.Find(swingAxisPath + "/Camera").GetComponent<Camera>();
+        rearRightCamera = transform.Find(swingAxisPath + "/RearCameraRight").GetComponent<Camera>();
+        rearCenterCamera = transform.Find(swingAxisPath + "/RearCameraCenter").GetComponent<Camera>();
+        rearLeftCamera = transform.Find(swingAxisPath + "/RearCameraLeft").GetComponent<Camera>();
+        mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+
+        // Attach MirrorFlipCamera script to the rear cameras
+        transform.Find(swingAxisPath + "/RearCameraRight").gameObject.AddComponent<MirrorFlipCamera>();
+        transform.Find(swingAxisPath + "/RearCameraCenter").gameObject.AddComponent<MirrorFlipCamera>();
+        transform.Find(swingAxisPath + "/RearCameraLeft").gameObject.AddComponent<MirrorFlipCamera>();
+ 
         bucket.AddComponent<MeshCollider>();
         bucket.GetComponent<MeshCollider>().convex = true;
         arm.AddComponent<MeshCollider>();
@@ -362,6 +382,27 @@ public class Excavator
         var rt = rightTrack.GetComponent<BoxCollider>().size;
         rightTrack.GetComponent<BoxCollider>().size = new Vector3(rt.x * 4 / 5F, rt.y * 16 / 17F, rt.z);
         
+    }
+
+    public void EnableRearCameras(bool enable)
+    {
+        rearLeftCamera.enabled = enable;
+        rearCenterCamera.enabled = enable;
+        rearRightCamera.enabled = enable;
+
+        if (enable)
+        {
+            mainCamera.rect = new Rect(0F, 0.5F, 0.333F, 0.5F);
+            operatorViewCamera.rect = new Rect(0.333F, 0.5F, 0.666F, 0.5F);
+            rearLeftCamera.rect = new Rect(0, 0, 0.333F, 0.5F);
+            rearCenterCamera.rect = new Rect(0.333F, 0F, 0.333F, 0.5F);
+            rearRightCamera.rect = new Rect(0.666F, 0F, 0.333F, 0.5F);
+        } else
+        {
+            mainCamera.rect = new Rect(0F, 0F, 0.5F, 1F);
+            operatorViewCamera.rect = new Rect(0.5F, 0F, 0.5F, 1F);
+        }
+
     }
 
     private void OrientHydraulicCylinder(Transform cylinder1, Transform cylinder1Target,
@@ -630,7 +671,7 @@ public class Excavator
     {
         set
         {
-            _useHook = true;
+            _useHook = value;
         }
         get
         {

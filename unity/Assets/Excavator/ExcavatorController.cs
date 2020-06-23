@@ -103,6 +103,8 @@ public class ExcavatorController : MonoBehaviour
     public float maxAccel = 55F;
     public float deltaDirection = 2F;
 
+    public bool enableRearCameras = false;
+
     public bool useHook = false;
 
     private DriveParams driveParams;
@@ -209,6 +211,8 @@ public class ExcavatorController : MonoBehaviour
         operationIndicator.color = new Color(0, 1F, 0);
         float mass = gameObject.GetComponent<Rigidbody>().mass;
         driveParams = new DriveParams(mass, maxSpeed, creepSpeed, initialAccel, deltaAccel, maxAccel, deltaDirection);
+
+        excavator.EnableRearCameras(enableRearCameras);
 
         excavator.useHook = useHook;
     }
