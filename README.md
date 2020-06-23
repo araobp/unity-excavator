@@ -1,5 +1,7 @@
 # Unity excavator
 
+[Demo video](https://www.youtube.com/watch?v=DNiNN6Qb9Ig)
+
 This project is a cumulation of my weekend works on Unity, to operate a 3D model excavator on Unity.
 
 ![scene](./scene.png)
