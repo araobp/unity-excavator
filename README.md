@@ -55,6 +55,8 @@ The excavator is equipped with four cameras:
 
 The rear cameras support mirror view.
 
+To enable the rear cameras, check Excavator -> ExcavatorController -> Enable Rear Cameras.
+
 ## Mathematics and Physics
 
 I have applied IK to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
