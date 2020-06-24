@@ -4,7 +4,7 @@
 
 This project is an achivement of my weekend works on Unity, to operate a 3D model excavator on Unity.
 
-![scene](./scene.png)
+![scene](./doc/scene.png)
 
 Note: I am working on Windows10 for this creation. I have used Blender to create the 3D model of excavator.
 
