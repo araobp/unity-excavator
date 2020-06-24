@@ -4,7 +4,7 @@
 
 ## Code
 
-[=> Code](./DepthCamera)
+[=> Code](../DepthCamera)
 
 ## Operation
 
