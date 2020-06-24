@@ -25,3 +25,4 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - Controlling digital twin from a joystick simulation app via MQTT messaging bus
 - Using Unity's camera for AI object detection with MobleNet on TensorFlow
 - Digital twin synchronizing with a real servo motor via real CAN bus
+- Transferring data from virtual sensors to MQTT messaging bus over private LoRa.
