@@ -53,7 +53,7 @@ To enable the rear cameras, check Excavator -> ExcavatorController -> Enable Rea
 
 ## Armature
 
-The 3D model has a lot of rotary axes. Refer to [these images](./geometry).
+The 3D model has a lot of rotary axes. Refer to [these images](../Excavator/geometry).
 
 ## Mathematics and Physics
 
