@@ -18,3 +18,5 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Excavator](./doc/Excavator.md)
 - [Depth camera](./doc/DepthCamera.md)
+- Lazer range finder
+- Digita twin working with MQTT
