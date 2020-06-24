@@ -4,7 +4,7 @@
 
 ## Code
 
-[=> Code](./Excavator)
+[=> Code](../Excavator)
 
 ## Operation
 
