@@ -21,7 +21,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - Converting LAS point cloud data to Unity's Terrain object
 - Lazer range finder simulation
 - Terrain height map manipulation
-- Digital twin working with Android app via MQTT messaging bus
-- Joystick simulation on Android
+- Transferring JPEG images from Unity's cameras to an Android app via MQTT messaging bus
+- Controlling digital twin from a joystick simulation app via MQTT messaging bus
 - Using Unity's camera for AI object detection with MobleNet on TensorFlow
 - Digital twin synchronizing with a real servo motor via real CAN bus
