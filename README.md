@@ -14,10 +14,11 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
 - Optional: [Logicool Gamepad F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html)
 
-## My weekend works
+## My weekend works (incl. TODO)
 
-- [Excavator simulation](./doc/Excavator.md)
-- [Depth camera simulation](./doc/DepthCamera.md)
+- [Excavator simulation](./doc/Excavator.md) => Completed!
+- [Depth camera simulation](./doc/DepthCamera.md) => Completed!
+- Basic Classical Physics (Dynamics) simulation on Unity
 - Converting LAS point cloud data to Unity's Terrain object
 - Lazer range finder simulation
 - Terrain height map manipulation
