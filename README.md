@@ -1,6 +1,6 @@
 # Unity excavator
 
-[Demo video](https://www.youtube.com/watch?v=DNiNN6Qb9Ig)
+[Demo video](https://www.youtube.com/watch?v=0X4c5gxU6-A)
 
 This project is an achivement of my weekend works on Unity, to operate a 3D model excavator on Unity.
 
