@@ -61,7 +61,7 @@ To enable the rear cameras, check Excavator -> ExcavatorController -> Enable Rea
 
 ## Mathematics and Physics
 
-I have applied IK to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
+I have applied [IK](./jupyter/IK.ipynb) to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
 
 I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
