@@ -18,5 +18,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Excavator](./doc/Excavator.md)
 - [Depth camera](./doc/DepthCamera.md)
+- Converting LAS point cloud data to Terrain
 - Lazer range finder
+- Terrain height map manipulation
 - Digita twin working with MQTT
