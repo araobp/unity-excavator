@@ -59,9 +59,13 @@ The rear cameras support mirror view.
 
 To enable the rear cameras, check Excavator -> ExcavatorController -> Enable Rear Cameras.
 
+## Armature
+
+The 3D model has a lot of rotary axes. Refer to [these images](./geometry).
+
 ## Mathematics and Physics
 
-I have applied IK to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
+I have applied [IK](./jupyter/IK.ipynb) to bucket positioning for autonomous driving/construction: Euler angles at the boom joint and the arm joint are caluculated based on Cosine Theorem.
 
 I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
