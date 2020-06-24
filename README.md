@@ -22,3 +22,5 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - Lazer range finder simulation
 - Terrain height map manipulation
 - Digita twin working with Android app via MQTT messaging bus
+- Gamepad simulation on Android
+- Using Unity's camera for AI object detection with MobleNet on TensorFlow
