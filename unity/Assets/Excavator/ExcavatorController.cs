@@ -333,15 +333,16 @@ public class ExcavatorController : MonoBehaviour
 
             /* Tracks */
             if (inputEvents.trackRight != 0F || inputEvents.trackLeft != 0F)
-            {
-                float rotationRight = -delta * 1.2F * inputEvents.trackRight;
-                float rotationLeft = delta * 1.2F * inputEvents.trackLeft;
-                float rotation = rotationRight + rotationLeft;
+{
+                float rotationRight = -delta * 0.6F * inputEvents.trackRight;
+                float rotationLeft = delta * 0.6F * inputEvents.trackLeft;
+                float deltaRotation = rotationRight + rotationLeft;
                 float input = inputEvents.trackRight + inputEvents.trackLeft;
                 if (input > 1F) input = 1F;
                 else if (input < -1F) input = -1F;
-                float accel = driveParams.maxAccel * input;
-                excavator.Move(rotation, accel, driveParams);
+                float accel = 0F;
+                if (input != 0F) accel = driveParams.initialAccel * Mathf.Sign(input) + (driveParams.maxAccel - driveParams.initialAccel) * input;
+                excavator.Move(deltaRotation, accel, driveParams);
                 rightTravelLeverAngles.upDown = 5F * inputEvents.trackRight;
                 leftTravelLeverAngles.upDown = 5F * inputEvents.trackLeft;
             }

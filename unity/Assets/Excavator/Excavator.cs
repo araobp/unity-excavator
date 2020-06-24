@@ -573,20 +573,17 @@ public class Excavator
     }
 
     float accel = 0;
+    float accelInput = 0;
 
-    public void Move(float rotation, float accel, DriveParams driveParams)
+    // Call this method in Update()
+    public void Move(float deltaRotation, float accel, DriveParams driveParams)
     {
-        if (Mathf.Abs(rotation) > driveParams.deltaDirection) rotation = Mathf.Sign(rotation) * driveParams.deltaDirection;
-        transform.Rotate(0, rotation, 0);
+        transform.Rotate(0, deltaRotation, 0);
 
         Vector3 forwardDirection = (excavatorForwardAxis.rotation * Vector3.right).normalized;
-
-        if (rb.velocity.magnitude <= driveParams.maxSpeed)
-        {
-            float force = driveParams.mass * accel;  // F = m * a
-            rb.AddForceAtPosition(forwardDirection * force, transform.position, ForceMode.Force);
-            Debug.Log($"Force: {driveParams.mass * accel}");
-        }
+        float force = driveParams.mass * accel;  // F = m * a
+        rb.AddForceAtPosition(forwardDirection * force, transform.position, ForceMode.Force);
+        Debug.Log($"Force: {driveParams.mass * accel}");
 
     }
 

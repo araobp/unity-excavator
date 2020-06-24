@@ -530,7 +530,7 @@ MonoBehaviour:
   creepSpeed: 1
   initialAccel: 30
   deltaAccel: 0.5
-  maxAccel: 55
+  maxAccel: 50
   deltaDirection: 2
   enableRearCameras: 0
   useHook: 0
