@@ -16,5 +16,5 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 ## Projects
 
-- [Excavator](./Excavator.md)
-- [Depth camera](./DepthCamera.md)
+- [Excavator](./doc/Excavator.md)
+- [Depth camera](./doc/DepthCamera.md)
