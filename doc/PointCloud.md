@@ -4,7 +4,7 @@
 
 ## Code
 
-[=> Code](./PointCloud)
+[=> Code](../PointCloud)
 
 ## Point cloud data conversion pipeline
 
