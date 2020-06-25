@@ -4,4 +4,4 @@
 
 ## Code
 
-[=> Code](./HeightMapManipulation.md)
+[=> Code](../HeightMapManipulation.md)
