@@ -1074,6 +1074,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acceleration: 4
+  arrowPrefab: {fileID: 5161373701569714588, guid: 66691163550467f459830eef61150316,
+    type: 3}
 --- !u!4 &1794344556
 Transform:
   m_ObjectHideFlags: 0
