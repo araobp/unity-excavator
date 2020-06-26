@@ -21,6 +21,7 @@
 /[Aa]ssets/SampleScenes/
 /[Aa]ssets/TextMesh Pro/
 /[Aa]ssets/Classic Skybox/
+PointCloudData/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
