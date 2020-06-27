@@ -1,12 +1,15 @@
 # Unity excavator
 
-[Demo video](https://www.youtube.com/watch?v=0X4c5gxU6-A)
-
 This project is an achivement of my weekend works on Unity and Blender.
 
 ![scene](./doc/scene.png)
 
 Note: I am working on Windows10 for this creation. I have used Blender to create the 3D model of excavator.
+
+## Demo videos
+
+- [Excavator](https://www.youtube.com/watch?v=0X4c5gxU6-A)
+- [Pendulum](https://www.youtube.com/watch?v=2AjkpGLnm74)
 
 ## Requirements
 
