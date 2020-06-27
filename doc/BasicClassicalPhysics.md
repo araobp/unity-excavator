@@ -19,7 +19,7 @@ I have confirmed that all the Physics experiments on Unity follow the lows of Cl
 
 ## Slope
 
-![slope](./slope.png)
+![slope](./twoSlopes.png)
 
 ## Vector
 
