@@ -18,6 +18,8 @@ public class SinglePendulum : MonoBehaviour
     float speed;
     float period;
 
+    Arrow arrow;
+
     // Start is called before the first frame update
     IEnumerator Start()
     {
@@ -30,6 +32,8 @@ public class SinglePendulum : MonoBehaviour
 
         float length = GameObject.Find("String").transform.localScale.y;
         textLength.text = $"Length: {Mathf.Round(length * 10) / 10F} (m)";
+
+        arrow = new Arrow(Arrow.Colors.RED, 5F, 3F);
 
         while (true)
         {
@@ -54,6 +58,8 @@ public class SinglePendulum : MonoBehaviour
         speed = transform.InverseTransformDirection(rb.velocity).x;
         //Debug.Log($"angle: {angle}, speed: {speed}");
 
+        Vector3 gravityTangent = rb.mass * Vector3.Dot(Physics.gravity, rb.transform.right) * rb.transform.right;
+        arrow.OrientVector(transform, gravityTangent);
 
         if (prevSpeed <= 0 && speed > 0)
         {

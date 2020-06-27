@@ -41,7 +41,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c0a305b33ee18bf4b84f083f61101532, type: 3}
       propertyPath: m_Name
-      value: arrow
+      value: arrowshaft
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c0a305b33ee18bf4b84f083f61101532, type: 3}
       propertyPath: m_LocalPosition.x

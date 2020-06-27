@@ -3,6 +3,7 @@
 public class Arrow: MonoBehaviour
 {
     GameObject arrow;
+    float shaftThickness;
 
     public enum Colors {
         RED,
@@ -11,8 +12,10 @@ public class Arrow: MonoBehaviour
         BLACK
     };
 
-    public Arrow(Colors color)
+    public Arrow(Colors color, float headsize=1F, float shaftThickness=1F)
     {
+        this.shaftThickness = shaftThickness;
+
         Material mat = Resources.Load("Materials/Red") as Material;
 
         GameObject arrowPrefab = Resources.Load("Prefabs/Arrow") as GameObject;
@@ -34,7 +37,12 @@ public class Arrow: MonoBehaviour
                 break;
         }
 
-        arrow.transform.GetChild(0).GetComponent<Renderer>().material = mat;
+        Transform arrowHeadTransform = arrow.transform.GetChild(0);
+        Transform arrowShaftTransform = arrow.transform.GetChild(1);
+
+        arrowHeadTransform.GetComponent<Renderer>().material = mat;
+        arrowHeadTransform.localScale = new Vector3(headsize, headsize, headsize);
+        arrowShaftTransform.localScale = new Vector3(shaftThickness, shaftThickness, 1F);
     }
 
     public void OrientVector(Transform vectorOrigin, Vector3 vector)
@@ -46,7 +54,7 @@ public class Arrow: MonoBehaviour
 
         float length = direction.magnitude * 10F - 2F;  // 1/10 scale, subtract the cone length
         arrow.transform.position = endPoint;
-        arrow.transform.GetChild(1).transform.localScale = new Vector3(1F, 1F, length);
+        arrow.transform.GetChild(1).transform.localScale = new Vector3(shaftThickness, shaftThickness, length);
         arrow.transform.LookAt(vectorOrigin);
     }
 
