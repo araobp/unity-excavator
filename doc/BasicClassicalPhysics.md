@@ -6,6 +6,7 @@ This project has multiple scenes:
 - Pendulum
 - Slope
 - Vector
+- Friction
 
 I have confirmed that all the Physics experiments on Unity follow the lows of Classical Physics.
 
@@ -26,6 +27,12 @@ I have confirmed that all the Physics experiments on Unity follow the lows of Cl
 Realtime rendering of velocity vector.
 
 ![velocityVector](./velocityVector.png)
+
+# Friction
+
+Comparison between Unity's Physics and Physics in real world Physics.
+
+![friction](./friction/png)
 
 ## Code
 
