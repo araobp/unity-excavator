@@ -6,27 +6,16 @@ using UnityEngine.UI;
 public class PushController : MonoBehaviour
 {
     public float acceleration = 4F;
+
     private Rigidbody rb;
     private Rigidbody rb2;
 
-    public GameObject arrowPrefab;
+    private Arrow arrow;
+    private Arrow arrow2;
 
-    private GameObject arrow;
-    private GameObject arrow2;
+    private Arrow arrowGravityTangent;
+    private Arrow arrowGravityTangent2;
 
-    void OrientVector(GameObject arrow, Transform transform, Vector3 vector)
-    {
-        Vector3 startPoint = transform.position;
-        Vector3 endPoint = vector + transform.position;
-        Vector3 direction = endPoint - startPoint;
-
-        float length = direction.magnitude * 10F - 2F;  // 1/10 scale, subtract the cone length
-        arrow.transform.position = endPoint;
-        arrow.transform.GetChild(1).transform.localScale = new Vector3(1F, 1F, length);
-        arrow.transform.LookAt(transform);
-    }
-
-    // Start is called before the first frame update
     void Start()
     {
         Text textAccel = GameObject.Find("TextAcceleration").GetComponent<Text>();
@@ -48,20 +37,32 @@ public class PushController : MonoBehaviour
         textSlope.text = $"Inclination: {360F - slope.rotation.eulerAngles.z} deg";
         textSlope2.text = $"Inclination: {360F - slope2.rotation.eulerAngles.z} deg";
 
-        arrow = Instantiate(arrowPrefab);
-        arrow2 = Instantiate(arrowPrefab);
+        arrow = new Arrow(Arrow.Colors.BLUE);
+        arrow2 = new Arrow(Arrow.Colors.GREEN);
+        arrowGravityTangent = new Arrow(Arrow.Colors.BLACK);
+        arrowGravityTangent2 = new Arrow(Arrow.Colors.BLACK);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Force to push the cubes along the slope
         Vector3 force = rb.mass * acceleration * -rb.transform.right;
         Vector3 force2 = rb2.mass * acceleration * -rb2.transform.right;
 
+        // Tangent component of Gravitaional force 
+        Vector3 gravityTangent = rb.mass * Vector3.Dot(Physics.gravity, rb.transform.right) * rb.transform.right;
+        Vector3 gravityTangent2 = rb2.mass * Vector3.Dot(Physics.gravity, rb2.transform.right) * rb2.transform.right;
+
+        // Push the cubes with the force
         rb.AddForce(force, ForceMode.Force);
         rb2.AddForce(force2, ForceMode.Force);
 
-        OrientVector(arrow, rb.transform, force/1000F);
-        OrientVector(arrow2, rb2.transform, force2/1000F);
+        // Draw vectors
+        arrow.OrientVector(rb.transform, force/1000F);
+        arrow2.OrientVector(rb2.transform, force2/1000F);
+        arrowGravityTangent.OrientVector(rb.transform, gravityTangent / 1000F);
+        arrowGravityTangent2.OrientVector(rb2.transform, gravityTangent2 / 1000F);
     }
 }
