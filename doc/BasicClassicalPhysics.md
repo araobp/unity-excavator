@@ -30,7 +30,7 @@ Realtime rendering of velocity vector.
 
 # Friction
 
-Comparison between Unity's Physics and Physics in real world Physics.
+Comparison between Unity's Physics and real world Physics.
 
 ![friction](./friction.png)
 
