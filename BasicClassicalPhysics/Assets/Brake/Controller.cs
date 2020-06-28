@@ -77,7 +77,7 @@ public class Controller : MonoBehaviour
 
         foreach (GameObject vehicle in vehicles)
         {
-            vehicle.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed);
+            vehicle.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * 1000F / 3600F);
             speed += 10F;
         }
 
