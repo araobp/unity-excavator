@@ -44,6 +44,8 @@ https://docs.unity3d.com/Manual/class-PhysicMaterial.html
 
 # Friction (Excavator)
 
+One Rigidbody with one Box Collider for each track (left and right tracks). The simulation result is exactly same as the above.
+
 ![frictionExcavator](./frictionExcavator.png)
 
 # Brake
