@@ -9,6 +9,7 @@ This project has multiple scenes:
 - Friction (cube)
 - Friction (excavator)
 - Brake
+- Collision
 
 I have confirmed that all the Physics experiments on Unity follow the lows of Classical Physics.
 
@@ -51,6 +52,10 @@ One Rigidbody with one Box Collider for each track (left and right tracks). The 
 # Brake
 
 ![brake](./brake.png)
+
+# Collision
+
+![collision](./collision.png)
 
 ## Code
 
