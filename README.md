@@ -22,9 +22,9 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Excavator simulation](./doc/Excavator.md) => Completed!
 - [Depth camera simulation](./doc/DepthCamera.md) => Completed!
 - [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md) => Completed!
+- [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
 - Lazer range finder simulation
-- [Terrain height map manipulation](./doc/HeightMapManipulation.md) => Completed!
 - Transferring JPEG images from Unity's cameras to an Android app via MQTT messaging bus
 - Controlling digital twin from a joystick simulation app via MQTT messaging bus
 - Using Unity's camera for AI object detection with MobleNet on TensorFlow
