@@ -233,7 +233,7 @@ Light:
     m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.85
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -892,6 +892,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.5483268
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7052653
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.9528302
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 49a0e923d39ec3c4c8bb97699e2f2903, type: 3}
       propertyPath: m_Target
       value: 
@@ -1487,6 +1503,18 @@ PrefabInstance:
     - target: {fileID: 2000000, guid: 818d1fc82d1f7254babe1b1942065d99, type: 3}
       propertyPath: field of view
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 818d1fc82d1f7254babe1b1942065d99, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 818d1fc82d1f7254babe1b1942065d99, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.7058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 818d1fc82d1f7254babe1b1942065d99, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2000002, guid: 818d1fc82d1f7254babe1b1942065d99, type: 3}
       propertyPath: m_Enabled
