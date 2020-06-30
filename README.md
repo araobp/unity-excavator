@@ -27,7 +27,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md) => Completed!
 
-### Surveying
+### Working with surveying data
 
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
