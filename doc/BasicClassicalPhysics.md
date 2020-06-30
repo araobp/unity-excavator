@@ -10,6 +10,8 @@ This project has multiple scenes:
 - Friction (excavator)
 - Brake
 - Collision
+- Torque, Moment of Inertia and Rotaional Energy
+- Solar system
 
 I have confirmed that all the Physics experiments on Unity follow the lows of Classical Physics.
 
