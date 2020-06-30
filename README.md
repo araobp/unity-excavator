@@ -1,10 +1,10 @@
 # Unity excavator
 
-This project is an achivement of my weekend works on Unity and Blender.
+This project is an achivement of my self-study on digital twin in my spare time at night and on weekends.
 
 ![scene](./doc/scene.png)
 
-Note: I am working on Windows10 for this creation. I have used Blender to create the 3D model of excavator.
+Note: I am working on Windows10 for this creation. I have used Blender to create the 3D models in this project.
 
 ## Demo videos
 
@@ -32,6 +32,8 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
 - Lazer range finder simulation
+- Total station simulation
+- Drone survey simulation
 
 ### Camera/image
 
