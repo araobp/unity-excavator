@@ -9,8 +9,9 @@
 ## Point cloud data conversion pipeline
 
 ```
-Cloud Compare => Blender => Unity Object (Mesh) => Unity Object (Terrain)
-+ Subsample     + Smooth    + 100x scale
+                  Optional
+Cloud Compare => (Blender) => Unity Object (Mesh) => Unity Object (Terrain)
++ Subsample      + Smooth    + 100x scale
 + Mesh          
 
 ```
