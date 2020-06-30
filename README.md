@@ -10,6 +10,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Excavator](https://www.youtube.com/watch?v=0X4c5gxU6-A)
 - [Pendulum](https://www.youtube.com/watch?v=2AjkpGLnm74)
+- [Solar system](https://www.youtube.com/watch?v=2z0K-X5a5Ss)
 
 ## Requirements
 
