@@ -57,6 +57,16 @@ One Rigidbody with one Box Collider for each track (left and right tracks). The 
 
 ![collision](./collision.png)
 
+# Torque, Moment of Inertia and Rotational Energy
+
+![torque](./torque.png)
+
+# Solar system
+
+This simulation replaces Unity's Gravity (-9.81 m/s^2 of accerelation) with Universal Law of Attraction for simulating the Solar system.
+
+![solarsystem](./solarsystem.png)
+
 ## Code
 
 [=> Code](../BasicClassicalPhysics)
