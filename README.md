@@ -19,7 +19,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 ## My weekend works (incl. TODO)
 
-### Excavator operation
+### Excavator manual/autonomous operation
 
 - [Excavator simulation](./doc/Excavator.md) => Completed!
 
@@ -42,7 +42,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - Digital twin synchronizing with a real servo motor via real CAN bus
 
-### IoT
+### Virtual IoT devices
 
 - Transferring JPEG images from Unity's cameras to an Android app via MQTT messaging bus
 - Controlling digital twin from a joystick simulation app via MQTT messaging bus
