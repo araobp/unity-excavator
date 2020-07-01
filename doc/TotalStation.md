@@ -2,7 +2,7 @@
 
 [Demo video](https://www.youtube.com/watch?v=Is45dRC3fNM)
 
-![totalstation](./doc/totatlstation.png)
+![totalstation](./totatlstation.png)
 
 ## Code 
 
