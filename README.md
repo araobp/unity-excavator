@@ -24,18 +24,18 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 ### Excavator manual/autonomous operation
 
-- [Excavator simulation](./doc/Excavator.md) => Completed!
+- [Excavator simulation](./doc/Excavator.md)
 
 ### Classical Physics with Rigidbody on Unity
 
-- [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md) => Completed!
+- [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md)
 
 ### Working with surveying data
 
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
-- [Total Station simulation](./doc/TotalStation.md) => Completed!
+- [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
+- [Total Station simulation](./doc/TotalStation.md)
 
 ### Camera/image
 
-- [Depth camera simulation](./doc/DepthCamera.md) => Completed!
+- [Depth camera simulation](./doc/DepthCamera.md)
