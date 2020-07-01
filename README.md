@@ -12,6 +12,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Pendulum](https://www.youtube.com/watch?v=2AjkpGLnm74)
 - [Friction](https://www.youtube.com/watch?v=5SQ1QVdskcI)
 - [Solar system](https://www.youtube.com/watch?v=2z0K-X5a5Ss)
+- [Total station](https://www.youtube.com/watch?v=Is45dRC3fNM)
 
 ## Requirements
 
@@ -33,8 +34,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
-- Lazer range finder simulation
-- Total station simulation
+- [Total Station simulation](./doc/TotalStation.md)
 - Drone survey simulation
 
 ### Camera/image
