@@ -184,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 100km/h
       objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
 --- !u!1 &350548248
@@ -470,6 +475,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 40km/h
       objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
 --- !u!1001 &575645122
@@ -543,6 +553,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 70km/h
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
@@ -708,6 +723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 80km/h
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
@@ -882,6 +902,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 30km/h
       objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
 --- !u!1001 &930505082
@@ -955,6 +980,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 60km/h
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
@@ -1280,7 +1310,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 45
+  field of view: 20
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1306,7 +1336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1644839861}
   m_LocalRotation: {x: 0.1542929, y: -0.4964162, z: 0.0901639, w: 0.8494911}
-  m_LocalPosition: {x: 45, y: 16.4, z: 6.84}
+  m_LocalPosition: {x: 128.4, y: 53.7, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1384,6 +1414,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 90km/h
       objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
 --- !u!1001 &2035502504
@@ -1457,6 +1492,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 50km/h
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
@@ -1532,6 +1572,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 20km/h
       objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
 --- !u!1001 &2617123221858870976
@@ -1605,6 +1650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Text
       value: 10km/h
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666746970951334562, guid: 611e3bc83eefa9a43ab49b5741b85b58,
+        type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 611e3bc83eefa9a43ab49b5741b85b58, type: 3}
