@@ -34,20 +34,8 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
-- [Total Station simulation](./doc/TotalStation.md)
-- Drone survey simulation
+- [Total Station simulation](./doc/TotalStation.md) => Completed!
 
 ### Camera/image
 
 - [Depth camera simulation](./doc/DepthCamera.md) => Completed!
-- Using Unity's camera for AI object detection with MobleNet on TensorFlow
-
-### Cyber-physical
-
-- Digital twin synchronizing with a real servo motor via real CAN bus
-
-### Virtual IoT devices
-
-- Transferring JPEG images from Unity's cameras to an Android app via MQTT messaging bus
-- Controlling digital twin from a joystick simulation app via MQTT messaging bus
-- Transferring data from virtual sensors on Unity to MQTT messaging bus over private LoRa.
