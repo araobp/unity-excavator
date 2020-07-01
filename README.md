@@ -32,9 +32,9 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 ### Working with surveying data
 
-- [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - [Total Station simulation](./doc/TotalStation.md)
+- [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 
 ### Camera/image
 
