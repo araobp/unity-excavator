@@ -40,6 +40,6 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 - [Depth camera simulation](./doc/DepthCamera.md)
 
-## IoT/MQTT
+### IoT/MQTT and TensorFlow lite for object detection
 
 - Transferring JPEG image from a virtual camera on Unity to TensorFlow lite on Android via MQTT server
