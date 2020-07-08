@@ -20,34 +20,26 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
 - Optional: [Logicool Gamepad F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html)
 
-## Projects (incl. TODO)
+## Projects
 
 ### Excavator manual/autonomous operation
 
-- [Excavator simulation](./doc/Excavator.md) => Completed!
+- [Excavator simulation](./doc/Excavator.md)
 
 ### Classical Physics with Rigidbody on Unity
 
-- [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md) => Completed!
+- [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md)
 
 ### Working with surveying data
 
-- [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md) => Completed!
+- [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - [Total Station simulation](./doc/TotalStation.md)
-- Drone survey simulation
+- [Terrain height map manipulation](./doc/HeightMapManipulation.md)
 
 ### Camera/image
 
-- [Depth camera simulation](./doc/DepthCamera.md) => Completed!
-- Using Unity's camera for AI object detection with MobleNet on TensorFlow
+- [Depth camera simulation](./doc/DepthCamera.md)
 
-### Cyber-physical
+## IoT/MQTT
 
-- Digital twin synchronizing with a real servo motor via real CAN bus
-
-### Virtual IoT devices
-
-- Transferring JPEG images from Unity's cameras to an Android app via MQTT messaging bus
-- Controlling digital twin from a joystick simulation app via MQTT messaging bus
-- Transferring data from virtual sensors on Unity to MQTT messaging bus over private LoRa.
+- Sending data (JSON or JPEG) from C#/Unity to Python via MQTT server
