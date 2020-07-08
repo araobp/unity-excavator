@@ -39,3 +39,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 ### Camera/image
 
 - [Depth camera simulation](./doc/DepthCamera.md)
+
+## IoT/MQTT
+
+- Sending image from C#/Unity to Python via MQTT server
