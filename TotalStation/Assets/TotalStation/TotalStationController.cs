@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class TotalStationController : MonoBehaviour
@@ -14,7 +11,6 @@ public class TotalStationController : MonoBehaviour
     public GameObject prism6;
     public GameObject prism7;
     public GameObject prism8;
-
 
     public float legAngle = 30F;
     public float legExtension = 0.6F;
@@ -117,7 +113,6 @@ public class TotalStationController : MonoBehaviour
 
         Vector3 absoluteSurveyPosition = ToAbsoluteSurveyPosition(relativeSurveyPosition);
         textCoordinates.text = $"Absolute coordinates: {RoundTo1st(absoluteSurveyPosition.x)}, {RoundTo1st(absoluteSurveyPosition.y)}, {RoundTo1st(absoluteSurveyPosition.z)} m";
-
     }
 
     // Start is called before the first frame update
