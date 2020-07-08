@@ -42,4 +42,4 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 ## IoT/MQTT
 
-- Sending image from C#/Unity to Python via MQTT server
+- Sending data (JSON or JPEG) from C#/Unity to Python via MQTT server
