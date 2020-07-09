@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="menuFontSize">16sp</dimen>
+    <dimen name="titleFontSize">26sp</dimen>
+    <dimen name="chartTitleFontSize">20sp</dimen>
+    <dimen name="mqttDataDumpSize">14sp</dimen>
+    <dimen name="labelFontSize">14sp</dimen>
+    <dimen name="editTextWidth">280sp</dimen>
+</resources>

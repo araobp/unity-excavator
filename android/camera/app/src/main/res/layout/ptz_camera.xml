@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/buttonZoomIn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewPtzCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+        <ImageView
+            android:id="@+id/imageViewPtzCameraDepth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonTiltUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Up"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTiltDown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonTiltDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Down"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonPanLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="Left"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonTiltDown"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTiltUp"
+        app:layout_constraintTop_toTopOf="@+id/buttonTiltUp" />
+
+    <Button
+        android:id="@+id/buttonPanRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Right"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonTiltDown"
+        app:layout_constraintStart_toEndOf="@+id/buttonTiltUp"
+        app:layout_constraintTop_toTopOf="@+id/buttonTiltUp" />
+
+    <Button
+        android:id="@+id/buttonZoomIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="In"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTiltUp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonPanRight" />
+
+    <Button
+        android:id="@+id/buttonZoomOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Out"
+        app:layout_constraintBottom_toTopOf="@+id/buttonTiltUp"
+        app:layout_constraintStart_toStartOf="@+id/buttonPanLeft" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
