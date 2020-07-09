@@ -7,8 +7,10 @@
 ```
 Ethan and the car               MobileNetv2/TensorFlowLite
 are on Unity                    runs on Android for object detection
- [Unity] <----> mosquitto <----> [Android]
-               MQTT server
+ [Unity] <----> [mosquitto] <----> [Android]
+                MQTT server
+                username: simulator
+                password: simulator
 ```
 
 ## Code
