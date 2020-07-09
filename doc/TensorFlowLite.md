@@ -23,7 +23,9 @@ These two cameras use "Render Texture" to capture images.
 
 JPEG image data is transferred to an app on Android via MQTT server.
 
-The app on Android receives the JPEG data, coneverts it into Bitmap, then perform object detection by using a pre-trained SSD-MobileNetv2 model on TensorFlow Lite.
+The app on Android receives JPEG data, converts it into Bitmap, then perform object detection by using a pre-trained SSD-MobileNetv2 model on TensorFlow Lite.
+
+The app on Android also supports remote control for the cameras on Android: pan, tilt and zoom (PTZ).
 
 ## Code
 - [=> Code on Unity](../TensorFlowLite)
