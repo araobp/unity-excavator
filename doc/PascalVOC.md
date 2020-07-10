@@ -17,5 +17,12 @@ Just press "B" to generate a Pascal VOC XML file. The generated file will be sav
 
 ![labelimg](./labelimg.png)
 
+## How it works
+
+- This implementation uses a Unity's camera as a depth camera to extract a target object only. 
+- All the objects with a tag "GreenScreen" is deactivated when extracting the target object from the scene.
+- Data about a bounding box of the extracted image is then translated into Pascal VOC XML format.
+- Those disabled objects are re-activated just before capturing the scene as an image in JPEG format.
+
 ## Code
 - [=> Code on Unity](../PascalVOC)
