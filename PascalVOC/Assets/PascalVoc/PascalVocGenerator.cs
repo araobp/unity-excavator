@@ -1,21 +1,24 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using UnityEngine;
 
 
 public class PascalVocGenerator : MonoBehaviour
 {
+    public string labelString = "ethan";
 
     Camera cameraDepth;
     Camera cameraCapture;
     GameObject temporaryStage;
     GameObject[] allObjects;
 
-    float left;
-    float top;
-    float right;
-    float bottom;
+    int left;
+    int top;
+    int right;
+    int bottom;
 
     private void FindBoundingBox()
     {
@@ -33,7 +36,7 @@ public class PascalVocGenerator : MonoBehaviour
         // Initialize bounding box coordinates
         left = image.width;
         top = 0;
-        right = 0F;
+        right = 0;
         bottom = image.height;
 
         // Scan the depth image to find a bounding box 
@@ -83,13 +86,40 @@ public class PascalVocGenerator : MonoBehaviour
         File.WriteAllBytes($"{Application.dataPath}/Capture/{timestamp}.jpg", bytes);
     }
 
-    private void GeneratePascalVOC(string timestamp)
+    private void GeneratePascalVOC(string timestamp, string name, int xmin, int ymin, int xmax, int ymax)
     {
         string pascalVoxXmlFilename = $"{Application.dataPath}/Capture/{timestamp}.xml";
 
-        XmlDocument xml = new XmlDocument();
-        
+        XElement annotation =
+            new XElement("annotation",
+                new XElement("folder", "Capture"),
+                new XElement("filename", $"{timestamp}.jpg"),
+                new XElement("path", $"{Application.dataPath}/Capture/{timestamp}.jpg"),
+                new XElement("source",
+                    new XElement("database", "Unknown")
+                ),
+                new XElement("size",
+                    new XElement("width", 1024),
+                    new XElement("height", 576),
+                    new XElement("depth", 3)
+                ),
+                new XElement("segmented", 0),
+                new XElement("object",
+                    new XElement("name", name),
+                    new XElement("pose", "Unspecified"),
+                    new XElement("truncated", 0),
+                    new XElement("difficult", 0),
+                    new XElement("bndbox",
+                        new XElement("xmin", xmin),
+                        new XElement("ymin", ymin),
+                        new XElement("xmax", xmax),
+                        new XElement("ymax", ymax)
+                    )
+                )
+            );
 
+        string annotationXml = annotation.ToString();
+        File.WriteAllBytes($"{Application.dataPath}/Capture/{timestamp}.xml", Encoding.ASCII.GetBytes(annotationXml));
 
     }
 
@@ -118,7 +148,11 @@ public class PascalVocGenerator : MonoBehaviour
 
             string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
 
-            GeneratePascalVOC(timestamp);
+            int xmin = left;
+            int ymin = 576 - top;
+            int xmax = right;
+            int ymax = 576 - bottom;
+            GeneratePascalVOC(timestamp, labelString, xmin, ymin, xmax, ymax);
 
             foreach (GameObject obj in allObjects)
             {
