@@ -27,7 +27,7 @@ public class Depth : MonoBehaviour
 
             byte[] bytes = image.EncodeToJPG();
             Destroy(image);
-            File.WriteAllBytes($"{Application.dataPath}/Capture/depth.png", bytes);
+            File.WriteAllBytes($"{Application.dataPath}/Capture/depth.jpg", bytes);
         } catch (NullReferenceException e)
         {
         }
