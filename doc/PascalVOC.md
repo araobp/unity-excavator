@@ -5,7 +5,7 @@
 
 I use it for training SSD-MobileNet v2 model with my original images. LabelImg outputs annotation files in the format of Pascal VOC XML.
 
-This project is to auto-generate annotation files for scenes on Untiy.
+This project is to auto-generate annotation files for scenes on Untiy, **without using LabelImg**.
 
 ## Generating Pascal VOC XML
 
