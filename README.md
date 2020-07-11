@@ -39,6 +39,8 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 ### Camera/image
 
 - [Depth camera simulation](./doc/DepthCamera.md)
+
+### AI
+
 - [Integration with TensorFlow Lite on Android](./doc/TensorFlowLite.md)
 - [Pascal VOC XML auto-generation](./doc/PascalVOC.md) 
-
