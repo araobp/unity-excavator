@@ -9,6 +9,9 @@ TagManager:
   - TemporaryStage
   - CameraDepth
   - CameraCapture
+  - name:ethan
+  - name:car
+  - Canvas
   layers:
   - Default
   - TransparentFX

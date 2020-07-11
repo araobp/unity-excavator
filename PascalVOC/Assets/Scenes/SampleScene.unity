@@ -445,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: ethan
       objectReference: {fileID: 0}
     - target: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -816,6 +816,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9487de0131db6574f88b26f9fab3fc86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  labelString: ethan
 --- !u!4 &1807437482
 Transform:
   m_ObjectHideFlags: 0
