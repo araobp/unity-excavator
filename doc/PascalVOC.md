@@ -27,5 +27,7 @@ Then, this implementation employes the following technique to generate Pascal VO
 - Data about a bounding box of the extracted image is then translated into Pascal VOC XML format.
 - Those deactivated objects are re-activated just before capturing the scene as an image in JPEG format.
 
+Those XML files and JPEG files are saved in "Assets/Capture" folder.
+
 ## Code
 - [=> Code on Unity](../PascalVOC)
