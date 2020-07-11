@@ -12,7 +12,7 @@ public class PascalVocGenerator : MonoBehaviour
 
     Camera cameraDepth;
     Camera cameraCapture;
-    GameObject temporaryStage;
+    //GameObject temporaryStage;
     GameObject canvas;
 
     GameObject[] allObjects;
@@ -162,7 +162,7 @@ public class PascalVocGenerator : MonoBehaviour
         allObjects = FindObjectsOfType<GameObject>();
         cameraDepth = GameObject.FindWithTag("CameraDepth").GetComponent<Camera>();
         cameraCapture = GameObject.FindWithTag("CameraCapture").GetComponent<Camera>();
-        temporaryStage = GameObject.FindWithTag("TemporaryStage");
+        //temporaryStage = GameObject.FindWithTag("TemporaryStage");
 
         foreach (GameObject obj in allObjects)
         {
@@ -196,7 +196,7 @@ public class PascalVocGenerator : MonoBehaviour
             {
 
                 // Activate the temporary stage so that target objects do not fall down due to the gravity
-                temporaryStage.SetActive(true);
+                //temporaryStage.SetActive(true);
 
                 // Deactivate objects tagged with "GreenScreen" 
                 foreach (GameObject obj in allObjects)
@@ -237,7 +237,7 @@ public class PascalVocGenerator : MonoBehaviour
                 }
 
                 // Deactivate the temporary stage
-                temporaryStage.SetActive(false);
+                //temporaryStage.SetActive(false);
 
             }
 
