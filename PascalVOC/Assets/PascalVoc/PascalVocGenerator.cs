@@ -9,6 +9,8 @@ public class PascalVocGenerator : MonoBehaviour
 {
 
     public GameObject bndBoxPrefab;
+    public string captureFolder = "Capture";
+    public bool fullPath = false;
 
     Camera cameraDepth;
     Camera cameraCapture;
@@ -90,6 +92,13 @@ public class PascalVocGenerator : MonoBehaviour
 
     }
 
+    private string saveFolder()
+    {
+        string path = captureFolder;
+        if (!fullPath) path = $"{Application.dataPath}/Capture";
+        return path;
+    }
+
     private void CaptureImage(string timestamp)
     {
         // Use the depth camera
@@ -108,7 +117,7 @@ public class PascalVocGenerator : MonoBehaviour
 
         Destroy(image);
 
-        File.WriteAllBytes($"{Application.dataPath}/Capture/{timestamp}.jpg", bytes);
+        File.WriteAllBytes($"{saveFolder()}/{timestamp}.jpg", bytes);
     }
 
     private void GeneratePascalVOC(string timestamp, List<BoundingBox> boundingBoxes)
@@ -151,7 +160,9 @@ public class PascalVocGenerator : MonoBehaviour
         // Save it
         string annotationXml = annotation.ToString();
         string pascalVoxXmlFilename = $"{Application.dataPath}/Capture/{timestamp}.xml";
-        File.WriteAllBytes($"{Application.dataPath}/Capture/{timestamp}.xml", Encoding.ASCII.GetBytes(annotationXml));
+        string path = captureFolder;
+        if (!fullPath) path = $"{Application.dataPath}/Capture";
+        File.WriteAllBytes($"{saveFolder()}/{timestamp}.xml", Encoding.ASCII.GetBytes(annotationXml));
 
     }
 
