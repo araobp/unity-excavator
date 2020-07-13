@@ -908,7 +908,12 @@ ModelImporter:
     4300302: Sphere.009
     4300304: Cube.052
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: d070852d7f08da14998ac1cc88b906c2, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

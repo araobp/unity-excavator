@@ -357,7 +357,7 @@ public class Excavator
         rearRightCamera = transform.Find(swingAxisPath + "/RearCameraRight").GetComponent<Camera>();
         rearCenterCamera = transform.Find(swingAxisPath + "/RearCameraCenter").GetComponent<Camera>();
         rearLeftCamera = transform.Find(swingAxisPath + "/RearCameraLeft").GetComponent<Camera>();
-        mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
+        mainCamera = transform.Find(swingAxisPath + "/Camera").GetComponent<Camera>();
 
         // Attach MirrorFlipCamera script to the rear cameras
         transform.Find(swingAxisPath + "/RearCameraRight").gameObject.AddComponent<MirrorFlipCamera>();
