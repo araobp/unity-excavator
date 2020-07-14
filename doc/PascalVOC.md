@@ -23,11 +23,13 @@ First, add a tag startigng with "name:" to target objects. For example, "name:et
 
 Then, this implementation employes the following technique to generate Pascal VOC XML files:
 - It uses a Unity's Camera object as a depth camera to extract target objects only. 
-- All the objects with a tag "GreenScreen" is deactivated (that is, those objects become "greeen screen") when extracting the target object from the scene.
+- All the objects, that are not necessary to extract images, are deactivated.
 - Data about a bounding box of the extracted image is then translated into Pascal VOC XML format.
 - Those deactivated objects are re-activated just before capturing the scene as an image in JPEG format.
 
 Those XML files and JPEG files are saved in "Assets/Capture" folder.
+
+Note: Objects having a tag "Studio" is a set of objects that works like a studio with a green screen behind a target object.
 
 ## Code
 - [=> Code on Unity](../PascalVOC)
