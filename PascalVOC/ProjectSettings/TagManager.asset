@@ -12,6 +12,7 @@ TagManager:
   - name:ethan
   - name:car
   - Canvas
+  - Studio
   layers:
   - Default
   - TransparentFX

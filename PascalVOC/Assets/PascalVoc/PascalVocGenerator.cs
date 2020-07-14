@@ -18,6 +18,7 @@ public class PascalVocGenerator : MonoBehaviour
     GameObject canvas;
 
     GameObject[] allObjects;
+    List<GameObject> allRootObjects;
     List<GameObject> labeledObjects = new List<GameObject>();
 
 
@@ -171,20 +172,25 @@ public class PascalVocGenerator : MonoBehaviour
     {
         canvas = GameObject.FindWithTag("Canvas");
         allObjects = FindObjectsOfType<GameObject>();
+        allRootObjects = new List<GameObject>();
+
         cameraDepth = GameObject.FindWithTag("CameraDepth").GetComponent<Camera>();
         cameraCapture = GameObject.FindWithTag("CameraCapture").GetComponent<Camera>();
         //temporaryStage = GameObject.FindWithTag("TemporaryStage");
 
+        // List up all the root objects
         foreach (GameObject obj in allObjects)
         {
-            string tag = obj.tag;
+            if (obj.transform.parent == null) allRootObjects.Add(obj);
+        }
 
-            // Find objects that will be bounded and labeled later on.
-            if (obj.transform.parent == null && tag.StartsWith("name:"))
+        // Find objects that will be bounded and labeled later on.
+        foreach (GameObject obj in allRootObjects)
+        {
+            if (obj.tag.StartsWith("name:"))
             {
                 labeledObjects.Add(obj);
             }
-
         }
 
     }
@@ -209,16 +215,10 @@ public class PascalVocGenerator : MonoBehaviour
                 // Activate the temporary stage so that target objects do not fall down due to the gravity
                 //temporaryStage.SetActive(true);
 
-                // Deactivate objects tagged with "GreenScreen" 
-                foreach (GameObject obj in allObjects)
+                // Deactivate objects neither the target object nor Studio objects
+                foreach (GameObject obj in allRootObjects)
                 {
-                    if (obj.transform.parent == null && obj.tag == "GreenScreen") obj.SetActive(false);
-                }
-
-                // Deactivate objects other than the target object
-                foreach (GameObject obj in labeledObjects)
-                {
-                    if (obj.tag.StartsWith("name:") && obj != targetObj) obj.SetActive(false);
+                    if (obj != targetObj && obj.tag != "Studio") obj.SetActive(false);
                 }                
                 
                 // Find a bounding box
@@ -238,18 +238,11 @@ public class PascalVocGenerator : MonoBehaviour
                 // Re-activate objects
                 foreach (GameObject obj in allObjects)
                 {
-                    if (obj.transform.parent == null && obj.tag == "GreenScreen") obj.SetActive(true);
-                }
-
-                // Re-activate objects
-                foreach (GameObject obj in labeledObjects)
-                {
-                    if (obj.tag.StartsWith("name:") && obj != targetObj) obj.SetActive(true);
+                    if (obj != targetObj && obj.tag != "Studio") obj.SetActive(true);
                 }
 
                 // Deactivate the temporary stage
                 //temporaryStage.SetActive(false);
-
             }
 
             // Generate Pascal VOC XML and save it
