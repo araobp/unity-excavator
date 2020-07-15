@@ -1,7 +1,7 @@
 <annotation>
   <folder>Capture</folder>
-  <filename>20200714_171422.jpg</filename>
-  <path>C:/Users/shiny/Documents/unity-excavator/PascalVOC/Assets/Capture/20200714_171422.jpg</path>
+  <filename>20200715_140156.jpg</filename>
+  <path>C:/Users/shiny/Documents/unity-excavator/PascalVOC/Assets/Capture/20200715_140156.jpg</path>
   <source>
     <database>Unknown</database>
   </source>
@@ -11,18 +11,6 @@
     <depth>3</depth>
   </size>
   <segmented>0</segmented>
-  <object>
-    <name>car</name>
-    <pose>Unspecified</pose>
-    <truncated>0</truncated>
-    <difficult>0</difficult>
-    <bndbox>
-      <xmin>0</xmin>
-      <ymin>149</ymin>
-      <xmax>294</xmax>
-      <ymax>272</ymax>
-    </bndbox>
-  </object>
   <object>
     <name>car</name>
     <pose>Unspecified</pose>

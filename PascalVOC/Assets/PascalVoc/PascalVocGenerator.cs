@@ -21,11 +21,14 @@ public class PascalVocGenerator : MonoBehaviour
     List<GameObject> allRootObjects;
     List<GameObject> labeledObjects = new List<GameObject>();
 
+    // Exclude bounding boxes that are not in the range of the following area coorinates
+    public float boundingBoxOffset = 5F;
+    public float minArea = 2000F;
 
     // Bounding box image coordinates
     class BoundingBox
     {
-        public string lable;  // "name" element in Pascal VOC XML
+        public string label;  // "name" element in Pascal VOC XML
         public int xmin;  // "xmin" element
         public int ymin;  // "ymin" element
         public int xmax;  // "xmax" element
@@ -33,7 +36,7 @@ public class PascalVocGenerator : MonoBehaviour
 
         public BoundingBox(string label, int xmin, int ymin, int xmax, int ymax)
         {
-            this.lable = label;
+            this.label = label;
             this.xmin = xmin;
             this.ymin = ymin;
             this.xmax = xmax;
@@ -42,8 +45,10 @@ public class PascalVocGenerator : MonoBehaviour
     }
 
     // Find a bounding box
-    private int[] FindBoundingBox()
+    private bool FindBoundingBox(out int[] coordinates)
     {
+        bool found = false;
+
         // Use the depth camera
         RenderTexture activeRenderTexture = RenderTexture.active;
         RenderTexture.active = cameraDepth.targetTexture;
@@ -69,6 +74,7 @@ public class PascalVocGenerator : MonoBehaviour
                 float px = image.GetPixel(x, y).r;  // Sample red strength in the pixel
                 if (px > 0)  // The pixel is in the target object
                 {
+                    found = true;
                     if (x < left) left = x;
                     if (x > right) right = x;
                     if (y > top) top = y;
@@ -76,21 +82,34 @@ public class PascalVocGenerator : MonoBehaviour
                 }
             }
         }
-        Debug.Log($"[BoundingBox] left: {left}, top: {top}, right: {right}, bottom: {bottom}");
 
         Destroy(image);
 
-        // Draw a bounding box on the canvas
-        GameObject bndBox = Instantiate(bndBoxPrefab) as GameObject;
-        bndBox.transform.SetParent(canvas.transform, true);
-        RectTransform rectTransform = bndBox.GetComponent<RectTransform>();
-        rectTransform.position = new Vector3(left, bottom, 0);
-        rectTransform.sizeDelta = new Vector2(right - left, top - bottom);
+        if (found)
+        {
+            int area = (right - left) * (top - bottom);
+
+            if (left < boundingBoxOffset || right > (image.width - boundingBoxOffset) || top > (image.height - boundingBoxOffset) || bottom < boundingBoxOffset || area < minArea)
+            {
+                found = false;
+                Debug.Log($"[This bounding box is discarded] left: {left}, top: {top}, right: {right}, bottom: {bottom}");
+            }
+            else
+            {
+                Debug.Log($"[BoundingBox] left: {left}, top: {top}, right: {right}, bottom: {bottom}");
+                // Draw a bounding box on the canvas
+                GameObject bndBox = Instantiate(bndBoxPrefab) as GameObject;
+                bndBox.transform.SetParent(canvas.transform, true);
+                RectTransform rectTransform = bndBox.GetComponent<RectTransform>();
+                rectTransform.position = new Vector3(left, bottom, 0);
+                rectTransform.sizeDelta = new Vector2(right - left, top - bottom);
+            }
+        }
 
         // Return the bounding box coordinates
-        int[] coordinates = { left, top, right, bottom };
-        return coordinates;
+        coordinates = new int[]{ left, top, right, bottom };
 
+        return found;
     }
 
     private string saveFolder()
@@ -144,7 +163,7 @@ public class PascalVocGenerator : MonoBehaviour
         {
             annotation.Add(
                 new XElement("object",
-                new XElement("name", bndBox.lable),
+                new XElement("name", bndBox.label),
                 new XElement("pose", "Unspecified"),
                 new XElement("truncated", 0),
                 new XElement("difficult", 0),
@@ -202,6 +221,7 @@ public class PascalVocGenerator : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.B))
         {
+            bool foundAtLeastOne = false;
 
             // Remove panels that was used before
             for (int i = 0; i < canvas.transform.childCount; i++)
@@ -211,7 +231,6 @@ public class PascalVocGenerator : MonoBehaviour
 
             foreach (GameObject targetObj in labeledObjects)
             {
-
                 // Activate the temporary stage so that target objects do not fall down due to the gravity
                 //temporaryStage.SetActive(true);
 
@@ -219,21 +238,26 @@ public class PascalVocGenerator : MonoBehaviour
                 foreach (GameObject obj in allRootObjects)
                 {
                     if (obj != targetObj && obj.tag != "Studio") obj.SetActive(false);
-                }                
-                
+                }
+
                 // Find a bounding box
-                int[] coordinates = FindBoundingBox();
+                int[] coordinates;
 
-                // Translate the panel coordinates into the image coordinates
-                int xmin = coordinates[0];  // left
-                int ymin = 576 - coordinates[1];  // 576 - top 
-                int xmax = coordinates[2];  // right
-                int ymax = 576 - coordinates[3];  // 576 - bottom
+                if (FindBoundingBox(out coordinates))
+                {
+                    foundAtLeastOne = true;
 
-                Debug.Log(targetObj.tag.Split(':'));
-                string name = targetObj.tag.Split(':')[1];
+                    // Translate the panel coordinates into the image coordinates
+                    int xmin = coordinates[0];  // left
+                    int ymin = 576 - coordinates[1];  // 576 - top 
+                    int xmax = coordinates[2];  // right
+                    int ymax = 576 - coordinates[3];  // 576 - bottom
 
-                boundingBoxes.Add(new BoundingBox(name, xmin, ymin, xmax, ymax));
+                    Debug.Log(targetObj.tag.Split(':'));
+                    string name = targetObj.tag.Split(':')[1];
+
+                    boundingBoxes.Add(new BoundingBox(name, xmin, ymin, xmax, ymax));
+                }
 
                 // Re-activate objects
                 foreach (GameObject obj in allObjects)
@@ -245,11 +269,12 @@ public class PascalVocGenerator : MonoBehaviour
                 //temporaryStage.SetActive(false);
             }
 
-            // Generate Pascal VOC XML and save it
-            string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-            CaptureImage(timestamp);
-            GeneratePascalVOC(timestamp, boundingBoxes);
+            if (foundAtLeastOne) {
+                // Generate Pascal VOC XML and save it
+                string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                CaptureImage(timestamp);
+                GeneratePascalVOC(timestamp, boundingBoxes);
+            }
         }
-
     }
 }

@@ -740,6 +740,11 @@ PrefabInstance:
       propertyPath: captureFolder
       value: Capture
       objectReference: {fileID: 0}
+    - target: {fileID: 6676159611176098113, guid: 54c136fcb3de79746856281313f82b66,
+        type: 3}
+      propertyPath: minArea
+      value: 2000
+      objectReference: {fileID: 0}
     - target: {fileID: 6676159611176098114, guid: 54c136fcb3de79746856281313f82b66,
         type: 3}
       propertyPath: m_LocalPosition.x
