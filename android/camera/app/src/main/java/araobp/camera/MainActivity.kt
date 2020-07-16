@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
 
@@ -44,6 +46,9 @@ class MainActivity : AppCompatActivity() {
             val editTextMqttPassword = dialog.findViewById<EditText>(R.id.editTextMqttPassword)
             editTextMqttPassword.setText(mProps.mqttPassword)
 
+            val editTextDepthCameraRange = dialog.findViewById<EditText>(R.id.editTextDepthCameraRange)
+            editTextDepthCameraRange.setText(mProps.depthCameraRange.roundToInt().toString())
+
             editTextMqttServer.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) =
                     Unit
@@ -71,6 +76,20 @@ class MainActivity : AppCompatActivity() {
                 override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) = Unit
                 override fun afterTextChanged(p0: Editable?) {
                     mProps.mqttPassword = editTextMqttPassword.text.toString()
+                }
+            })
+
+            editTextDepthCameraRange.addTextChangedListener(object : TextWatcher {
+                override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) =
+                    Unit
+
+                override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) = Unit
+                override fun afterTextChanged(p0: Editable?) {
+                    try {
+                        mProps.depthCameraRange = editTextDepthCameraRange.text.toString().toFloat()
+                    } catch (e: Exception) {
+                        Log.d(TAG, e.toString())
+                    }
                 }
             })
 

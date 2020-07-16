@@ -1,6 +1,7 @@
 package araobp.camera
 
 import android.content.Context
+import kotlin.math.roundToInt
 
 
 class Properties(val context: Context) {
@@ -23,7 +24,7 @@ class Properties(val context: Context) {
         mqttServer = prefs.getString("mqttServer", "localhost").toString()
         mqttUsername = prefs.getString("mqttUsername", "anonymous").toString()
         mqttPassword = prefs.getString("mqttPassword", "password").toString()
-        depthCameraRange = prefs.getFloat("depthCameraRange", 50F)
+        depthCameraRange = prefs.getInt("depthCameraRange", 50).toFloat()
     }
 
     fun save() {
@@ -31,7 +32,7 @@ class Properties(val context: Context) {
         editor.putString("mqttServer", mqttServer)
         editor.putString("mqttUsername", mqttUsername)
         editor.putString("mqttPassword", mqttPassword)
-        editor.putFloat("depthCameraRange", depthCameraRange)
+        editor.putInt("depthCameraRange", depthCameraRange.roundToInt())
         editor.apply()
     }
 }

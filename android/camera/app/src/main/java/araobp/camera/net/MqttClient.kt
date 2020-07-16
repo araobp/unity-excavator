@@ -40,10 +40,14 @@ class MqttClient(
     )
 
     fun publish(topic: String, jsonObject: JSONObject) {
-        if (mMqttClient.isConnected) {
-            val mqttMessage =
-                MqttMessage(jsonObject.toString().toByteArray(charset = Charsets.UTF_8))
-            mMqttClient.publish("${topic}Rx", mqttMessage)
+        try {
+            if (mMqttClient.isConnected) {
+                val mqttMessage =
+                    MqttMessage(jsonObject.toString().toByteArray(charset = Charsets.UTF_8))
+                mMqttClient.publish("${topic}Rx", mqttMessage)
+            }
+        } catch (e: IllegalArgumentException) {
+            Log.d(TAG, "This mqtt client has already been removed")
         }
     }
 
