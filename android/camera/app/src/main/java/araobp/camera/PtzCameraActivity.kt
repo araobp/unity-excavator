@@ -31,6 +31,9 @@ class PtzCameraActivity : AppCompatActivity() {
     private var requestedCommand: JSONObject? = null
     private var imageDepth: Bitmap? = null
 
+    private var timerCommand = Timer()
+    private var timerPolling = Timer()
+
     enum class Command {
         pan,
         tilt,
@@ -143,14 +146,16 @@ class PtzCameraActivity : AppCompatActivity() {
             true
         }
 
-        Timer().scheduleAtFixedRate(250, 250) {  // throttling at a certain interval
+        startSchedule()
+    }
+
+    private fun startSchedule() {
+        timerCommand.scheduleAtFixedRate(250, 250) {  // throttling at a certain interval
             requestedCommand?.let { mMqttClient.publish(TOPIC, it) }
         }
-
-        Timer().scheduleAtFixedRate(1000, 1000) {  // capturing image periodically
+        timerPolling.scheduleAtFixedRate(1000, 1000) {  // capturing image periodically
             mMqttClient.publish(TOPIC, command(Command.capture))
         }
-
     }
 
     override fun onResume() {
@@ -165,10 +170,13 @@ class PtzCameraActivity : AppCompatActivity() {
         )
 
         mMqttClient.connect(listOf(TOPIC, TOPIC_DEPTH))
+        startSchedule()
     }
 
     override fun onPause() {
         super.onPause()
+        timerCommand.cancel()
+        timerPolling.cancel()
         mMqttClient.destroy()
     }
 
