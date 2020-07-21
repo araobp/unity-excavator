@@ -99,8 +99,7 @@ class MainActivity : AppCompatActivity() {
 
             dialog.show()
         }
-
-        // Safie PTZ
+        
         buttonPtzCamera.setOnClickListener {
             val intent = Intent(this, PtzCameraActivity::class.java).apply {
                 putExtra(MQTT_SERVER, mProps.mqttServer)
