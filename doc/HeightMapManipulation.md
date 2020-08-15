@@ -10,7 +10,7 @@ TODO: Develop a function that accepts survey points (3D data (xyz) float array) 
 
 ## Operations
 
-### Saving a terrain heightmap in edit mode
+### Saving or swapping a terrain heightmap in edit mode
 
 Make the terrain active by clicking on the terrain, then choose the following on the editor:
 
