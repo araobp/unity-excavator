@@ -14,9 +14,11 @@ TODO: Develop a function that accepts survey points (3D data (xyz) float array) 
 
 Make the terrain active by clicking on the terrain, then choose the following on the editor:
 
-```
-Terrain -> Swapper
-```
+![menu](./terrainswapper_menu.png)
+
+Then, "Terrain swapper" edit GUI window appears. Name your terrain and save it.
+
+![gui](./terrainswapper_gui.png)
 
 ### Manipulating the terrain
 
