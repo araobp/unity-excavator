@@ -4,42 +4,51 @@ using UnityEngine;
 using UnityEditor;
 using System.IO;
 using System.Collections.Generic;
+using System;
 
-public class MultipleTerrains : EditorWindow
+public class TerrainSwapper : EditorWindow
 {
 
-    private string id = "unknown";
-    private Vector2 scroll;
-    private string text = "";
+    private string terrainName = "Unknown";
 
     static HeightMapSwapper swapper;
     
-    [MenuItem("Terrain/Swapper", false, 2000)]
+    [MenuItem("Terrain/Swapper", false, 100)]
     static void OpenWindow()
     {
-        EditorWindow.GetWindow<MultipleTerrains>(true);
+        GetWindow<TerrainSwapper>(true);
     }
 
     void OnGUI()
     {
-        Terrain terrain = Selection.activeGameObject.GetComponent<Terrain>();
-        swapper = new HeightMapSwapper(terrain);
-
-        id = EditorGUILayout.TextField("TerrainId", id);
-
-        scroll = EditorGUILayout.BeginScrollView(scroll);
-        List<string> list = swapper.listOfTerrainData();
-        string text = string.Join("\n", list);
-        text = EditorGUILayout.TextArea(text, GUILayout.Height(position.height - 30));
-        EditorGUILayout.EndScrollView();
-
-        if (GUILayout.Button("Save"))
+        try
         {
-            swapper.SaveTerrainData(id + ".ser");
-        }
-        if (GUILayout.Button("Load"))
+            Terrain terrain = Selection.activeGameObject.GetComponent<Terrain>();
+            swapper = new HeightMapSwapper(terrain);
+
+            terrainName = EditorGUILayout.TextField("Terrain Name", terrainName);
+
+            List<string> list = swapper.listOfTerrainData();
+
+            if (GUILayout.Button("Save"))
+            {
+                swapper.SaveTerrainData(terrainName + ".ser");
+            }
+
+            EditorGUILayout.Space();
+
+            EditorGUILayout.LabelField("Terrain Heightmaps");
+
+            foreach (string filename in list)
+            {
+                if (GUILayout.Button(filename))
+                {
+                    swapper.LoadTerrainData(filename + ".ser");
+                }
+            }
+        } catch (Exception e)
         {
-            swapper.LoadTerrainData(id + ".ser");
+            EditorGUILayout.LabelField("Please select your terrain!");
         }
 
     }
