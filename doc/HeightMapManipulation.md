@@ -1,9 +1,5 @@
 # Height map manipulation
 
-TODO: Develop a function that accepts survey points (3D data (xyz) float array) and modify (raise/lower) part of terrain.
-
-![heightmap](./heightmap.png)
-
 ## Code
 
 [=> Code](../HeightMapManipulation)
@@ -21,6 +17,8 @@ Then, "Terrain swapper" edit GUI window appears. Name your terrain and save it.
 ![gui](./terrainswapper_gui.png)
 
 ### Manipulating the terrain
+
+![heightmap](./heightmap.png)
 
 ```
 hit "R" --> Raise a part of the terrain
