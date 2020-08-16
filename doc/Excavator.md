@@ -35,6 +35,8 @@ F: Swing left
 
 ### Logicool Gamepad F310
 
+![joystick](./excavator_joystick.png)
+
 Use the left and right joysticks. Push B button to switch between the operation lever mode and the travel lever mode.
 
 ### Autonoumous driving/construction (experimental)
