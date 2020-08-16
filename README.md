@@ -16,8 +16,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 
 ## Requirements
 
-- Unity 2018.4
-- Unity 2019.4 in part
+- Unity 2019.4
 - [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
 - Optional: [Logicool Gamepad F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html)
 
