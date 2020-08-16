@@ -77,7 +77,7 @@ public class Object2Terrain : EditorWindow
         bounds.size = new Vector3(terrain.size.x, collider.bounds.size.y, terrain.size.z);
 
         // Do raycasting samples over the object to see what terrain heights should be
-        float[,] heights = new float[terrain.heightmapWidth, terrain.heightmapHeight];
+        float[,] heights = new float[terrain.heightmapResolution, terrain.heightmapResolution];
         Ray ray = new Ray(new Vector3(bounds.min.x, bounds.max.y + bounds.size.y, bounds.min.z), -Vector3.up);
         RaycastHit hit = new RaycastHit();
         float meshHeightInverse = 1 / bounds.size.y;
