@@ -15,8 +15,8 @@ public class HeightMapSwapper
     public HeightMapSwapper(Terrain terrain)
     {
         this.terrain = terrain;
-        heightmapWidth = terrain.terrainData.heightmapWidth;
-        heightmapHeight = terrain.terrainData.heightmapHeight;
+        heightmapWidth = terrain.terrainData.heightmapResolution;
+        heightmapHeight = terrain.terrainData.heightmapResolution;
     }
 
     private TerrainData getHeightMap()

@@ -20,8 +20,8 @@ public class Embankment
     public Embankment(Terrain terrain)
     {
         this.terrain = terrain;
-        heightmapWidth = terrain.terrainData.heightmapWidth;
-        heightmapHeight = terrain.terrainData.heightmapHeight;
+        heightmapWidth = terrain.terrainData.heightmapResolution;
+        heightmapHeight = terrain.terrainData.heightmapResolution;
         terrainSize = terrain.terrainData.size;
         terrainPosition = terrain.transform.position;
         ratioX = heightmapWidth / terrainSize.x;
