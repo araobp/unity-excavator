@@ -28,7 +28,6 @@ public class PlanetController : MonoBehaviour
         rb.velocity = new Vector3(initialForward.x, initialForward.y, initialForward.z) * initialSpeed;
     }
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 r = star.transform.position - transform.position;

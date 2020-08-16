@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Arrow: MonoBehaviour
+public class Arrow
 {
     GameObject arrow;
     float shaftThickness;
@@ -19,7 +19,7 @@ public class Arrow: MonoBehaviour
         Material mat = Resources.Load("Materials/Red") as Material;
 
         GameObject arrowPrefab = Resources.Load("Prefabs/Arrow") as GameObject;
-        arrow = Instantiate(arrowPrefab);
+        arrow = Object.Instantiate(arrowPrefab);
 
         switch (color)
         {
