@@ -1,5 +1,7 @@
 # Basic classical Physics
 
+Note: this project has migrated to Unity 2019.
+
 This project has multiple scenes:
 
 - Free fall
@@ -62,6 +64,14 @@ One Rigidbody with one Box Collider for each track (left and right tracks). The 
 # Torque, Moment of Inertia and Rotational Energy
 
 ![torque](./torque.png)
+
+## Coping with this error
+
+```
+Assets\Standard Assets\Utility\SimpleActivatorMenu.cs(11,16): error CS0619: 'GUIText' is obsolete: 'GUIText has been removed. Use UI.Text instead.'
+```
+
+Just remove "Assets\Utility\SimpleActivatorMenu.cs".
 
 # Solar system
 
