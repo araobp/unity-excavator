@@ -52,3 +52,7 @@ Just remove "Assets\Utility\SimpleActivatorMenu.cs".
 
 - [Integration with TensorFlow Lite on Android](./doc/TensorFlowLite.md)
 - [Pascal VOC XML auto-generation](./doc/PascalVOC.md) 
+
+### IoT
+
+- [Fresnel zone](./doc/FresnelZone.md)
