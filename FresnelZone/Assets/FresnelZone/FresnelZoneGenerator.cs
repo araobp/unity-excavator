@@ -42,7 +42,7 @@ public class FresnelZoneGenerator : MonoBehaviour
         distance = direction.magnitude;
 
         fresnelZone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        fresnelZone.transform.parent = antenna1.transform;
+        fresnelZone.transform.position = antenna1.transform.position;
         fresnelZone.transform.localPosition = new Vector3(0, 0, 0);
         Destroy(fresnelZone.GetComponent<SphereCollider>());
         Material mat = Resources.Load("FresnelZoneColor", typeof(Material)) as Material;
@@ -61,7 +61,7 @@ public class FresnelZoneGenerator : MonoBehaviour
             var radius = fresnelRadius(scaleZ);
             var diameter = radius * 2F;
             fresnelZone.transform.localScale = new Vector3(diameter, diameter, scaleZ);
-            fresnelZone.transform.localPosition = new Vector3(0, 0, 0);
+            fresnelZone.transform.position = antenna1.transform.position;
             fresnelZone.transform.LookAt(antenna2.transform);
             fresnelZone.transform.Translate(0F, 0F, scaleZ / 2F);
             textDistance.text = $"Distance: {Mathf.RoundToInt(scaleZ * 10F) / 10F} meters";
