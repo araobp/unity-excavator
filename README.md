@@ -43,6 +43,7 @@ Just remove "Assets\Utility\SimpleActivatorMenu.cs".
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - [Total Station simulation](./doc/TotalStation.md)
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
+- [PTZ camera and point cloud](./doc/PTZCamera.md)
 
 ### Camera/image
 
