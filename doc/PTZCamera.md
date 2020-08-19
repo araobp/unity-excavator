@@ -21,6 +21,7 @@ W: tilt up
 Z: tilt down
 E: zoom in
 X: zoom out
+```
 
 ## License
 
