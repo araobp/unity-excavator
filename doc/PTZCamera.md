@@ -8,7 +8,7 @@ PTZ camera with a lazer range finder works like a total station. If a terrain ge
 
 ## Code
 
-=> [Code](./PtzCamera)
+=> [Code](../PtzCamera)
 
 ## Operations
 
