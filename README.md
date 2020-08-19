@@ -26,7 +26,7 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 Assets\Standard Assets\Utility\SimpleActivatorMenu.cs(11,16): error CS0619: 'GUIText' is obsolete: 'GUIText has been removed. Use UI.Text instead.'
 ```
 
-Just remove "Assets\Utility\SimpleActivatorMenu.cs".
+Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorMenu.cs".
 
 ## Projects
 
