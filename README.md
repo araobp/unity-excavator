@@ -30,9 +30,10 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ## Projects
 
-### Excavator manual/autonomous operation
+### Vehicle operation
 
-- [Excavator simulation](./doc/Excavator.md)
+- [Excavator manual/autonomous operation](./doc/Excavator.md)
+- [Autonomous guided vehicle](./doc/AGV.md)
 
 ### Classical Physics with Rigidbody on Unity
 
