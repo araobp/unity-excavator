@@ -80,7 +80,7 @@ public class FresnelZone : MonoBehaviour
 public class FresnelZoneGenerator : MonoBehaviour
 {
 
-    public float frequencyInMHz = 2400F;
+    public float frequencyInMHz = 2400F;  // 2.4GHz
     public GameObject antenna;
     public GameObject antennaRepeater;
     public GameObject antennaTerminal1;
