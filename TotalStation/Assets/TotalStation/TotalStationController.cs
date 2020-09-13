@@ -8,9 +8,6 @@ public class TotalStationController : MonoBehaviour
     public GameObject prism3;
     public GameObject prism4;
     public GameObject prism5;
-    public GameObject prism6;
-    public GameObject prism7;
-    public GameObject prism8;
 
     public float legAngle = 30F;
     public float legExtension = 0.6F;
@@ -118,7 +115,7 @@ public class TotalStationController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        prisms = new GameObject[] { prism1, prism2, prism3, prism4, prism5, prism6, prism7, prism8 };
+        prisms = new GameObject[] { prism1, prism2, prism3, prism4, prism5 };
 
         horizontalAxis = transform.Find(horizontalAxisPath);
         horizontalAxis.rotation = Quaternion.Euler(0F, 180F, 0F);  // Set the forward direction To the North
@@ -153,10 +150,7 @@ public class TotalStationController : MonoBehaviour
         GameObject.FindWithTag("prism3").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(2); });
         GameObject.FindWithTag("prism4").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(3); });
         GameObject.FindWithTag("prism5").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(4); });
-        GameObject.FindWithTag("prism6").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(5); });
-        GameObject.FindWithTag("prism7").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(6); });
-        GameObject.FindWithTag("prism8").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(7); });
-
+    
         textHorizontalAngle = GameObject.FindWithTag("horizontalAngle").GetComponent<Text>();
         textVerticalAngle = GameObject.FindWithTag("verticalAngle").GetComponent<Text>();
         textCoordinates = GameObject.FindWithTag("coordinates").GetComponent<Text>();
