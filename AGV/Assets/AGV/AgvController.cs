@@ -7,12 +7,12 @@ using System;
 public class AgvController : MonoBehaviour
 {
     public float mass = 250F;
-    public float maxTorque = 20F; // maximum torque the motor can apply to wheel
-    public float maxSpeed = 60F;  // 60 meters / min
+    public float initialMaxTorque = 20F; // maximum torque the motor can apply to wheel
+    public float initialMaxSpeed = 60F;  // 60 meters / min
     public float slowDownMaxTorque = 5F;
     public float slowDownMaxSpeed = 10F;
     public float wheelDampingRate = 0.8F;
-    public bool display = false;
+    public bool showInfo = false;
 
     Rigidbody rb;
 
@@ -49,15 +49,22 @@ public class AgvController : MonoBehaviour
     PhysicMaterial rubberMaterial;
     PhysicMaterial floorMaterial;
 
-    Text textTorque;
+    GameObject[] obstacles;
+
     Text textSpeed;
 
+    Button buttonStart;
+    Button buttonClear;
+
+    float maxTorque;
+    float maxSpeed;
     float maxSpeedInSiUnit;
     float deltaTorque;
     float currentTorque = 0F;
-    bool convergencePlus = true;
 
     bool emergencyStop = false;
+
+    GameObject obstacleInHazardArea = null;
 
     private float RoundTo1st(float value)
     {
@@ -152,11 +159,13 @@ public class AgvController : MonoBehaviour
             wc.suspensionSpring = ss;
         }
 
-        maxSpeedInSiUnit = maxSpeed / 60F;
-        currentTorque = maxTorque;
-
-        textTorque = GameObject.FindWithTag("TextTorque").GetComponent<Text>();
         textSpeed = GameObject.FindWithTag("TextSpeed").GetComponent<Text>();
+
+        buttonStart = GameObject.FindWithTag("buttonStart").GetComponent<Button>();
+        buttonClear = GameObject.FindWithTag("buttonClear").GetComponent<Button>();
+
+        buttonStart.onClick.AddListener(delegate { StartAgv(); } );
+        buttonClear.onClick.AddListener(delegate { clearObstacles(); });
 
         // Hazard area
         GameObject red;
@@ -183,6 +192,10 @@ public class AgvController : MonoBehaviour
         yellow.GetComponent<BoxCollider>().isTrigger = true;
         yellow.AddComponent<HazardArea>();
         yellow.GetComponent<HazardArea>().SetController(this, false);
+
+        obstacles = GameObject.FindGameObjectsWithTag("obstacles");
+
+        StartAgv();
     }
 
     public void FixedUpdate()
@@ -240,16 +253,9 @@ public class AgvController : MonoBehaviour
             rightFrontWheelCollider.steerAngle -= deltaAngle;
             leftRearWheelCollider.steerAngle += deltaAngle;
             rightRearWheelCollider.steerAngle += deltaAngle;
-            /*
-            leftFrontWheelCollider.steerAngle = 0F;
-            rightFrontWheelCollider.steerAngle = 0F;
-            leftRearWheelCollider.steerAngle = 0F;
-            rightRearWheelCollider.steerAngle = 0F;
-            */
         }
         else  // over the track
         {
-
             float delta = 1F;
             if (!forward) delta = -1F;
             if (rightHit) deltaAngle = delta;
@@ -267,15 +273,15 @@ public class AgvController : MonoBehaviour
         {
             currentTorque = 0F;
         }
-            leftFrontWheelCollider.motorTorque = currentTorque;
-            rightFrontWheelCollider.motorTorque = currentTorque;
-            leftRearWheelCollider.motorTorque = currentTorque;
-            rightRearWheelCollider.motorTorque = currentTorque;
 
-        if (display)
+        leftFrontWheelCollider.motorTorque = currentTorque;
+        rightFrontWheelCollider.motorTorque = currentTorque;
+        leftRearWheelCollider.motorTorque = currentTorque;
+        rightRearWheelCollider.motorTorque = currentTorque;
+
+        if (showInfo)
         {
-            textTorque.text = $"Torque: 4 x {currentTorque} N*m";
-            textSpeed.text = $"Speed: {-Mathf.RoundToInt(rb.velocity.z * 60F)} m/min";
+            textSpeed.text = $"Speed: {Mathf.RoundToInt(rb.velocity.magnitude * 60F)} m/min";
         }
     }
 
@@ -287,8 +293,34 @@ public class AgvController : MonoBehaviour
         } 
     }
 
-    public void OnHazardEnter(bool red)  // red: true, yellow: false
+    public void StartAgv()
     {
+        maxTorque = initialMaxTorque;
+        maxSpeed = initialMaxSpeed;
+        maxSpeedInSiUnit = maxSpeed / 60F;
+        currentTorque = maxTorque;
+    }
+
+    public void clearObstacles()
+    {
+        foreach(var o in obstacles)
+        {
+            if (o == obstacleInHazardArea)
+            {
+                o.SetActive(false);
+            }
+        }
+    }
+
+    public void OnHazardEnter(bool red, Collider other)  // red: true, yellow: false
+    {
+        foreach (var obj in obstacles) {
+            if (obj == other.gameObject)
+            {
+                obstacleInHazardArea = obj;
+            }
+        }
+
         if (red)
         {
             maxTorque = 0F;

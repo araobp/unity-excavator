@@ -145,11 +145,11 @@ public class TotalStationController : MonoBehaviour
         Vector3 leg3Pos = legLock3.localPosition;
         legLock3.localPosition = new Vector3(leg3Pos.x, leg3Pos.y, leg3Pos.z - legExtension);
 
-        GameObject.FindWithTag("prism1").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(0); });
-        GameObject.FindWithTag("prism2").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(1); });
-        GameObject.FindWithTag("prism3").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(2); });
-        GameObject.FindWithTag("prism4").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(3); });
-        GameObject.FindWithTag("prism5").GetComponent<Button>().onClick.AddListener(delegate { onClickListener(4); });
+        GameObject.FindWithTag("prism1").GetComponent<Button>().onClick.AddListener(delegate { OnClickListener(0); });
+        GameObject.FindWithTag("prism2").GetComponent<Button>().onClick.AddListener(delegate { OnClickListener(1); });
+        GameObject.FindWithTag("prism3").GetComponent<Button>().onClick.AddListener(delegate { OnClickListener(2); });
+        GameObject.FindWithTag("prism4").GetComponent<Button>().onClick.AddListener(delegate { OnClickListener(3); });
+        GameObject.FindWithTag("prism5").GetComponent<Button>().onClick.AddListener(delegate { OnClickListener(4); });
     
         textHorizontalAngle = GameObject.FindWithTag("horizontalAngle").GetComponent<Text>();
         textVerticalAngle = GameObject.FindWithTag("verticalAngle").GetComponent<Text>();
@@ -159,7 +159,7 @@ public class TotalStationController : MonoBehaviour
         textFov = GameObject.FindWithTag("fov").GetComponent<Text>();
     }
 
-    void onClickListener(int idx)
+    void OnClickListener(int idx)
     {
         OrientTelescope(prisms[idx]);
     }

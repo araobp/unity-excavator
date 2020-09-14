@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 public class Depth : MonoBehaviour
 {
-    public Material mat;
+    public Material depthShader;
 
     // Capture an image from a camera
     public void Capture()
@@ -40,7 +40,7 @@ public class Depth : MonoBehaviour
 
     public void OnRenderImage(RenderTexture source, RenderTexture dest)
     {
-        Graphics.Blit(source, dest, mat);
+        Graphics.Blit(source, dest, depthShader);
     }
 
     public void Update()

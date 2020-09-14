@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HazardArea: MonoBehaviour
+public class HazardArea : MonoBehaviour
 {
     AgvController controller;
     bool red;
@@ -15,11 +15,8 @@ public class HazardArea: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "vBeaconEnable")
-        {
-            GameObject parent = transform.parent.gameObject;
-            AgvController controller = parent.GetComponent<AgvController>();
-            this.controller.OnHazardEnter(red);
-        }
+        GameObject parent = transform.parent.gameObject;
+        AgvController controller = parent.GetComponent<AgvController>();
+        this.controller.OnHazardEnter(red, other);
     }
 }

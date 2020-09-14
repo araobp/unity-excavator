@@ -7,6 +7,12 @@ TagManager:
   - Fire
   - raycastLocation
   - raycastDistance
+  - buttonPanLeft
+  - buttonPanRight
+  - buttonTiltUp
+  - buttonTiltDown
+  - buttonZoomIn
+  - buttonZoomOut
   layers:
   - Default
   - TransparentFX

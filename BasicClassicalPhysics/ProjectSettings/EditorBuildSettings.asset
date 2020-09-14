@@ -5,19 +5,40 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 91314be121f0f2f4ebe7c128847cb3ca
+  - enabled: 1
     path: Assets/Scenes/Pendulum.unity
     guid: 6bb940375a6a7404db2a646e25a2efb1
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/SoloarSystem.unity
     guid: 56eb2498470e8df488b7a6526ca8dcd0
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Excavator.unity
     guid: bdb9e68b5d05dfd47b565ea42c80b54d
   - enabled: 1
     path: Assets/Scenes/Brake.unity
     guid: 2a03e778ac27eb644aa836cf565a06cc
+  - enabled: 1
+    path: Assets/Scenes/FreeFall.unity
+    guid: c4a67970608b9d142b8323bd0cbf4ecb
+  - enabled: 1
+    path: Assets/Scenes/Friction.unity
+    guid: b483d3ebac9d2b74f9d3e5134fcf8a31
+  - enabled: 1
+    path: Assets/Scenes/Slope.unity
+    guid: 00049f11c681f7a4984af1382d54d8b4
+  - enabled: 1
+    path: Assets/Scenes/Vector.unity
+    guid: 226b48708efc7f54f9b4de48e98cd3cb
+  - enabled: 1
+    path: Assets/Scenes/Torque.unity
+    guid: a0dc03faeba8e094abee397a11858dd9
+  - enabled: 1
+    path: Assets/Scenes/Collision.unity
+    guid: f2ca24e936e4683459f1ab7e3234071d
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
