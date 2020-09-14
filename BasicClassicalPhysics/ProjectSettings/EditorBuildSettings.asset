@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Pendulum.unity
     guid: 6bb940375a6a7404db2a646e25a2efb1
   - enabled: 1
-    path: Assets/Scenes/SoloarSystem.unity
-    guid: 56eb2498470e8df488b7a6526ca8dcd0
-  - enabled: 1
     path: Assets/Scenes/Excavator.unity
     guid: bdb9e68b5d05dfd47b565ea42c80b54d
   - enabled: 1
@@ -38,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Collision.unity
     guid: f2ca24e936e4683459f1ab7e3234071d
+  - enabled: 1
+    path: Assets/Scenes/SolarSystem.unity
+    guid: 2b6c4fe188d4ccb4d8da7797fddc6b8c
+  - enabled: 0
+    path: 
+    guid: 56eb2498470e8df488b7a6526ca8dcd0
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

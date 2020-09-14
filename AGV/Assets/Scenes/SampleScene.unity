@@ -365,7 +365,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.05
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -4927,7 +4927,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 123495722}
-  m_PlaneDistance: 0.1
+  m_PlaneDistance: 0.03
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0

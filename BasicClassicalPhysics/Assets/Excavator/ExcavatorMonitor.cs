@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ExcavatorMonitor : MonoBehaviour
@@ -39,6 +40,12 @@ public class ExcavatorMonitor : MonoBehaviour
 
         slope2 = GameObject.Find("Joint2").transform;
 
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            }
+        );
     }
 
     // Update is called once per frame
@@ -67,5 +74,10 @@ public class ExcavatorMonitor : MonoBehaviour
         // Draw vectors
         arrow.OrientVector(rb.transform, force/10000F);
         arrowGravityTangent.OrientVector(rb.transform, gravityTangent / 10000F);
+    }
+
+    void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

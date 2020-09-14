@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Controller : MonoBehaviour
@@ -44,6 +45,18 @@ public class Controller : MonoBehaviour
         vehicles.Add(vehicle90);
         vehicles.Add(vehicle100);
 
+        GameObject.Find("ButtonStart").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                StartSimulation();
+            });
+
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            });
+
     }
 
     // Update is called once per frame
@@ -71,7 +84,7 @@ public class Controller : MonoBehaviour
         }
     }
 
-    public void onClick()
+    void StartSimulation()
     {
         float speed = 10F;
 
@@ -82,5 +95,10 @@ public class Controller : MonoBehaviour
         }
 
         started = true;
+    }
+
+    void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

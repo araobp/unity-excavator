@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class DriveController : MonoBehaviour
 {
@@ -41,6 +43,12 @@ public class DriveController : MonoBehaviour
         vY = rb.velocity.y;
         vZ = rb.velocity.z;
 
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            }
+        );
     }
 
     // Update is called once per frame
@@ -66,5 +74,10 @@ public class DriveController : MonoBehaviour
     {
         Debug.Log(other.name);
         cl.material = phyMatBrake;
+    }
+
+    public void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }
