@@ -37,22 +37,22 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 ### Vehicle operation
 
 - [Excavator manual/autonomous operation](./doc/Excavator.md)
-- [Autonomous guided vehicle](./doc/AGV.md)
+- **[Autonomous guided vehicle](./doc/AGV.md)**
 
 ### Classical Physics with Rigidbody on Unity
 
-- [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md)
+- **[Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md)**
 
 ### Working with surveying data
 
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - **[Total Station simulation](./doc/TotalStation.md)**
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- [PTZ camera and point cloud](./doc/PTZCamera.md)
+- **[PTZ camera and point cloud](./doc/PTZCamera.md)**
 
 ### Camera/image
 
-- [Depth camera simulation](./doc/DepthCamera.md)
+- **[Depth camera simulation](./doc/DepthCamera.md)**
 
 ### AI
 
