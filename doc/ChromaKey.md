@@ -1,6 +1,6 @@
 # Chroma key
 
-Note: This screen shot is not a good example, because the green back used for this shot is a temporary one (a cutting board). I should have purchased a green back from Amazon.
+Note: This screen shot is not a good example, because the green back used for this shot is a temporary one (a green cutting board). I should have purchased a green back from Amazon.
 
 ![screenshot](./chromakey.png)
 
