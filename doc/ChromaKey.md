@@ -6,4 +6,4 @@ Note: This screen shot is not a good example, because the green back used for th
 
 ## Code 
 
-=> [code](../ChormaKey)
+=> [code](../ChromaKey)
