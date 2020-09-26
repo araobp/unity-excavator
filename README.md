@@ -53,7 +53,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 ### Camera/image
 
 - **[Depth camera simulation](./doc/DepthCamera.md)**
-- [Chroma key](./doc/ChromaKey.md)**
+- [Chroma key](./doc/ChromaKey.md)
 
 ### AI
 
