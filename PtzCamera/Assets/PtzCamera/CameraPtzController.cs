@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CameraPtzController : MonoBehaviour, IPointerDownHandler
+public class CameraPtzController : MonoBehaviour
 {
 
     enum Direction
@@ -145,8 +145,4 @@ public class CameraPtzController : MonoBehaviour, IPointerDownHandler
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Button button = eventData.
-    }
 }
