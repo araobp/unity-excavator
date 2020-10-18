@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Monitor : MonoBehaviour
@@ -39,6 +40,13 @@ public class Monitor : MonoBehaviour
 
         slope2 = GameObject.Find("Joint2").transform;
 
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            }
+        );
+
     }
 
     // Update is called once per frame
@@ -67,5 +75,10 @@ public class Monitor : MonoBehaviour
         // Draw vectors
         arrow.OrientVector(rb.transform, force/1000F);
         arrowGravityTangent.OrientVector(rb.transform, gravityTangent / 1000F);
+    }
+
+    private void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

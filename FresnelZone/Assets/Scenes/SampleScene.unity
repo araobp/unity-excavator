@@ -825,7 +825,7 @@ MonoBehaviour:
   antennaTerminal1: {fileID: 2067817110}
   antennaTerminal2: {fileID: 1305582104}
   antennaTerminal3: {fileID: 97207445}
-  renderLine: 0
+  renderLine: 1
 --- !u!4 &1339140719
 Transform:
   m_ObjectHideFlags: 0

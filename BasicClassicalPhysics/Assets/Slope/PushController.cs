@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PushController : MonoBehaviour
@@ -42,6 +43,13 @@ public class PushController : MonoBehaviour
         arrowGravityTangent = new Arrow(Arrow.Colors.BLACK);
         arrowGravityTangent2 = new Arrow(Arrow.Colors.BLACK);
 
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            }
+        );
+
     }
 
     // Update is called once per frame
@@ -64,5 +72,10 @@ public class PushController : MonoBehaviour
         arrow2.OrientVector(rb2.transform, force2/1000F);
         arrowGravityTangent.OrientVector(rb.transform, gravityTangent / 1000F);
         arrowGravityTangent2.OrientVector(rb2.transform, gravityTangent2 / 1000F);
+    }
+
+    private void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

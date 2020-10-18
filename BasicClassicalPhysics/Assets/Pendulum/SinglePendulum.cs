@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SinglePendulum : MonoBehaviour
@@ -34,6 +35,13 @@ public class SinglePendulum : MonoBehaviour
         textLength.text = $"Length: {Mathf.Round(length * 10) / 10F} (m)";
 
         arrow = new Arrow(Arrow.Colors.RED, 5F, 3F);
+
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            }
+        );
 
         while (true)
         {
@@ -70,5 +78,10 @@ public class SinglePendulum : MonoBehaviour
         }
 
         prevSpeed = speed;
+    }
+
+    private void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

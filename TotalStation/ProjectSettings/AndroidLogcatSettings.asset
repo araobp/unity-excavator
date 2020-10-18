@@ -1,0 +1,149 @@
+{
+    "m_SelectedDeviceId": "98151FFAZ000L8",
+    "m_SelectedPackage": {
+        "deviceId": "98151FFAZ000L8",
+        "name": "jp.araobp.totalstation",
+        "processId": 31660,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 18433,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 19121,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 20755,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 21497,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 22467,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 24217,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 24697,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 25276,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 26262,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 27028,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 28959,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 29851,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 30558,
+            "exited": false
+        },
+        {
+            "deviceId": "98151FFAZ000L8",
+            "name": "jp.araobp.totalstation",
+            "processId": 31660,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 255.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 1,
+        "Behavior": 1
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}

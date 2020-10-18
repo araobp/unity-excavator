@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FresnelZone : MonoBehaviour
+public class FresnelZone
 {
     private GameObject gameObject;
     private float frequencyInMHz;
@@ -34,7 +34,7 @@ public class FresnelZone : MonoBehaviour
 
         fresnelZone = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         fresnelZone.transform.position = antenna1.transform.position;
-        Destroy(fresnelZone.GetComponent<SphereCollider>());
+        GameObject.Destroy(fresnelZone.GetComponent<SphereCollider>());
 
         Material mat;
         if (access)
@@ -80,7 +80,7 @@ public class FresnelZone : MonoBehaviour
 public class FresnelZoneGenerator : MonoBehaviour
 {
 
-    public float frequencyInMHz = 2400F;
+    public float frequencyInMHz = 2400F;  // 2.4GHz
     public GameObject antenna;
     public GameObject antennaRepeater;
     public GameObject antennaTerminal1;

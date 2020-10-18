@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class TorqueControl : MonoBehaviour
@@ -21,6 +22,12 @@ public class TorqueControl : MonoBehaviour
 
         // [Reference] http://hyperphysics.phy-astr.gsu.edu/hbase/mi.html#mi
         momentOfInertia = 2F / 5F * rb.mass * Mathf.Pow(rb.transform.localScale.x / 2F, 2F);
+
+        GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
+            delegate
+            {
+                GoHome();
+            });
     }
 
     bool stopPowering = false;
@@ -45,5 +52,10 @@ public class TorqueControl : MonoBehaviour
                 rb.AddTorque(transform.up * force);
             }
         }
+    }
+
+    private void GoHome()
+    {
+        SceneManager.LoadScene("Scenes/Menu");
     }
 }

@@ -98,9 +98,9 @@ public class ExcavatorController : MonoBehaviour
 {
     public float maxSpeed = 3F;
     public float creepSpeed = 1F;
-    public float initialAccel = 30F;
+    public float initialAccel = 15F;
     public float deltaAccel = 0.5F;
-    public float maxAccel = 55F;
+    public float maxAccel = 45F;
     public float deltaDirection = 2F;
 
     public bool enableRearCameras = false;

@@ -1,69 +1,190 @@
 fileFormatVersion: 2
 guid: c65c8fd977b2e8f49ae3dfc476245c28
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: Armature.001
-    100004: Bone
-    100006: Cube
-    100008: Cube.001
-    100010: Cylinder
-    100012: Cylinder.001
-    100014: Cylinder.012
-    100016: Cylinder.016
-    100018: Cylinder.020
-    100020: Prism
-    100022: //RootNode
-    100024: VerticalAxis
-    100026: VerticalAxis_end
-    400000: Armature
-    400002: Armature.001
-    400004: Bone
-    400006: Cube
-    400008: Cube.001
-    400010: Cylinder
-    400012: Cylinder.001
-    400014: Cylinder.012
-    400016: Cylinder.016
-    400018: Cylinder.020
-    400020: Prism
-    400022: //RootNode
-    400024: VerticalAxis
-    400026: VerticalAxis_end
-    2100000: PoleRed
-    2100002: PoleWhite
-    2100004: Metal
-    2100006: YellowButton
-    2100008: Dial
-    2300000: Cube
-    2300002: Cube.001
-    2300004: Cylinder
-    2300006: Cylinder.001
-    2300008: Cylinder.012
-    2300010: Cylinder.016
-    2300012: Cylinder.020
-    2300014: Prism
-    3300000: Cube
-    3300002: Cube.001
-    3300004: Cylinder
-    3300006: Cylinder.001
-    3300008: Cylinder.012
-    3300010: Cylinder.016
-    3300012: Cylinder.020
-    3300014: Prism
-    4300000: Cylinder.012
-    4300002: Cylinder
-    4300004: Cube.001
-    4300006: Cylinder.001
-    4300008: Cylinder.016
-    4300010: Cylinder.020
-    4300012: Prism
-    4300014: Cube
-    2186277476908879412: ImportLogs
-  externalObjects: {}
+  serializedVersion: 19301
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: Armature.001
+  - first:
+      1: 100004
+    second: Bone
+  - first:
+      1: 100006
+    second: Cube
+  - first:
+      1: 100008
+    second: Cube.001
+  - first:
+      1: 100010
+    second: Cylinder
+  - first:
+      1: 100012
+    second: Cylinder.001
+  - first:
+      1: 100014
+    second: Cylinder.012
+  - first:
+      1: 100016
+    second: Cylinder.016
+  - first:
+      1: 100018
+    second: Cylinder.020
+  - first:
+      1: 100020
+    second: Prism
+  - first:
+      1: 100022
+    second: //RootNode
+  - first:
+      1: 100024
+    second: VerticalAxis
+  - first:
+      1: 100026
+    second: VerticalAxis_end
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: Armature.001
+  - first:
+      4: 400004
+    second: Bone
+  - first:
+      4: 400006
+    second: Cube
+  - first:
+      4: 400008
+    second: Cube.001
+  - first:
+      4: 400010
+    second: Cylinder
+  - first:
+      4: 400012
+    second: Cylinder.001
+  - first:
+      4: 400014
+    second: Cylinder.012
+  - first:
+      4: 400016
+    second: Cylinder.016
+  - first:
+      4: 400018
+    second: Cylinder.020
+  - first:
+      4: 400020
+    second: Prism
+  - first:
+      4: 400022
+    second: //RootNode
+  - first:
+      4: 400024
+    second: VerticalAxis
+  - first:
+      4: 400026
+    second: VerticalAxis_end
+  - first:
+      21: 2100000
+    second: PoleRed
+  - first:
+      21: 2100002
+    second: PoleWhite
+  - first:
+      21: 2100004
+    second: Metal
+  - first:
+      21: 2100006
+    second: YellowButton
+  - first:
+      21: 2100008
+    second: Dial
+  - first:
+      23: 2300000
+    second: Cube
+  - first:
+      23: 2300002
+    second: Cube.001
+  - first:
+      23: 2300004
+    second: Cylinder
+  - first:
+      23: 2300006
+    second: Cylinder.001
+  - first:
+      23: 2300008
+    second: Cylinder.012
+  - first:
+      23: 2300010
+    second: Cylinder.016
+  - first:
+      23: 2300012
+    second: Cylinder.020
+  - first:
+      23: 2300014
+    second: Prism
+  - first:
+      33: 3300000
+    second: Cube
+  - first:
+      33: 3300002
+    second: Cube.001
+  - first:
+      33: 3300004
+    second: Cylinder
+  - first:
+      33: 3300006
+    second: Cylinder.001
+  - first:
+      33: 3300008
+    second: Cylinder.012
+  - first:
+      33: 3300010
+    second: Cylinder.016
+  - first:
+      33: 3300012
+    second: Cylinder.020
+  - first:
+      33: 3300014
+    second: Prism
+  - first:
+      43: 4300000
+    second: Cylinder.012
+  - first:
+      43: 4300002
+    second: Cylinder
+  - first:
+      43: 4300004
+    second: Cube.001
+  - first:
+      43: 4300006
+    second: Cylinder.001
+  - first:
+      43: 4300008
+    second: Cylinder.016
+  - first:
+      43: 4300010
+    second: Cylinder.020
+  - first:
+      43: 4300012
+    second: Prism
+  - first:
+      43: 4300014
+    second: Cube
+  - first:
+      41386430: 2186277476908879412
+    second: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 66aab1044b4e1534a9758858a82f2c38, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -96,25 +217,28 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -123,10 +247,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -136,13 +260,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 0
   humanoidOversampling: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
