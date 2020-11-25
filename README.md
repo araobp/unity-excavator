@@ -66,4 +66,4 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### UI
 
-- [Gamepad Logcool F310](./doc/GamepadF310.md)
+- [Gamepad Logicool F310](./doc/GamepadF310.md)
