@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 096be19f838addd45821efc82508c187, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.43822175, g: 0.48624384, b: 0.5665227, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -224,11 +224,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12adbdaacbaa7a469af2239ab672f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
+  maxSpeed: 1
   creepSpeed: 1
-  initialAccel: 15
+  initialAccel: 30
   deltaAccel: 0.5
-  maxAccel: 50
+  maxAccel: 45
   deltaDirection: 2
   enableRearCameras: 0
   useHook: 0
@@ -689,6 +689,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7145992303957660930, guid: 349feeae5b63a69408484dd48d4b1af2,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -7145992303957660930, guid: 349feeae5b63a69408484dd48d4b1af2,
+        type: 3}
+      propertyPath: field of view
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 349feeae5b63a69408484dd48d4b1af2,
         type: 3}

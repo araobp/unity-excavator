@@ -223,7 +223,7 @@ public class ExcavatorController : MonoBehaviour
     private LeverAngles leftTravelLeverAngles = new LeverAngles(0F, 0F);
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         excavator.OrientHook();  // TODO: add hook operations
 
