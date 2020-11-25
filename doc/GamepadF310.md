@@ -2,7 +2,7 @@
 
 ## Code
 
-Code ==> [code](https://github.com/araobp/unity-excavator/tree/master/GamepadF310)
+[=> Code](https://github.com/araobp/unity-excavator/tree/master/GamepadF310)
 
 Open Input Manager on the Unity editor to see the configurations for joystick axes:
 
