@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f966c2c0e29a3174c88c79d23fa67693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depthShader: {fileID: 0}
+  depthShader: {fileID: 2100000, guid: 0bbe7df2da367c448841237f9798f8e3, type: 2}
 --- !u!20 &1019712578
 Camera:
   m_ObjectHideFlags: 0

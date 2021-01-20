@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class Depth : MonoBehaviour
 {
     public Material depthShader;
 
     // Capture an image from a camera
-    public void Capture()
+    void Capture()
     {
         Camera camera = GetComponent<Camera>();
         RenderTexture activeRenderTexture = RenderTexture.active;
@@ -33,17 +30,17 @@ public class Depth : MonoBehaviour
         }
     }
 
-    public void Start()
+    void Start()
     {
         GetComponent<Camera>().depthTextureMode |= DepthTextureMode.Depth;
     }
 
-    public void OnRenderImage(RenderTexture source, RenderTexture dest)
+    void OnRenderImage(RenderTexture source, RenderTexture dest)
     {
         Graphics.Blit(source, dest, depthShader);
     }
 
-    public void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.C)) Capture();
     }
