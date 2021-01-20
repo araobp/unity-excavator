@@ -6,4 +6,6 @@ This project tests [Unity Render Streaming](https://docs.unity3d.com/Packages/co
 
 ## Code
 
+Requirements: "Standard Assets" from Unity
+
 => [code](../RenderStreaming)
