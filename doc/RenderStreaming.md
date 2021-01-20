@@ -9,3 +9,9 @@ This project tests [Unity Render Streaming](https://docs.unity3d.com/Packages/co
 Requirements: "Standard Assets" from Unity
 
 => [code](../RenderStreaming)
+
+## HTML5 dump
+
+Two video elements are in the HTML5 code:
+
+<img src="/doc/render_streaming_html5.jpg" width=800>
