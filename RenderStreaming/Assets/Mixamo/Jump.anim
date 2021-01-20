@@ -40355,12 +40355,12 @@ AnimationClip:
     m_LoopTime: 1
     m_LoopBlend: 1
     m_LoopBlendOrientation: 0
-    m_LoopBlendPositionY: 0
+    m_LoopBlendPositionY: 1
     m_LoopBlendPositionXZ: 0
     m_KeepOriginalOrientation: 0
-    m_KeepOriginalPositionY: 1
+    m_KeepOriginalPositionY: 0
     m_KeepOriginalPositionXZ: 0
-    m_HeightFromFeet: 0
+    m_HeightFromFeet: 1
     m_Mirror: 0
   m_EditorCurves: []
   m_EulerEditorCurves: []

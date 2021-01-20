@@ -269,7 +269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83609151}
   m_LocalRotation: {x: -0.5780024, y: 0.012803689, z: 0.0034625758, w: -0.81592727}
-  m_LocalPosition: {x: 0.02, y: 2.97, z: 0.73}
+  m_LocalPosition: {x: -0.22, y: 3.58, z: 0.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -541,7 +541,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &683131290
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1721,6 +1721,42 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1501782094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0886de153eb985d45834c3593751ac64,
+    type: 3}
+  m_PrefabInstance: {fileID: 1935708788}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1501782097
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501782094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25533
+  m_Height: 1.96702
+  m_Direction: 1
+  m_Center: {x: -0.0054517393, y: 1.0326524, z: -4.2003026e-11}
+--- !u!54 &1501782098
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501782094}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1599603498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,9 +1889,9 @@ MonoBehaviour:
     click:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 705507993}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1831746483}
+          m_MethodName: Jump
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1868,9 +1904,9 @@ MonoBehaviour:
     click:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 705507993}
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1831746483}
+          m_MethodName: Turn
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1883,8 +1919,8 @@ MonoBehaviour:
     click:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 683131290}
-          m_MethodName: Play
+        - m_Target: {fileID: 1831746483}
+          m_MethodName: Dance
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1907,6 +1943,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1831746482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1831746484}
+  - component: {fileID: 1831746483}
+  m_Layer: 0
+  m_Name: SceneDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1831746483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831746482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 013013b7d09d4704e80cce29b8c96e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1501782094}
+--- !u!4 &1831746484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831746482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3541426, y: 1.137546, z: 1.4704018}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1935708788
 PrefabInstance:
