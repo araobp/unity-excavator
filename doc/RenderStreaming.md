@@ -43,3 +43,12 @@ https://github.com/Unity-Technologies/UnityRenderStreaming/blob/release/2.2.2/We
 I have confirmed this code works with my Logicool F310
 
 https://github.com/Unity-Technologies/UnityRenderStreaming/blob/release/2.2.2/WebApp/public/scripts/gamepadEvents.js
+
+### Security vulnerabilities alert from GitHub
+
+WebApp (copied from https://github.com/Unity-Technologies/UnityRenderStreaming/tree/release/2.2.2/WebApp) seems to have security vulnerabilities:
+
+```
+node-notifier  moderate severity
+minimist low severity
+```
