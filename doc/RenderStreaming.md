@@ -16,6 +16,14 @@ Two video elements are in the HTML5 code:
 
 <img src="/doc/render_streaming_html5.jpg" width=800>
 
+## Settings on RenderStreaming
+
+Since my PC is not equipped with NVIDIA GPU, I have uncheked "Hardware Encode Support" in the cyan frame.
+
+Button events from the browser can be distributed to my custom functions by modifying the settings in the yellow frame.
+
+<img src="/doc/render_streaming_settings.jpg" width=800>
+
 ## Code reading
 
 ### JavaScript part of <div id="player"></div>
