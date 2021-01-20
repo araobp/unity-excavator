@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: 8de9d4396eda83a4a9dac3fc8976fd44
-=======
-guid: c1d4db3fc7019534a8b73e92c5f90d48
->>>>>>> 3931379a3cad6154a4d2a9c8cd5f74ae0bbeb0e0
+guid: bb393e1042f36fd42b2d44b0744a0a82
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -25,18 +21,18 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
-  streamingMipmaps: 1
+  streamingMipmaps: 0
   streamingMipmapsPriority: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
-  cubemapConvolution: 0
-  seamlessCubemap: 0
+  cubemapConvolution: 1
+  seamlessCubemap: 1
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
-    aniso: 3
+    filterMode: 2
+    aniso: 0
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -52,11 +48,11 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
+  alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 6
-  textureShape: 1
+  textureType: 0
+  textureShape: 2
   singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -68,12 +64,8 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-<<<<<<< HEAD
-    textureCompression: 2
-=======
     textureCompression: 1
->>>>>>> 3931379a3cad6154a4d2a9c8cd5f74ae0bbeb0e0
-    compressionQuality: 50
+    compressionQuality: 100
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
