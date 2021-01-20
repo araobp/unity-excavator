@@ -15,3 +15,19 @@ Requirements: "Standard Assets" from Unity
 Two video elements are in the HTML5 code:
 
 <img src="/doc/render_streaming_html5.jpg" width=800>
+
+## Code reading
+
+### Video player
+
+https://github.com/Unity-Technologies/UnityRenderStreaming/blob/release/2.2.2/WebApp/public/scripts/video-player.js
+
+### Handling input events
+
+https://github.com/Unity-Technologies/UnityRenderStreaming/blob/release/2.2.2/WebApp/public/scripts/register-events.js
+
+### Handling gamepad events
+
+I have confirmed this code works with my Logicool F310
+
+https://github.com/Unity-Technologies/UnityRenderStreaming/blob/release/2.2.2/WebApp/public/scripts/gamepadEvents.js
