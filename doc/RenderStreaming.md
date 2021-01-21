@@ -6,7 +6,9 @@ This project tests [Unity Render Streaming](https://docs.unity3d.com/Packages/co
 
 ## Code
 
-Requirements: "Standard Assets" from Unity
+Requirements:
+- "Standard Assets" from Unity
+- Signalling server: https://github.com/araobp/signalling-server
 
 => [code](../RenderStreaming)
 
