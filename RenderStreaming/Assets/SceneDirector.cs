@@ -28,4 +28,8 @@ public class SceneDirector : MonoBehaviour
         animator.SetTrigger("Dance");
     }
 
+    public void Kick()
+    {
+        animator.SetTrigger("Kick");
+    }
 }
