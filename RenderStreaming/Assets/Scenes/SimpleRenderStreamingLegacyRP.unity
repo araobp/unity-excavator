@@ -1965,7 +1965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 045786cf504bd7347842d6948241cbd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  urlSignaling: https://192.168.57.3:9001
+  urlSignaling: http://192.168.57.3:9001
   signalingType: Unity.RenderStreaming.Signaling.HttpSignaling
   iceServers:
   - credential: 
