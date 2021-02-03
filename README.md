@@ -6,7 +6,9 @@ This project is an achivement of my self-study on digital twin in my spare time 
 
 Note: I am working on Windows10 for this creation. I have used Blender to create the 3D models in this project.
 
-## Demo videos
+## Demo
+
+### YouTube
 
 - [Excavator](https://www.youtube.com/watch?v=0X4c5gxU6-A)
 - [Pendulum](https://www.youtube.com/watch?v=2AjkpGLnm74)
@@ -14,6 +16,10 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Solar system](https://www.youtube.com/watch?v=2z0K-X5a5Ss)
 - [Total station](https://www.youtube.com/watch?v=Is45dRC3fNM)
 - [Render Streaming](https://youtu.be/CTrM93eaq1s)
+
+### WebGL-version
+
+- [Total station](https://araobp.github.io/unity-excavator/www/total_station/)
 
 ## Requirements
 
