@@ -2,191 +2,42 @@ fileFormatVersion: 2
 guid: c65c8fd977b2e8f49ae3dfc476245c28
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      1: 100000
-    second: Armature
-  - first:
-      1: 100002
-    second: Armature.001
-  - first:
-      1: 100004
-    second: Bone
-  - first:
-      1: 100006
-    second: Cube
-  - first:
-      1: 100008
-    second: Cube.001
-  - first:
-      1: 100010
-    second: Cylinder
-  - first:
-      1: 100012
-    second: Cylinder.001
-  - first:
-      1: 100014
-    second: Cylinder.012
-  - first:
-      1: 100016
-    second: Cylinder.016
-  - first:
-      1: 100018
-    second: Cylinder.020
-  - first:
-      1: 100020
-    second: Prism
-  - first:
-      1: 100022
-    second: //RootNode
-  - first:
-      1: 100024
-    second: VerticalAxis
-  - first:
-      1: 100026
-    second: VerticalAxis_end
-  - first:
-      4: 400000
-    second: Armature
-  - first:
-      4: 400002
-    second: Armature.001
-  - first:
-      4: 400004
-    second: Bone
-  - first:
-      4: 400006
-    second: Cube
-  - first:
-      4: 400008
-    second: Cube.001
-  - first:
-      4: 400010
-    second: Cylinder
-  - first:
-      4: 400012
-    second: Cylinder.001
-  - first:
-      4: 400014
-    second: Cylinder.012
-  - first:
-      4: 400016
-    second: Cylinder.016
-  - first:
-      4: 400018
-    second: Cylinder.020
-  - first:
-      4: 400020
-    second: Prism
-  - first:
-      4: 400022
-    second: //RootNode
-  - first:
-      4: 400024
-    second: VerticalAxis
-  - first:
-      4: 400026
-    second: VerticalAxis_end
-  - first:
-      21: 2100000
-    second: PoleRed
-  - first:
-      21: 2100002
-    second: PoleWhite
-  - first:
-      21: 2100004
-    second: Metal
-  - first:
-      21: 2100006
-    second: YellowButton
-  - first:
-      21: 2100008
-    second: Dial
-  - first:
-      23: 2300000
-    second: Cube
-  - first:
-      23: 2300002
-    second: Cube.001
-  - first:
-      23: 2300004
-    second: Cylinder
-  - first:
-      23: 2300006
-    second: Cylinder.001
-  - first:
-      23: 2300008
-    second: Cylinder.012
-  - first:
-      23: 2300010
-    second: Cylinder.016
-  - first:
-      23: 2300012
-    second: Cylinder.020
-  - first:
-      23: 2300014
-    second: Prism
-  - first:
-      33: 3300000
-    second: Cube
-  - first:
-      33: 3300002
-    second: Cube.001
-  - first:
-      33: 3300004
-    second: Cylinder
-  - first:
-      33: 3300006
-    second: Cylinder.001
-  - first:
-      33: 3300008
-    second: Cylinder.012
-  - first:
-      33: 3300010
-    second: Cylinder.016
-  - first:
-      33: 3300012
-    second: Cylinder.020
-  - first:
-      33: 3300014
-    second: Prism
-  - first:
-      43: 4300000
-    second: Cylinder.012
-  - first:
-      43: 4300002
-    second: Cylinder
-  - first:
-      43: 4300004
-    second: Cube.001
-  - first:
-      43: 4300006
-    second: Cylinder.001
-  - first:
-      43: 4300008
-    second: Cylinder.016
-  - first:
-      43: 4300010
-    second: Cylinder.020
-  - first:
-      43: 4300012
-    second: Prism
-  - first:
-      43: 4300014
-    second: Cube
-  - first:
-      41386430: 2186277476908879412
-    second: ImportLogs
+  internalIDToNameTable: []
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dial
+    second: {fileID: 2100000, guid: 71e429f6b8806b547b949023bb8bf2ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lens
+    second: {fileID: 2100000, guid: 999c9820b30048a4fb79171950e66c09, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: 2100000, guid: 66aab1044b4e1534a9758858a82f2c38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PoleRed
+    second: {fileID: 2100000, guid: f0e6b30df9caa934a8a9a14426fe84f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PoleWhite
+    second: {fileID: 2100000, guid: d271c45abd96df544b5bbe3e25973972, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: YellowButton
+    second: {fileID: 2100000, guid: ce1821890fa5f5a4dadfbc0a34faff0c, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -210,7 +61,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -222,7 +73,7 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    fileIdsGeneration: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -267,7 +118,7 @@ ModelImporter:
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
   additionalBone: 0
