@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "BasicClassicalPhysics",
+"productVersion": "0.1",
+"dataUrl": "basic_classical_physics.data.unityweb",
+"wasmCodeUrl": "basic_classical_physics.wasm.code.unityweb",
+"wasmFrameworkUrl": "basic_classical_physics.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.18f1"
+}
