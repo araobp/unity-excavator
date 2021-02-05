@@ -71,7 +71,7 @@ public class ExcavatorController : MonoBehaviour
         engineRightCylinder = transform.Find(RUNNING_AXIS + "/Bone.005/EngineRightCylinder");
         engineLeftCylinder = transform.Find(RUNNING_AXIS + "/Bone.006/EngineLeftCylinder");
         engineLeftCylinderTarget = transform.Find(ENGINE_AXIS + "/EngineLeftCylinderTarget");
-        engineRightCylinderTarget = transform.Find(ENGINE_AXIS + "EngineRightCylinderTarget");
+        engineRightCylinderTarget = transform.Find(ENGINE_AXIS + "/EngineRightCylinderTarget");
 
         armLeftCylinderTarget = transform.Find(RUNNING_AXIS + "/ArmLeftCylinderTarget");
         armRightCylinderTarget = transform.Find(RUNNING_AXIS + "/ArmRightCylinderTarget");

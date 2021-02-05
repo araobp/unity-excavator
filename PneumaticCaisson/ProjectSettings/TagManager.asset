@@ -11,8 +11,6 @@ TagManager:
   - ArmLeftCylinder
   - EngineRightCylinder
   - EngineLeftCylinder
-  - fresnelDistance
-  - fresnelRadius
   layers:
   - Default
   - TransparentFX
