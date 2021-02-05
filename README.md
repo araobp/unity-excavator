@@ -4,9 +4,12 @@ This project is an achivement of my self-study on digital twin in my spare time 
 
 ![scene](./doc/scene.png)
 
-Note: I am working on Windows10 for this creation. I have used Blender to create the 3D models in this project.
-
 ## Demo
+
+### WebGL-version
+
+- [Basic classical Physics](https://araobp.github.io/unity-excavator/www/basic_classical_physics/)
+- [Total station](https://araobp.github.io/unity-excavator/www/total_station/)
 
 ### YouTube
 
@@ -16,11 +19,6 @@ Note: I am working on Windows10 for this creation. I have used Blender to create
 - [Solar system](https://www.youtube.com/watch?v=2z0K-X5a5Ss)
 - [Total station](https://www.youtube.com/watch?v=Is45dRC3fNM)
 - [Render Streaming](https://youtu.be/CTrM93eaq1s)
-
-### WebGL-version
-
-- [Basic classical Physics](https://araobp.github.io/unity-excavator/www/basic_classical_physics/)
-- [Total station](https://araobp.github.io/unity-excavator/www/total_station/)
 
 ## Requirements
 
