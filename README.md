@@ -9,6 +9,7 @@ This project is an achivement of my self-study on digital twin in my spare time 
 ### WebGL-version
 
 - [Basic classical Physics](https://araobp.github.io/unity-excavator/www/basic_classical_physics/)
+- [Pneumatic Caisson](https://araobp.github.io/unity-excavator/www/pneumatic_caisson/)
 - [Total station](https://araobp.github.io/unity-excavator/www/total_station/)
 
 ### YouTube
@@ -43,7 +44,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 ### Vehicle operation
 
 - [Excavator manual/autonomous operation](./doc/Excavator.md)
-- Pneumatic Caisson (work in progress)
+- [Pneumatic Caisson](./doc/PneumaticCaisson.md)
 - **[Autonomous guided vehicle](./doc/AGV.md)**
 
 ### Classical Physics with Rigidbody on Unity
