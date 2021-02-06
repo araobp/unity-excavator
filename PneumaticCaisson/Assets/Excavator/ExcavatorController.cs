@@ -85,35 +85,38 @@ public class ExcavatorController : MonoBehaviour
         float rotation = ROTATION_SPEED * Time.deltaTime;
         float running = RUNNING_SPEED * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKey(KeyCode.A))
         {
             runningAxis.Rotate(new Vector3(0, rotation, 0));
         }
-        else if (Input.GetKey(KeyCode.J))
+        else if (Input.GetKey(KeyCode.D))
         {
             runningAxis.Rotate(new Vector3(0, -rotation, 0));
         }
-        else if (Input.GetKey(KeyCode.U))
+
+        if (Input.GetKey(KeyCode.W))
         {
             var pos = new Vector3(-running * 2F, 0, 0);
             transform.Translate(pos);
         }
-        else if (Input.GetKey(KeyCode.N))
+        else if (Input.GetKey(KeyCode.S))
         {
             var pos = new Vector3(running * 2F, 0, 0);
             transform.Translate(pos);
         }
-        else if (Input.GetKey(KeyCode.Y))
+
+        if (Input.GetKey(KeyCode.U))
         {
             engineAxis.Rotate(new Vector3(rotation * 0.5F, 0, 0));
             OrientArmHydraulicCylinder();
         }
-        else if (Input.GetKey(KeyCode.B))
+        else if (Input.GetKey(KeyCode.N))
         {
             engineAxis.Rotate(new Vector3(-rotation * 0.5F, 0, 0));
             OrientArmHydraulicCylinder();
         }
-        else if (Input.GetKey(KeyCode.I))
+
+        if (Input.GetKey(KeyCode.I))
         {
             if (stickBone.localPosition.y <= 0.024)
             {
@@ -121,7 +124,7 @@ public class ExcavatorController : MonoBehaviour
             }
             Debug.Log("Stickbone: " + stickBone.transform.localPosition.y);
         }
-        else if (Input.GetKey(KeyCode.M))
+        else if (Input.GetKey(KeyCode.K))
         {
             if (stickBone.localPosition.y >= 0.0094)
             {
@@ -129,12 +132,13 @@ public class ExcavatorController : MonoBehaviour
             }
             Debug.Log("Stickbone: " + stickBone.transform.localPosition.y);
         }
-        else if (Input.GetKey(KeyCode.L))
+
+        if (Input.GetKey(KeyCode.L))
         {
             bucketAxis.Rotate(new Vector3(rotation * 1.5F, 0, 0));
             OrientBucketHydraulicCylinder();
         }
-        else if (Input.GetKey(KeyCode.K))
+        else if (Input.GetKey(KeyCode.J))
         {
             bucketAxis.Rotate(new Vector3(-rotation * 1.5F, 0, 0));
             OrientBucketHydraulicCylinder();
