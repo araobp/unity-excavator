@@ -10,7 +10,7 @@ Open Input Manager on the Unity editor to see the configurations for joystick ax
 Edit -> Project Settings... -> Input Manager
 ```
 
-Or just apply the following preset to InputManager: /GamepadF310/Assets/Preset/InputManager.preset
+Or just apply [the preset](/GamepadF310/Assets/Preset/InputManager.preset) to InputManager: 
 
 ## Reference
 
