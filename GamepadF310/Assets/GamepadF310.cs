@@ -52,6 +52,7 @@ public class GamepadF310 : MonoBehaviour
         float leftAnalogY = Input.GetAxis("LeftAnalogY");
         float dPadX = Input.GetAxis("DPadX");
         float dPadY = Input.GetAxis("DPadY");
+        float trigger = Input.GetAxis("Trigger");
 
         if (rightAnalogX != 0)
         {
@@ -76,6 +77,10 @@ public class GamepadF310 : MonoBehaviour
         if (dPadY != 0)
         {
             Debug.Log($"DPadY: {dPadY}");
+        }
+        if (trigger != 0)
+        {
+            Debug.Log($"Trigger: {trigger}");
         }
     }
 }
