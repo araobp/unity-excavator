@@ -69,3 +69,5 @@ crashlytics-build.properties
 
 # Jupyter Notebook
 .ipynb_checkpoints
+
+**/.DS_Store
