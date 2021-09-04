@@ -77,6 +77,10 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 - **[Fresnel zone](./doc/FresnelZone.md)**
 
+### GNSS(GPS)
+
+- [GNSS test](./doc/GNSSTest.md)
+
 ### UI
 
 - [Gamepad Logicool F310](./doc/GamepadF310.md)
