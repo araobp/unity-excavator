@@ -64,31 +64,31 @@ public class InputEvents
     public float boom
     {
         set { _boom = value; _updated = true; }
-        get { return _boom; }
+        get => _boom;
     }
 
     public float arm
     {
         set { _arm = value; _updated = true; }
-        get { return _arm; }
+        get => _arm;
     }
 
     public float bucket
     {
         set { _bucket = value; _updated = true; }
-        get { return _bucket; }
+        get => _bucket;
     }
 
     public float trackRight
     {
         set { _trackRight = value; _updated = true; }
-        get { return _trackRight; }
+        get => _trackRight;
     }
 
     public float trackLeft
     {
         set { _trackLeft = value; _updated = true; }
-        get { return _trackLeft; }
+        get => _trackLeft;
     }
 
 }
@@ -139,7 +139,7 @@ public class ExcavatorController : MonoBehaviour
                 inputEvents.swing = joystickLeftX;
             }
 
-            float joystickLeftY = Input.GetAxis("JoystickLeftY");
+            float joystickLeftY = Input.GetAxis("JoystickRightY");
             if (joystickLeftY != 0)
             {
                 inputEvents.arm = -joystickLeftY;
@@ -151,10 +151,10 @@ public class ExcavatorController : MonoBehaviour
                 inputEvents.bucket = joystickRightX;
             }
 
-            float joystickRightY = Input.GetAxis("JoystickRightY");
+            float joystickRightY = Input.GetAxis("JoystickLeftY");
             if (joystickRightY != 0)
             {
-                inputEvents.boom = -joystickRightY;
+                inputEvents.boom = joystickRightY;
             }
 
         } else
@@ -222,8 +222,7 @@ public class ExcavatorController : MonoBehaviour
     private LeverAngles rightTravelLeverAngles = new LeverAngles(0F, 0F);
     private LeverAngles leftTravelLeverAngles = new LeverAngles(0F, 0F);
 
-    // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         excavator.OrientHook();  // TODO: add hook operations
 
