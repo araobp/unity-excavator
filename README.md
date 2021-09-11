@@ -1,6 +1,6 @@
 # Unity excavator
 
-This project is an achivement of my self-study on digital twin in my spare time at night and on weekends.
+This project is an achivement of my self-study on digital twin in my spare time.
 
 ![scene](./doc/scene.png)
 
