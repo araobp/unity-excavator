@@ -1,16 +1,96 @@
 fileFormatVersion: 2
 guid: 349feeae5b63a69408484dd48d4b1af2
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 21100
   internalIDToNameTable: []
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: 6a6368c99b684a8468d83417224a3d08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BodyColor
+    second: {fileID: 2100000, guid: 522f08324918e574f82ebb270713761a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DarkColor
+    second: {fileID: 2100000, guid: e7789ab2bf96f854d9140854142d2e20, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EngineCover
+    second: {fileID: 2100000, guid: 7f65e86915af8f2418162db05ca904f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: 097f79b98acc24644b3a8f423b14f8dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frame
+    second: {fileID: 2100000, guid: ceeeb9f9b061c524e8153c4791fa2421, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 972783f3378638841b8b23346d764847, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hook
+    second: {fileID: 2100000, guid: 14475c3b285306c41bb941a65fdaf4f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lever
+    second: {fileID: 2100000, guid: 0d228120c2a7fa945b7bae3b83ee7a3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MaterialCap
+    second: {fileID: 2100000, guid: 0cd08f04bfe7c474ab2a832c2a9e390d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal
-    second: {fileID: 2100000, guid: d070852d7f08da14998ac1cc88b906c2, type: 2}
+    second: {fileID: 2100000, guid: addaa053aee49af4aaa427a6cbfc19e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mirror
+    second: {fileID: 2100000, guid: f2e1cdac151fef44594405abbeabfbb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RearCamera
+    second: {fileID: 2100000, guid: 64d13753deb54a249930aef33a8efae6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RearCameraLens
+    second: {fileID: 2100000, guid: 9439668a881653c449a04d3a86d9b45b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Seat
+    second: {fileID: 2100000, guid: 0c6802b092422154caa9e884255defac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Seat2
+    second: {fileID: 2100000, guid: 030ea061cd9d0024e8a0394ff4f21b8c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Track.001
+    second: {fileID: 2100000, guid: 9c13951902ee3024c95965823223ab8a, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -54,6 +134,7 @@ ModelImporter:
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -63,6 +144,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -96,6 +180,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
