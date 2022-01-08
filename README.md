@@ -11,6 +11,7 @@ This project is an achivement of my self-study on digital twin in my spare time.
 - [Basic classical Physics](https://araobp.github.io/unity-excavator/www/basic_classical_physics/)
 - [Pneumatic Caisson](https://araobp.github.io/unity-excavator/www/pneumatic_caisson/)
 - [Total station](https://araobp.github.io/unity-excavator/www/total_station/)
+- [AGV](https://araobp.github.io/unity-excavator/www/agv/)
 
 ### YouTube
 
