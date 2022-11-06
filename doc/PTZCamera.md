@@ -1,12 +1,14 @@
 # PTZ Camera with Point Cloud
 
+Latest update on November 6h, 2022:
+- Upgrad to URP
+- Upgrad to the Unity's new Input System
+- Replace the terrain with a FBX-format dune model with a texture from this repo: https://github.com/araobp/pointcloud
+- Apply "Simple Water Shader URP" to the ocean plane
+
 ## PTZ camera with a virtual Lazer range finder
 
 PTZ camera with a lazer range finder works like a total station. If a terrain generated from point cloud data is in the scene, a virtual PTZ camera with a virual Lazer range finder can locate a point on the terrain and measure the distance to the point.
-
-Note:
-- This project has incorporated URP and the Unity's new Input System.
-- The FBX-format dune model is from this repo: https://github.com/araobp/pointcloud
 
 <img src="./ptz_camera.jpg" width=500>
 <img src="./ptz_camera2.jpg" width=500>
