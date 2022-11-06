@@ -87,7 +87,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### GNSS(GPS)
 
-- [GNSS](./doc/GNSS.md)
+- [GNSS](./doc/GNSS.md)([Unity 2022.1] Latest update: November 6th, 2022)
 
 ### UI
 
