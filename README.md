@@ -2,7 +2,14 @@
 
 This project is an achivement of my self-study on digital twin in my spare time.
 
-![scene](./doc/scene.png)
+<table>
+<tr><td>
+<img src="./doc/scene.png" width=400>
+</td>
+<td style="margin: 20px;" >
+<img src="./doc/ptz_camera2.jpg" width=400>
+</td></tr>
+<table>
 
 ## Demo
 
@@ -62,7 +69,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - **[Total Station simulation](./doc/TotalStation.md)**
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- **[PTZ camera and point cloud](./doc/PTZCamera.md)**
+- **[PTZ camera and point cloud](./doc/PTZCamera.md)** (Latest update: November 6th, 2022)
 
 ### Camera/image
 
