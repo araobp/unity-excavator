@@ -1,4 +1,4 @@
-# GNSS Test
+# GNSS and Digital Compass
 
 ## Code
 
