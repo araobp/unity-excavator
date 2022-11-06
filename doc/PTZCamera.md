@@ -18,7 +18,7 @@ Press one of the following keys to control the virtual PTZ camera:
 D: pan right
 A: pan left
 W: tilt up
-Z: tilt down
+S: tilt down
 E: zoom in
 X: zoom out
 ```

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Controls;
 
 public class CameraPtzController : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class CameraPtzController : MonoBehaviour
     Transform panAxis;
     Transform tiltAxis;
 
-    LineRenderer lineRederer;
+    LineRenderer lineRenderer;
     RaycastHit raycastHit;
 
     public float raycastDistance = 100F;
@@ -41,14 +43,19 @@ public class CameraPtzController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+
         camera = transform.Find("Armature/PanAxis/TiltAxis/Camera");
         panAxis = transform.Find("Armature/PanAxis");
         tiltAxis = transform.Find("Armature/PanAxis/TiltAxis");
 
         camera.gameObject.AddComponent<LineRenderer>();
-        lineRederer = camera.gameObject.GetComponent<LineRenderer>();
-        lineRederer.SetPosition(0, camera.position);
-        lineRederer.startWidth = raycastWidth;
+        lineRenderer = camera.gameObject.GetComponent<LineRenderer>();
+        lineRenderer.SetPosition(0, camera.position);
+        lineRenderer.startWidth = raycastWidth;
+        lineRenderer.startColor = Color.white;
+        lineRenderer.endColor = Color.white;
+        lineRenderer.material = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
 
         textRaycastLocation = GameObject.FindWithTag("raycastLocation").GetComponent<Text>();
         textRaycastDistance = GameObject.FindWithTag("raycastDistance").GetComponent<Text>();
@@ -101,14 +108,14 @@ public class CameraPtzController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var timeDelta = Time.deltaTime;
+        var timeDelta3 = Time.deltaTime * 3;
 
         if (enableLazer)
         {
-            lineRederer.SetPosition(1, camera.forward * raycastDistance + camera.position);
+            lineRenderer.SetPosition(1, camera.forward * raycastDistance + camera.position);
         } else
         {
-            lineRederer.SetPosition(1, camera.forward * 0F + camera.position);
+            lineRenderer.SetPosition(1, camera.forward * 0F + camera.position);
         }
 
         bool hit = Physics.Raycast(camera.position, camera.forward * raycastDistance, out raycastHit, raycastDistance);
@@ -122,26 +129,27 @@ public class CameraPtzController : MonoBehaviour
             textRaycastDistance.text = $"Distance: {roundTo1st(distance)} meters";
         }
 
-        if (Input.GetKey(KeyCode.A))  // Pan left
+        var keyboard = Keyboard.current;
+        if (keyboard.aKey.isPressed)  // Pan left
         {
-            OrientCamera(Direction.PAN_LEFT, timeDelta);
-        } else if (Input.GetKey(KeyCode.D))  // Pan right
+            OrientCamera(Direction.PAN_LEFT, timeDelta3);
+        } else if (keyboard.dKey.isPressed)  // Pan right
         {
-            OrientCamera(Direction.PAN_RIGHT, timeDelta);
+            OrientCamera(Direction.PAN_RIGHT, timeDelta3);
         }
-        else if (Input.GetKey(KeyCode.W))  // Tile up
+        else if (keyboard.wKey.isPressed)  // Tile up
         {
-            OrientCamera(Direction.TILT_UP, timeDelta);
-        } else if (Input.GetKey(KeyCode.Z))  // Tild down
+            OrientCamera(Direction.TILT_UP, timeDelta3);
+        } else if (keyboard.sKey.isPressed)  // Tild down
         {
-            OrientCamera(Direction.TILT_DONW, timeDelta);
+            OrientCamera(Direction.TILT_DONW, timeDelta3);
         }
-        else if (Input.GetKey(KeyCode.E))  // Zoom in
+        if (keyboard.eKey.isPressed)  // Zoom in
         {
-            OrientCamera(Direction.ZOOM_IN, timeDelta);
-        } else if (Input.GetKey(KeyCode.X))  // Zoom out
+            OrientCamera(Direction.ZOOM_IN, timeDelta3);
+        } else if (keyboard.xKey.isPressed)  // Zoom out
         {
-            OrientCamera(Direction.ZOOM_OUT, timeDelta);
+            OrientCamera(Direction.ZOOM_OUT, timeDelta3);
         }
     }
 
