@@ -1,6 +1,7 @@
 # PTZ Camera with Point Cloud
 
-![ptz_camera](./ptz_camera.png)
+![ptz_camera](./ptz_camera.jpg)
+![ptz_camera](./ptz_camera2.jpg)
 
 ## PTZ camera with a virtual Lazer range finder
 
