@@ -1,7 +1,9 @@
 # PTZ Camera with Point Cloud
 
-![ptz_camera](./ptz_camera.jpg)
-![ptz_camera](./ptz_camera2.jpg)
+Note: this project has incorporated URP and the Unity's new Input System.
+
+<img src="./ptz_camera.jpg" width=500>
+<img src="./ptz_camera2.jpg" width=500>
 
 ## PTZ camera with a virtual Lazer range finder
 
@@ -23,6 +25,12 @@ S: tilt down
 E: zoom in
 X: zoom out
 ```
+
+## Simple Water Shader URP from Unity Asset Store
+
+I use this Water shader in this project. This works great!
+
+https://assetstore.unity.com/packages/2d/textures-materials/water/simple-water-shader-urp-191449
 
 ## License
 
