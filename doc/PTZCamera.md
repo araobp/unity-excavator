@@ -1,6 +1,8 @@
 # PTZ Camera with Point Cloud
 
-Note: this project has incorporated URP and the Unity's new Input System.
+Note:
+- This project has incorporated URP and the Unity's new Input System.
+- The FBX-format dune model is from this repo: https://github.com/araobp/pointcloud
 
 <img src="./ptz_camera.jpg" width=500>
 <img src="./ptz_camera2.jpg" width=500>
