@@ -54,11 +54,11 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 - [Excavator manual/autonomous operation](./doc/Excavator.md)
 - [Pneumatic Caisson](./doc/PneumaticCaisson.md)
-- **[Autonomous guided vehicle](./doc/AGV.md)**
+- [Autonomous guided vehicle](./doc/AGV.md)
 
 ### Classical Physics with Rigidbody on Unity
 
-- **[Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md)**
+- [Basic Classical Physics (Dynamics) simulation on Unity](./doc/BasicClassicalPhysics.md)
 
 ### WebRTC
 
@@ -67,9 +67,9 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 ### Working with surveying data
 
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
-- **[Total Station simulation](./doc/TotalStation.md)**
+- [Total Station simulation](./doc/TotalStation.md)
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- **[PTZ camera and point cloud](./doc/PTZCamera.md)** ([Unity 2022.1] Latest update: November 6th, 2022)
+- [PTZ camera and point cloud](./doc/PTZCamera.md) ([Unity 2022.1] Latest update: November 6th, 2022)
 
 ### Camera/image
 
@@ -83,7 +83,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### IoT
 
-- **[Fresnel zone](./doc/FresnelZone.md)**
+- [Fresnel zone](./doc/FresnelZone.md) ([Unity 2022.1] Latest update: November 6th, 2022)
 
 ### GNSS(GPS)
 
