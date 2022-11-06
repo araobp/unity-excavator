@@ -87,7 +87,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### GNSS(GPS)
 
-- [GNSS test](./doc/GNSSTest.md)
+- [GNSS](./doc/GNSS.md)
 
 ### UI
 
