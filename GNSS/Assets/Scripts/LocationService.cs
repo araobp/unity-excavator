@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GNSS_Test : MonoBehaviour
+public class LocationService : MonoBehaviour
 {
     [SerializeField]
     Text m_textLatitude;
@@ -66,7 +66,7 @@ public class GNSS_Test : MonoBehaviour
     {
         if (!Input.location.isEnabledByUser)
         {
-            m_textDebug.text = "Not granted";
+            m_textDebug.text = "Location service not granted by user";
             yield break;
         }
 
