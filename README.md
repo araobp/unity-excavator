@@ -89,6 +89,10 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 - [GNSS](./doc/GNSS.md) ([Unity 2022.1] Latest update: November 6th, 2022)
 
+### AssetBundle
+
+- (Work in progress) Use Github Pages as a AssetBundle server for Unity 3D apps.
+
 ### UI
 
 - [Gamepad Logicool F310](./doc/GamepadF310.md)
