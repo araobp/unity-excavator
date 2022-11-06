@@ -2,7 +2,14 @@
 
 This project is an achivement of my self-study on digital twin in my spare time.
 
-![scene](./doc/scene.png)
+<table>
+<tr><td>
+<img src="./doc/scene.png" width=400>
+</td>
+<td style="margin: 20px;" >
+<img src="./doc/ptz_camera2.jpg" width=400>
+</td></tr>
+<table>
 
 ## Demo
 
