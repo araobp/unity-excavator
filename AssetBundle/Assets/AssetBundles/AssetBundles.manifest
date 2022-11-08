@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 1451028474
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: azumahouse
+      Dependencies: {}
+    Info_1:
+      Name: catwalk
+      Dependencies: {}
