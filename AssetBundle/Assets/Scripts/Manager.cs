@@ -6,17 +6,23 @@ using TMPro;
 
 public class Manager : WebClient
 {
-    const string URL_LOCAL = "http://localhost:8080/asset_bundles";
-    const string URL = "http://localhost:8080/asset_bundles";
+    //const string URL_LOCAL = "http://localhost:8080/asset_bundles";
+    const string URL = "https://araobp.github.io/unity-excavator/www/asset_bundles";
 
     [SerializeField]
     TMP_Dropdown m_Dropdown;
 
-    GameObject instance;
+    [SerializeField]
+    GameObject m_PanelDownloadProgress;
+
+    GameObject m_Instance;
+    DownloadIndicator m_DownloadIndicator;
 
     // Start is called before the first frame update
     void Start()
     {
+        m_DownloadIndicator = m_PanelDownloadProgress.GetComponent<DownloadIndicator>();
+        m_DownloadIndicator.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,13 +32,16 @@ public class Manager : WebClient
 
     public void OnDownloadButtonPressed()
     {
-        if (instance != null)
+        if (m_Instance != null)
         {
-            Destroy(instance);
+            Destroy(m_Instance);
         }
 
+        m_DownloadIndicator.gameObject.SetActive(true);
+
         string name = m_Dropdown.options[m_Dropdown.value].text;
-        string url = $"{URL_LOCAL}/{name}";
+        //string url = $"{URL_LOCAL}/{name}";
+        string url = $"{URL}/{name}";
 
         GetAsset(url,
 
@@ -42,13 +51,18 @@ public class Manager : WebClient
         {
             
             GameObject prefab = bundle.LoadAsset<GameObject>(name);
-            instance = Instantiate(prefab);
+            m_Instance = Instantiate(prefab);
         }
     },
     (progress, downloadBytes) =>
     {
-        Debug.Log(progress);
-        Debug.Log(downloadBytes);   
+        //Debug.Log(progress);
+        //Debug.Log(downloadBytes);
+        m_DownloadIndicator.progress = progress;
+        if (progress >= 1F)
+        {
+            m_DownloadIndicator.gameObject.SetActive(false);
+        }
     });
     }
 }
