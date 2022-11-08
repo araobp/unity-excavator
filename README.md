@@ -91,7 +91,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### AssetBundle
 
-- [AssetBundle](./doc/AssetBundle.md) (Work in progress) Use Github Pages as a AssetBundle server for Unity 3D apps.
+- [AssetBundle](./doc/AssetBundle.md) ([Unity 2022.1] Latest update: November 8th, 2022)
 
 ### UI
 
