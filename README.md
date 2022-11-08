@@ -97,7 +97,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### AssetBundle
 
-- [AssetBundle](./doc/AssetBundle.md) ([Unity 2022.1] Latest update: November 8th, 2022)
+- [AssetBundle](./doc/AssetBundle.md) ([Unity 2021.3] Latest update: November 8th, 2022)
 
 ### UI
 
