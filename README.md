@@ -103,3 +103,4 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 - [Gamepad Logicool F310](./doc/GamepadF310.md)
 - [VR goggle with PC as an input device](./doc/VR_Input.md)
+- [Drone remote controller for iPad] (Work in progress)
