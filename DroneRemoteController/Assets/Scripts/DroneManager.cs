@@ -22,7 +22,7 @@ public class DroneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
     // Update is called once per frame
@@ -35,7 +35,7 @@ public class DroneManager : MonoBehaviour
         float deltaXRight = m_StickControllerRight.deltaX * deltaTime * m_MultiplierRotate;
         float deltaYRight = m_StickControllerRight.deltaY * deltaTime * m_MultiplierTranslate;
         Transform cam = m_CameraObject.transform;
-        cam.Translate(new Vector3(10F * deltaXRight, 10F * deltaYLeft, 20F * deltaYRight));
+        cam.Translate(new Vector3(20F * deltaXRight, 20F * deltaYLeft, 40F * deltaYRight));
         cam.Rotate(new Vector3(0F, 100F * deltaXLeft, 0F));
 
     }
