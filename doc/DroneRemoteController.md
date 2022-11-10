@@ -1,4 +1,4 @@
-# Drone Remote Controller
+# Drone remote controller for iPad
 
 ## Code
 
