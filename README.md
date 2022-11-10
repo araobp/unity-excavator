@@ -15,6 +15,12 @@ This project is an achivement of my self-study on digital twin in my spare time.
 <td style="margin: 20px;" >
 <img src="./doc/AssetBundle_Catwalk.jpg" width=400>
 </td></tr>
+<tr><td>
+<img src="./doc/DroneRemoteController1.jpg" width=400>
+</td>
+<td style="margin: 20px;" >
+<img src="./doc/DroneRemoteController2.jpg" width=400>
+</td></tr>
 <table>
 
 ## Demo
