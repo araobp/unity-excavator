@@ -1,5 +1,7 @@
 # Drone remote controller for iPad
 
+Not only for iPad but also for other tablet/smartphone models.
+
 Joypad emulation on iPad
 
 <img src="DroneRemoteController1.jpg" width=500>
