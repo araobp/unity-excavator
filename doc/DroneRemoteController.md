@@ -4,7 +4,7 @@ Not only for iPad but also for other tablet/smartphone models.
 
 However, iPad mini is the best for this remote controller emulation.
 
-## Joypad emulation on iPad
+## Joypad emulation on iPad mini
 
 <img src="DroneRemoteController1.jpg" width=500>
 
