@@ -110,3 +110,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 - [Gamepad Logicool F310](./doc/GamepadF310.md)
 - [VR goggle with PC as an input device](./doc/VR_Input.md)
 - [Drone remote controller for iPad](./doc/DroneRemoteController.md) ([Unity 2022.1] Latest update: November 10th, 2022)
+
+### Integration with chat
+
+- [Integration with Salesforce Chat](./doc/SalesforceChat.md) ([Unity 2021.3] Latest update: November 11th, 2022)
