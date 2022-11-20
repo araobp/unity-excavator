@@ -45,6 +45,11 @@ The following code is to support both remote controller emulation and attitude c
 
          :
          
+    private void OnEnable()
+    {
+        InputSystem.EnableDevice(AttitudeSensor.current);
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
