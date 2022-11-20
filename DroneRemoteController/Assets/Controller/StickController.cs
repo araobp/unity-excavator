@@ -1,5 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.InputSystem.EnhancedTouch;
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 
 public class StickController : MonoBehaviour
 {
@@ -10,6 +11,12 @@ public class StickController : MonoBehaviour
     float m_HeightHalf;
     float m_DeltaX;
     float m_DeltaY;
+
+    void OnEnable()
+    {
+        EnhancedTouchSupport.Enable();
+        TouchSimulation.Enable();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +33,13 @@ public class StickController : MonoBehaviour
     void Update()
     {
         bool stickTouched = false;
-        if (Input.touchCount > 0)
+        var count = Touch.activeTouches.Count;
+        if (count > 0)
         {
-            for (int i=0; i < Input.touchCount; i++) {
-                Vector3 pos = Input.GetTouch(i).position;
+            var touches = Touch.activeTouches;
+            for (int i = 0; i < count; i++)
+            {
+                Vector3 pos = touches[i].screenPosition;
                 Vector3 localPos = transform.InverseTransformPoint(pos);
                 if (m_StickArea.Contains(localPos))
                 {
