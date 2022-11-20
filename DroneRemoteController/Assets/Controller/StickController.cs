@@ -15,7 +15,6 @@ public class StickController : MonoBehaviour
     void OnEnable()
     {
         EnhancedTouchSupport.Enable();
-        TouchSimulation.Enable();
     }
 
     // Start is called before the first frame update
@@ -66,10 +65,8 @@ public class StickController : MonoBehaviour
             m_DeltaY = 0;
             m_Stick.localPosition = Vector2.zero;
         }
-
-
     }
-
+    
     public float deltaX
     {
         get => Mathf.Sign(m_DeltaX) * Mathf.Pow(m_DeltaX, 2);
