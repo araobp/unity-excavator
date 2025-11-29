@@ -1,6 +1,6 @@
 # Basic classical Physics
 
-Note: this project has migrated to Unity 2019.
+Note: this project was developed in June 2019.
 
 This project has multiple scenes:
 
