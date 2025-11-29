@@ -1,6 +1,6 @@
 # Basic classical Physics
 
-Note: this project was developed in June 2019.
+Note: this project was developed in June 2020.
 
 This project has multiple scenes:
 
