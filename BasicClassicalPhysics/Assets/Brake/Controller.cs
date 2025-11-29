@@ -67,7 +67,7 @@ public class Controller : MonoBehaviour
             GameObject toBeRemoved = null;
             foreach (GameObject vehicle in vehicles)
             {
-                float currentSpeed = vehicle.GetComponent<Rigidbody>().velocity.magnitude;
+                float currentSpeed = vehicle.GetComponent<Rigidbody>().linearVelocity.magnitude;
                 if (currentSpeed == 0F)
                 {
                     toBeRemoved = vehicle;
@@ -90,7 +90,7 @@ public class Controller : MonoBehaviour
 
         foreach (GameObject vehicle in vehicles)
         {
-            vehicle.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, speed * 1000F / 3600F);
+            vehicle.GetComponent<Rigidbody>().linearVelocity = new Vector3(0, 0, speed * 1000F / 3600F);
             speed += 10F;
         }
 

@@ -38,8 +38,8 @@ public class PushController : MonoBehaviour
         textSlope.text = $"Inclination: {360F - slope.rotation.eulerAngles.z} deg";
         textSlope2.text = $"Inclination: {360F - slope2.rotation.eulerAngles.z} deg";
 
-        arrow = new Arrow(Arrow.Colors.BLUE);
-        arrow2 = new Arrow(Arrow.Colors.GREEN);
+        arrow = new Arrow(Arrow.Colors.BLUE, 3F, 2F);
+        arrow2 = new Arrow(Arrow.Colors.GREEN ,3F, 2F);
         arrowGravityTangent = new Arrow(Arrow.Colors.BLACK);
         arrowGravityTangent2 = new Arrow(Arrow.Colors.BLACK);
 

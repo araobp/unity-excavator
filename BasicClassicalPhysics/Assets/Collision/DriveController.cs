@@ -12,8 +12,8 @@ public class DriveController : MonoBehaviour
     Rigidbody rb;
     BoxCollider cl;
 
-    PhysicMaterial phyMatZero;
-    PhysicMaterial phyMatBrake;
+    PhysicsMaterial phyMatZero;
+    PhysicsMaterial phyMatBrake;
 
     float vX;
     float vY;
@@ -26,22 +26,22 @@ public class DriveController : MonoBehaviour
 
         rb = gameObject.GetComponent<Rigidbody>();
         rb.mass = transform.localScale.x * transform.localScale.y * transform.localScale.z * 100F;
-        rb.velocity = speed * 1000 / 3600F * transform.forward;
+        rb.linearVelocity = speed * 1000 / 3600F * transform.forward;
         cl = gameObject.GetComponent<BoxCollider>();
 
-        phyMatZero = new PhysicMaterial();
+        phyMatZero = new PhysicsMaterial();
         phyMatZero.dynamicFriction = 0F;
         phyMatZero.staticFriction = 0F;
 
-        phyMatBrake = new PhysicMaterial();
+        phyMatBrake = new PhysicsMaterial();
         phyMatBrake.dynamicFriction = 0.2F;
         phyMatBrake.staticFriction = 0.2F;
 
         cl.material = phyMatZero;
 
-        vX = rb.velocity.x;
-        vY = rb.velocity.y;
-        vZ = rb.velocity.z;
+        vX = rb.linearVelocity.x;
+        vY = rb.linearVelocity.y;
+        vZ = rb.linearVelocity.z;
 
         GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
             delegate
@@ -56,11 +56,11 @@ public class DriveController : MonoBehaviour
     {
         float deltaTime = Time.deltaTime;
         Vector3 prevVelocity = new Vector3(vX, vY, vZ);
-        vX = rb.velocity.x;
-        vY = rb.velocity.y;
-        vZ = rb.velocity.z;
+        vX = rb.linearVelocity.x;
+        vY = rb.linearVelocity.y;
+        vZ = rb.linearVelocity.z;
 
-        float deltaSpeed = (rb.velocity - prevVelocity).magnitude;
+        float deltaSpeed = (rb.linearVelocity - prevVelocity).magnitude;
         float deltaAccel = deltaSpeed / deltaTime;
         if (deltaAccel > maxDeltaAccel)
         {

@@ -13,7 +13,7 @@ public class VectorTest : MonoBehaviour
         //arrow = Instantiate(arrowPrefab);
         arrow = new Arrow(Arrow.Colors.BLUE);
         rb = gameObject.GetComponent<Rigidbody>();
-        rb.velocity = new Vector3(20F, 20F, 0F);
+        rb.linearVelocity = new Vector3(20F, 20F, 0F);
 
         GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
             delegate
@@ -25,7 +25,7 @@ public class VectorTest : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        arrow.OrientVector(transform, rb.velocity/10F);
+        arrow.OrientVector(transform, rb.linearVelocity/10F);
     }
 
     private void GoHome()

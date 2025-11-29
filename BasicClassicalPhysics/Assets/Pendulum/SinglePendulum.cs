@@ -63,7 +63,7 @@ public class SinglePendulum : MonoBehaviour
         float time = Time.time;
 
         angle = Vector3.SignedAngle(transform.up, Vector3.up, Vector3.forward);
-        speed = transform.InverseTransformDirection(rb.velocity).x;
+        speed = transform.InverseTransformDirection(rb.linearVelocity).x;
         //Debug.Log($"angle: {angle}, speed: {speed}");
 
         Vector3 gravityTangent = rb.mass * Vector3.Dot(Physics.gravity, rb.transform.right) * rb.transform.right;

@@ -27,7 +27,7 @@ public class PlanetController : MonoBehaviour
         transform.Rotate(rotation, 0, 0);
         rb.angularVelocity = new Vector3(0, angularVelocity, 0);
         Vector3 initialForward = new Vector3(rb.transform.forward.x, rb.transform.forward.y, rb.transform.forward.z);
-        rb.velocity = new Vector3(initialForward.x, initialForward.y, initialForward.z) * initialSpeed;
+        rb.linearVelocity = new Vector3(initialForward.x, initialForward.y, initialForward.z) * initialSpeed;
 
         GameObject.Find("ButtonClose").GetComponent<Button>().onClick.AddListener(
             delegate

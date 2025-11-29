@@ -35,8 +35,8 @@ public class Monitor : MonoBehaviour
         slope = GameObject.Find("Joint").transform;
         textSlope.text = $"Slant: {360F - slope.rotation.eulerAngles.z} deg";
 
-        arrow = new Arrow(Arrow.Colors.BLUE);
-        arrowGravityTangent = new Arrow(Arrow.Colors.BLACK);
+        arrow = new Arrow(Arrow.Colors.BLUE, 3F, 2F);
+        arrowGravityTangent = new Arrow(Arrow.Colors.GREEN, 3F, 2F);
 
         slope2 = GameObject.Find("Joint2").transform;
 
