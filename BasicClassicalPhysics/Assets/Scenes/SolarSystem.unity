@@ -291,8 +291,8 @@ GameObject:
   - component: {fileID: 353614350}
   - component: {fileID: 353614349}
   - component: {fileID: 353614348}
-  - component: {fileID: 353614347}
   - component: {fileID: 353614353}
+  - component: {fileID: 353614347}
   m_Layer: 0
   m_Name: Planet1
   m_TagString: Untagged
@@ -313,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 19.5
-  orbitalInclination: 0
+  orbitalInclination: -1
 --- !u!54 &353614348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 10
-  orbitalInclination: 0
+  orbitalInclination: 6
 --- !u!54 &738031386
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 8
-  orbitalInclination: 0
+  orbitalInclination: 1
 --- !u!54 &1367409484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 20
-  orbitalInclination: 0
+  orbitalInclination: -30
 --- !u!54 &1905325769
 Rigidbody:
   m_ObjectHideFlags: 0
