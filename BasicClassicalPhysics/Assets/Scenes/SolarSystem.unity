@@ -313,8 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 19.5
-  rotation: -1
-  angularVelocity: 0.5
+  orbitalInclination: 0
 --- !u!54 &353614348
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -897,8 +896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 10
-  rotation: 6
-  angularVelocity: 0.5
+  orbitalInclination: 0
 --- !u!54 &738031386
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1557,8 +1555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 8
-  rotation: 1
-  angularVelocity: 0.5
+  orbitalInclination: 0
 --- !u!54 &1367409484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1915,8 +1912,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpeed: 20
-  rotation: -30
-  angularVelocity: 0.5
+  orbitalInclination: 0
 --- !u!54 &1905325769
 Rigidbody:
   m_ObjectHideFlags: 0
