@@ -59,18 +59,18 @@ The following code is to support both remote controller emulation and attitude c
         float deltaYLeft = _StickControllerLeft.deltaY * deltaTime * _MultiplierTranslate;
         float deltaXRight = _StickControllerRight.deltaX * deltaTime * _MultiplierRotate;
         float deltaYRight = _StickControllerRight.deltaY * deltaTime * _MultiplierTranslate;
-        Transform cam = m_CameraObject.transform;
+        Transform cam = _CameraObject.transform;
         cam.Translate(new Vector3(20F * deltaXRight, 20F * deltaYLeft, 40F * deltaYRight));
 
         float deltaXLeft = _StickControllerLeft.deltaX * deltaTime * _MultiplierTranslate;
-        m_RotationY += 100F * deltaXLeft;
+        _RotationY += 100F * deltaXLeft;
 
         // Camera attitude Control
         Quaternion attitude = AttitudeSensor.current.attitude.ReadValue();
         attitude = Quaternion.Euler(0, 0, -180) * Quaternion.Euler(-90, 0, 0) * attitude * Quaternion.Euler(0, 0, 180);
-        cam.transform.rotation = attitude;// * Quaternion.AngleAxis(m_RotationY, Vector3.up);
+        cam.transform.rotation = attitude;// * Quaternion.AngleAxis(_RotationY, Vector3.up);
 
         // Rotate the camera around Y-axis in world splace
-        cam.Rotate(new Vector3(0F, m_RotationY, 0F), Space.World);
+        cam.Rotate(new Vector3(0F, _RotationY, 0F), Space.World);
     }
 }
