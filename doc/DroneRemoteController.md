@@ -19,12 +19,12 @@ I devised the following part in "StickController.cs" to stabilize the stick posi
 ```
     public float deltaX
     {
-        get => Mathf.Sign(m_DeltaX) * Mathf.Pow(m_DeltaX, 2);
+        get => Mathf.Sign(_DeltaX) * Mathf.Pow(_DeltaX, 2);
     }
 
     public float deltaY
     {
-        get => Mathf.Sign(m_DeltaY) * Mathf.Pow(m_DeltaY, 2);
+        get => Mathf.Sign(_DeltaY) * Mathf.Pow(_DeltaY, 2);
     }
 ```
 
@@ -56,13 +56,13 @@ The following code is to support both remote controller emulation and attitude c
         float deltaTime = Time.deltaTime;
 
         // Stick Control
-        float deltaYLeft = m_StickControllerLeft.deltaY * deltaTime * m_MultiplierTranslate;
-        float deltaXRight = m_StickControllerRight.deltaX * deltaTime * m_MultiplierRotate;
-        float deltaYRight = m_StickControllerRight.deltaY * deltaTime * m_MultiplierTranslate;
+        float deltaYLeft = _StickControllerLeft.deltaY * deltaTime * _MultiplierTranslate;
+        float deltaXRight = _StickControllerRight.deltaX * deltaTime * _MultiplierRotate;
+        float deltaYRight = _StickControllerRight.deltaY * deltaTime * _MultiplierTranslate;
         Transform cam = m_CameraObject.transform;
         cam.Translate(new Vector3(20F * deltaXRight, 20F * deltaYLeft, 40F * deltaYRight));
 
-        float deltaXLeft = m_StickControllerLeft.deltaX * deltaTime * m_MultiplierTranslate;
+        float deltaXLeft = _StickControllerLeft.deltaX * deltaTime * _MultiplierTranslate;
         m_RotationY += 100F * deltaXLeft;
 
         // Camera attitude Control
