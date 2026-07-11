@@ -1,0 +1,2 @@
+/Users/shiny/Documents/GitHub/unity-excavator/DroneRemoteController/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt
+/Users/shiny/Documents/GitHub/unity-excavator/DroneRemoteController/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing/CMakeLists.txt

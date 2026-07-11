@@ -1,0 +1,3 @@
+# ninja log v5
+0	74	1783757102015512249	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	abeaad749a468145
+74	150	1783757102071817676	/Users/shiny/Documents/GitHub/unity-excavator/DroneRemoteController/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/105c5664/obj/arm64-v8a/libswappywrapper.so	7e0a66c898831e45
