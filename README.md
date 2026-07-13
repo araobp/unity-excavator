@@ -81,7 +81,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - [Total Station simulation](./doc/TotalStation.md)
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- [PTZ camera and point cloud](./doc/PTZCamera.md) ([Unity 2022.1] Latest update: November 6th, 2022)
+- [PTZ camera and point cloud](./doc/PTZCamera.md) (Unity 6000.5.3f1, Latest update: July 13th, 2026)
 
 ### Camera/image
 
@@ -109,4 +109,4 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 - [Gamepad Logicool F310](./doc/GamepadF310.md)
 - [VR goggle with PC as an input device](./doc/VR_Input.md)
-- [Drone remote controller for Android](./doc/DroneRemoteController.md) (Unity 6000.5.3f1)
+- [Drone remote controller for Android](./doc/DroneRemoteController.md) (Unity 6000.5.3f1, Latest update: July 12th, 2026)
