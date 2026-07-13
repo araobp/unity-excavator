@@ -81,7 +81,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 - [Converting LAS point cloud data to Unity's Terrain object](./doc/PointCloud.md)
 - [Total Station simulation](./doc/TotalStation.md)
 - [Terrain height map manipulation](./doc/HeightMapManipulation.md)
-- [PTZ camera and point cloud](./doc/PTZCamera.md) (Unity 6000.5.3f1, Latest update: July 12th, 2026)
+- [PTZ camera and point cloud](./doc/PTZCamera.md) (Unity 6000.5.3f1, Latest update: July 13th, 2026)
 
 ### Camera/image
 
