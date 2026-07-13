@@ -65,7 +65,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 ### Vehicle operation
 
 - [Excavator manual/autonomous operation](./doc/Excavator.md)
-- [Pneumatic Caisson](./doc/PneumaticCaisson.md)
+- [Pneumatic Caisson](./doc/PneumaticCaisson.md) (Unity 6000.5.3f1, Latest update: July 13th, 2026)
 - [Autonomous guided vehicle](./doc/AGV.md)
 
 ### Classical Physics with Rigidbody on Unity
