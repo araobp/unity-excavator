@@ -1380,7 +1380,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1383567090}
-  - component: {fileID: 1383567091}
   - component: {fileID: 1383567092}
   m_Layer: 0
   m_Name: AssetBundleClient
@@ -1404,20 +1403,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1383567091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383567089}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 473703bd9e7bd4ad29cd5180fc6e3ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Dropdown: {fileID: 429727525}
-  m_PanelDownloadProgress: {fileID: 1677084359}
 --- !u!114 &1383567092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1741,9 +1726,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1383567091}
+      - m_Target: {fileID: 11500000, guid: fb7573403d51c4c44b0ff636b9c9f876, type: 3}
         m_TargetAssemblyTypeName: Manager, Assembly-CSharp
-        m_MethodName: OnDownloadButtonPressed
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
