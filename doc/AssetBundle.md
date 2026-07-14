@@ -1,4 +1,4 @@
-# AssetBundle
+# AssetBundle (Addressable Assets)
 
 This project is to show how to use Github Pages as an AssetBundle server for Unity applications.
 
@@ -17,3 +17,7 @@ It is not a good idea to use Github Pages as a AssetBundle server, because it su
 ## Code
 
 => [Code](../AssetBundle) 
+
+## References
+
+- [Getting Started with Addressables](https://www.youtube.com/watch?v=AFMkXYiquB0)
