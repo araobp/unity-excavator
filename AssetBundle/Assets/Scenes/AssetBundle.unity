@@ -93,7 +93,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8faa53dfb150d43bcbec3141b494e69b,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1417,6 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ManagerAddressable
   _Dropdown: {fileID: 429727525}
   _PanelDownloadProgress: {fileID: 1677084359}
+  _ButtonDownload: {fileID: 1530869571}
 --- !u!1 &1396931447
 GameObject:
   m_ObjectHideFlags: 0

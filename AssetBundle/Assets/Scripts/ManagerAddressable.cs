@@ -18,7 +18,7 @@ public class ManagerAddressable : MonoBehaviour
 
 
     [SerializeField]
-    Button _Button; 
+    Button _ButtonDownload; 
 
     GameObject _Instance;
     AsyncOperationHandle<GameObject> _CurrentLoadHandle; // Added to track progress and safe releases
@@ -29,7 +29,7 @@ public class ManagerAddressable : MonoBehaviour
         _DownloadIndicator = _PanelDownloadProgress.GetComponent<DownloadIndicator>();
         _DownloadIndicator.gameObject.SetActive(false);
 
-        _Button.onClick.AddListener(OnDownloadButtonPressed);
+        _ButtonDownload.onClick.AddListener(OnDownloadButtonPressed);
     }
 
     public void OnDownloadButtonPressed()
