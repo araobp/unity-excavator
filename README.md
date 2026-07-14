@@ -16,10 +16,9 @@ This project is an achivement of my self-study on digital twin in my spare time.
 <img src="./doc/AssetBundle_Catwalk.jpg" width=400>
 </td></tr>
 <tr><td>
-<img src="./doc/DroneRemoteController1.jpg" width=400>
+<img src="./doc/DroneRemoteController.jpg" width=400>
 </td>
 <td style="margin: 20px;" >
-<img src="./doc/DroneRemoteController2.jpg" width=400>
 </td></tr>
 <table>
 
@@ -65,7 +64,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 ### Vehicle operation
 
 - [Excavator manual/autonomous operation](./doc/Excavator.md)
-- [Pneumatic Caisson](./doc/PneumaticCaisson.md)
+- [Pneumatic Caisson](./doc/PneumaticCaisson.md) (Unity 6000.5.3f1, Latest update: July 13th, 2026)
 - [Autonomous guided vehicle](./doc/AGV.md)
 
 ### Classical Physics with Rigidbody on Unity
