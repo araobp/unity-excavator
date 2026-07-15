@@ -100,7 +100,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 - [GNSS](./doc/GNSS.md) ([Unity 2022.1] Latest update: November 6th, 2022)
 
-### AssetBundle (Addressable Assets)
+### AssetBundle (Addressable Asset System)
 
 - [AssetBundle](./doc/AssetBundle.md) (Unity 6000.5.3f1, Latest update: July 14th, 2026)
 
