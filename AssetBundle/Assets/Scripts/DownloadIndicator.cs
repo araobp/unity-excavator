@@ -5,24 +5,34 @@ using UnityEngine;
 public class DownloadIndicator : MonoBehaviour
 {
     [SerializeField]
-    GameObject m_PanelDownloadProgress;
+    GameObject _PanelDownloadProgress;
 
-    RectTransform m_RectTransform;
-    float m_Progress = 0F;
+    RectTransform _RectTransform;
+    float _Progress = 0F;
+
+    void Awake()
+    {
+        // 1. Ensure we have the reference even if it wasn't assigned manually
+        if (_PanelDownloadProgress == null) _PanelDownloadProgress = this.gameObject;
+        
+        // 2. Cache the component immediately
+        _RectTransform = _PanelDownloadProgress.GetComponent<RectTransform>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        m_RectTransform = m_PanelDownloadProgress.transform.GetComponent<RectTransform>();
+        _RectTransform = _PanelDownloadProgress.transform.GetComponent<RectTransform>();
+        Debug.Log(_RectTransform);
     }
 
     public float progress
     {
-        get => m_Progress;
+        get => _Progress;
         set
         {
-            m_Progress = value;
-            m_RectTransform.localScale = new Vector3(progress, 1F, 1F);
+            _Progress = value;
+            _RectTransform.localScale = new Vector3(progress, 1F, 1F);
         }
     }
 }

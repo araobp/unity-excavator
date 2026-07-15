@@ -8,13 +8,11 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class ManagerAddressable : MonoBehaviour
 {
-    // REMOVED URL CONSTANT: The URL is handled globally by your Addressables Profile settings, not here!
-
     [SerializeField]
     TMP_Dropdown _Dropdown;
 
     [SerializeField]
-    GameObject _PanelDownloadProgress;
+    GameObject _PanelDownloadIndicator;
 
 
     [SerializeField]
@@ -26,7 +24,7 @@ public class ManagerAddressable : MonoBehaviour
 
     void Start()
     {
-        _DownloadIndicator = _PanelDownloadProgress.GetComponent<DownloadIndicator>();
+        _DownloadIndicator = _PanelDownloadIndicator.GetComponent<DownloadIndicator>();
         _DownloadIndicator.gameObject.SetActive(false);
 
         _ButtonDownload.onClick.AddListener(OnDownloadButtonPressed);
@@ -59,9 +57,7 @@ public class ManagerAddressable : MonoBehaviour
         while (!_CurrentLoadHandle.IsDone)
         {
             float progress = _CurrentLoadHandle.PercentComplete;
-            
-            // OPTIONAL: If your DownloadIndicator script has a custom update method, call it here:
-            // _DownloadIndicator.UpdateSlider(progress); 
+            _DownloadIndicator.progress = progress; 
 
             yield return null;
         }
