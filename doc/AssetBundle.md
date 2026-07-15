@@ -20,7 +20,7 @@ It is not a good idea to use Github Pages as a AssetBundle server, because it su
 
 ## Remote Load Path setting
 
-<img src="./RemoteLoadPath.jpg" width=800>
+<img src="./RemoteLoadPath.jpg" width=900>
 
 ## References
 
