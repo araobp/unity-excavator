@@ -1,6 +1,6 @@
 # AssetBundle (Addressable Assets)
 
-This project is to show how to use Github Pages as an AssetBundle server for Unity applications.
+This project is to show how to use Github Pages as an Addressable Assets server for Unity applications.
 
 Note: 
 
@@ -17,6 +17,10 @@ It is not a good idea to use Github Pages as a AssetBundle server, because it su
 ## Code
 
 => [Code](../AssetBundle) 
+
+## Remote Load Path setting
+
+<img src="./RemoteLoadPath.jpg" width=800>
 
 ## References
 
