@@ -8,7 +8,7 @@ Github Pages base URL: https://araobp.github.io/unity-excavator/
 
 Note: 
 
-It is not a good idea to use Github Pages as a AssetBundle server, because it supports neither authentication nor authorization. This project is for a demo purpose only.
+It is not a good idea to use Github Pages as an Addressables server, because it supports neither authentication nor authorization. This project is for a demo purpose only.
 
 <img src="./AssetBundle_Start.jpg" width=500>
 
