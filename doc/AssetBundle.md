@@ -1,8 +1,8 @@
-# AssetBundle (Addressable Assets)
+# AssetBundle (Addressable Asset System)
 
-Addressable Assets: Replaced old AssetBundles for easier management, automated dependency handling, and flexible remote content delivery.
+Addressable Asset System: Replaced old AssetBundles for easier management, automated dependency handling, and flexible remote content delivery.
 
-This project is to show how to use Github Pages as an Addressable Assets server for Unity applications.
+This project is to show how to use Github Pages as an Addressables server for Unity applications.
 
 Github Pages base URL: https://araobp.github.io/unity-excavator/
 
