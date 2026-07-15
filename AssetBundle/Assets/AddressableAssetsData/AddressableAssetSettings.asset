@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 50c162c7941ac4d0b8ec7ce8a7fd2c69
   m_currentHash:
     serializedVersion: 2
-    Hash: 1938b367c9bcfa0e8b47dd8b751752e4
+    Hash: 00000000000000000000000000000000
   m_ExtractTypeTreeData: 0
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
       - m_Id: 3bc11a4ed83f548c9965bd55b4abb5bb
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: 72186dfc922a6424e8b0f085a1a81522
-        m_Value: https://araobp.github.io/unity-excavator/www/addressable_assets
+        m_Value: 'https://araobp.github.io/unity-excavator/www/addressable_assets/[BuildTarget]'
       - m_Id: a878cd014936145e89a04638db0cd2c8
         m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
     m_ProfileEntryNames:
