@@ -16,7 +16,7 @@ public class ManagerAddressable : MonoBehaviour
 
 
     [SerializeField]
-    Button _ButtonDownload; 
+    Button _ButtonDownload;
 
     GameObject _Instance;
     AsyncOperationHandle<GameObject> _CurrentLoadHandle; // Added to track progress and safe releases
@@ -24,6 +24,11 @@ public class ManagerAddressable : MonoBehaviour
 
     void Start()
     {
+        if (Caching.ClearCache())
+        {
+            Debug.Log("Successfully cleared all cached Addressable bundles!");
+        }
+
         _DownloadIndicator = _PanelDownloadIndicator.GetComponent<DownloadIndicator>();
         _DownloadIndicator.gameObject.SetActive(false);
 
@@ -57,7 +62,7 @@ public class ManagerAddressable : MonoBehaviour
         while (!_CurrentLoadHandle.IsDone)
         {
             float progress = _CurrentLoadHandle.PercentComplete;
-            _DownloadIndicator.progress = progress; 
+            _DownloadIndicator.progress = progress;
 
             yield return null;
         }
@@ -79,7 +84,7 @@ public class ManagerAddressable : MonoBehaviour
         else
         {
             Debug.LogError($"[CDN] Failed to load remote asset. Error: {handle.OperationException}");
-            
+
             // Clean up the invalid handle safely if it fails
             if (handle.IsValid())
             {

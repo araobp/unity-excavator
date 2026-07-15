@@ -1417,7 +1417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ManagerAddressable
   _Dropdown: {fileID: 429727525}
-  _PanelDownloadProgress: {fileID: 1474692929}
+  _PanelDownloadIndicator: {fileID: 1677084359}
   _ButtonDownload: {fileID: 1530869571}
 --- !u!1 &1396931447
 GameObject:
@@ -1972,7 +1972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6dc8202f3c44c19ba52f76ea67be97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _PanelDownloadProgress: {fileID: 0}
+  _PanelDownloadProgress: {fileID: 1474692929}
 --- !u!1 &2075588039
 GameObject:
   m_ObjectHideFlags: 0
