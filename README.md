@@ -63,7 +63,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### Vehicle operation
 
-- [Excavator manual/autonomous operation](./doc/Excavator.md)
+- [Excavator manual/autonomous operation](./doc/Excavator.md) (Unity 6000.5.3f1, Latest update: July 18th, 2026)
 - [Pneumatic Caisson](./doc/PneumaticCaisson.md) (Unity 6000.5.3f1, Latest update: July 13th, 2026)
 - [Autonomous guided vehicle](./doc/AGV.md)
 
