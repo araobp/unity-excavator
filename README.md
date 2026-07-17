@@ -43,8 +43,7 @@ This project is an achivement of my self-study on digital twin in my spare time.
 
 ## Requirements
 
-- [Unity 2019.4 LTS](https://unity.com/releases/2019-lts) ... I have been upgrading some of these projects with Unity 2022.1
-- [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351)
+- [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351) (Deprecated => [Another host](https://github.com/jamschutz/Unity-Standard-Assets))
 - Optional: [Logicool Gamepad F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html)
 
 ## Android support
@@ -63,7 +62,7 @@ Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorM
 
 ### Vehicle operation
 
-- [Excavator manual/autonomous operation](./doc/Excavator.md)
+- [Excavator manual/autonomous operation](./doc/Excavator.md) (Unity 6000.5.3f1, Latest update: July 18th, 2026)
 - [Pneumatic Caisson](./doc/PneumaticCaisson.md) (Unity 6000.5.3f1, Latest update: July 13th, 2026)
 - [Autonomous guided vehicle](./doc/AGV.md)
 

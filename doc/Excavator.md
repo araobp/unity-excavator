@@ -2,12 +2,6 @@
 
 [Demo video](https://www.youtube.com/watch?v=0X4c5gxU6-A)
 
-## Requirements
-
-- Unity 2021
-- Windows 10 PC
-- Logicool Gamepad F310
-
 ## Code
 
 [=> Code](../Excavator)
