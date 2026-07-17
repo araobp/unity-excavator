@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class LeverAngles
 {
@@ -117,10 +118,12 @@ public class ExcavatorController : MonoBehaviour
     Image travelIndicator;
     Image operationIndicator;
 
+
     private void ProcessGamepadEvents(InputEvents inputEvents)
     {
 
-        bool modeChange = Input.GetKeyUp(KeyCode.Joystick1Button1);
+        bool modeChange = Gamepad.current != null && Gamepad.current.buttonEast.wasReleasedThisFrame;
+
         if (modeChange)
         {
             travel = !travel;
@@ -133,25 +136,27 @@ public class ExcavatorController : MonoBehaviour
 
         if (!travel)
         {
-            float joystickLeftX = Input.GetAxis("JoystickLeftX");
+            float joystickLeftX = Gamepad.current != null ? Gamepad.current.leftStick.x.ReadValue() : 0f;
             if (joystickLeftX != 0)
             {
                 inputEvents.swing = joystickLeftX;
             }
 
-            float joystickLeftY = Input.GetAxis("JoystickRightY");
+            float joystickLeftY = Gamepad.current != null ? Gamepad.current.leftStick.y.ReadValue() : 0f;
             if (joystickLeftY != 0)
             {
-                inputEvents.arm = -joystickLeftY;
+                inputEvents.arm = joystickLeftY;
             }
 
-            float joystickRightX = Input.GetAxis("JoystickRightX");
+            float joystickRightX = Gamepad.current != null ? Gamepad.current.rightStick.x.ReadValue() : 0f;
+
             if (joystickRightX != 0)
             {
                 inputEvents.bucket = joystickRightX;
             }
 
-            float joystickRightY = Input.GetAxis("JoystickLeftY");
+            float joystickRightY = Gamepad.current != null ? Gamepad.current.rightStick.y.ReadValue() : 0f;
+
             if (joystickRightY != 0)
             {
                 inputEvents.boom = joystickRightY;
@@ -160,16 +165,17 @@ public class ExcavatorController : MonoBehaviour
         } else
 
         {
-            float joystickLeftY = Input.GetAxis("JoystickLeftY");
+            float joystickLeftY = Gamepad.current != null ? Gamepad.current.leftStick.y.ReadValue() : 0f;
+
             if (joystickLeftY != 0)
             {
-                inputEvents.trackLeft = -joystickLeftY;
+                inputEvents.trackLeft = joystickLeftY;
             }
 
-            float joystickRightY = Input.GetAxis("JoystickRightY");
+            float joystickRightY = Gamepad.current != null ? Gamepad.current.rightStick.y.ReadValue() : 0f;
             if (joystickRightY != 0)
             {
-                inputEvents.trackRight = -joystickRightY;
+                inputEvents.trackRight = joystickRightY;
             }
         }
 
@@ -178,26 +184,26 @@ public class ExcavatorController : MonoBehaviour
     private void ProcessKeyEvents(InputEvents inputEvents)
     {
         // Swing
-        if (Input.GetKey(KeyCode.H)) { inputEvents.swing = 1F; }  // Swing right
-        else if (Input.GetKey(KeyCode.F)) { inputEvents.swing = -1F; }  // Swing left
+        if (Keyboard.current != null && Keyboard.current.hKey.isPressed) { inputEvents.swing = 1F; }  // Swing right
+        else if (Keyboard.current != null && Keyboard.current.fKey.isPressed) { inputEvents.swing = -1F; }  // Swing left
 
         // Arm
-        if (Input.GetKey(KeyCode.T)) { inputEvents.arm = 1F; }  // Arm roll out
-        else if (Input.GetKey(KeyCode.G)) { inputEvents.arm = -1F; }  // Arm rool in
+        if (Keyboard.current != null && Keyboard.current.tKey.isPressed) { inputEvents.arm = 1F; }  // Arm roll out
+        else if (Keyboard.current != null && Keyboard.current.gKey.isPressed) { inputEvents.arm = -1F; }  // Arm rool in
 
         // Boom
-        if (Input.GetKey(KeyCode.I)) { inputEvents.boom = 1F; }  // Boom roll in
-        else if (Input.GetKey(KeyCode.K)) { inputEvents.boom = -1F; }  // Boom roll out
+        if (Keyboard.current != null && Keyboard.current.iKey.isPressed) { inputEvents.boom = 1F; }  // Boom roll in
+        else if (Keyboard.current != null && Keyboard.current.kKey.isPressed) { inputEvents.boom = -1F; }  // Boom roll out
 
         // Bucket
-        if (Input.GetKey(KeyCode.L)) { inputEvents.bucket = 1F; }  // Bucket roll out
-        else if (Input.GetKey(KeyCode.J)) { inputEvents.bucket = -1F; }  // Bucket roll in
+        if (Keyboard.current != null && Keyboard.current.lKey.isPressed) { inputEvents.bucket = 1F; }  // Bucket roll out
+        else if (Keyboard.current != null && Keyboard.current.jKey.isPressed) { inputEvents.bucket = -1F; }  // Bucket roll in
 
         // Track
-        if (Input.GetKey(KeyCode.U)) { inputEvents.trackRight = 1F; }  // Track right
-        else if (Input.GetKey(KeyCode.O)) { inputEvents.trackRight = -1F; }
-        if (Input.GetKey(KeyCode.Y)) { inputEvents.trackLeft = 1F; }  // Track left
-        else if (Input.GetKey(KeyCode.R)) { inputEvents.trackLeft = -1F; }
+        if (Keyboard.current != null && Keyboard.current.uKey.isPressed) { inputEvents.trackRight = 1F; }  // Track right
+        else if (Keyboard.current != null && Keyboard.current.oKey.isPressed) { inputEvents.trackRight = -1F; }
+        if (Keyboard.current != null && Keyboard.current.yKey.isPressed) { inputEvents.trackLeft = 1F; }  // Track left
+        else if (Keyboard.current != null && Keyboard.current.rKey.isPressed) { inputEvents.trackLeft = -1F; }
     }
 
     // Start is called before the first frame update
@@ -227,41 +233,48 @@ public class ExcavatorController : MonoBehaviour
         excavator.OrientHook();  // TODO: add hook operations
 
         //--- Code for autonomous operations from this line ---
-        if (Input.GetKey(KeyCode.Alpha1))
+        //if (Input.GetKey(KeyCode.Alpha1))
+        if (Keyboard.current != null && Keyboard.current.digit1Key.isPressed)
         {
             excavator.EnableCuttingEdges(false);
             StartCoroutine(excavator.Reset());
             GameObject target = GameObject.FindWithTag("Target1");
             StartCoroutine(excavator.MoveToTarget(target, driveParams, 40F, 40F));
         }
-        if (Input.GetKey(KeyCode.Alpha2)) {
+        //if (Input.GetKey(KeyCode.Alpha2)) 
+        if (Keyboard.current != null && Keyboard.current.digit2Key.isPressed)
+        {
+
             excavator.EnableCuttingEdges(false);
             StartCoroutine(excavator.Reset());
             GameObject target2 = GameObject.FindWithTag("Target2");
             StartCoroutine(excavator.MoveToTarget(target2, driveParams, 40F, 40F));
         }
-        if (Input.GetKey(KeyCode.Alpha3))
+        //if (Input.GetKey(KeyCode.Alpha3))
+        if (Keyboard.current != null && Keyboard.current.digit3Key.isPressed)
         {
             excavator.EnableCuttingEdges(true);
             StartCoroutine(excavator.Reset());
             GameObject target3 = GameObject.FindWithTag("Target3");
             StartCoroutine(excavator.MoveToTarget(target3, driveParams, 40F, 40F));
         }
-        if (Input.GetKey(KeyCode.Alpha4))
+        //if (Input.GetKey(KeyCode.Alpha4))
+        if (Keyboard.current != null && Keyboard.current.digit4Key.isPressed)
         {
             excavator.EnableCuttingEdges(false);
             StartCoroutine(excavator.Reset());
             GameObject target4 = GameObject.FindWithTag("Target4");
             StartCoroutine(excavator.MoveToTarget(target4, driveParams, 50F, 50F));
         }
-        if (Input.GetKey(KeyCode.Alpha5))
+        //if (Input.GetKey(KeyCode.Alpha5))
+        if (Keyboard.current != null && Keyboard.current.digit5Key.isPressed)
         {
             excavator.EnableCuttingEdges(true);
             StartCoroutine(excavator.Reset());
             GameObject target5 = GameObject.FindWithTag("Target5");
             StartCoroutine(excavator.MoveToTarget(target5, driveParams, 140F, 40F));
         }
-        if (Input.GetKey(KeyCode.Alpha6))
+        if (Keyboard.current != null && Keyboard.current.digit6Key.isPressed)
         {
             excavator.EnableCuttingEdges(true);
             GameObject target6 = GameObject.FindWithTag("Target6");
@@ -332,7 +345,7 @@ public class ExcavatorController : MonoBehaviour
 
             /* Tracks */
             if (inputEvents.trackRight != 0F || inputEvents.trackLeft != 0F)
-{
+            {
                 float rotationRight = -delta * 0.6F * inputEvents.trackRight;
                 float rotationLeft = delta * 0.6F * inputEvents.trackLeft;
                 float deltaRotation = rotationRight + rotationLeft;

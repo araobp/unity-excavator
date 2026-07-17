@@ -622,7 +622,7 @@ public class Excavator
             }
             float maxSpeed = driveParams.maxSpeed;
             if (distance < 15F) maxSpeed = driveParams.creepSpeed;  // slow down range
-            if (rb.velocity.magnitude < maxSpeed && this.accel + driveParams.deltaAccel < driveParams.maxAccel)
+            if (rb.linearVelocity.magnitude < maxSpeed && this.accel + driveParams.deltaAccel < driveParams.maxAccel)
             {
                 this.accel += driveParams.deltaAccel;
             }
@@ -638,7 +638,7 @@ public class Excavator
             return true;
         }
 
-        if (rb.velocity.magnitude < 0.01F)
+        if (rb.linearVelocity.magnitude < 0.01F)
         {
             accel = 0F;
             return false;
