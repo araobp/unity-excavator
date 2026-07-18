@@ -66,13 +66,3 @@ I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 Regarding autonomous driving/construction, it is just about caliculation of the bucket's orbit by using Classical Dynamics.
 
 However, it will also be a good experiment to apply Unity ML-Agents to the caliculation: Physics vs Statistics.
-
-## Working with point cloud
-
-It is possible to replace the virtual terrain with real terrain by importing poing cloud data.
-
-I use [CloudCompare](https://www.danielgm.net/cc/) to convert LAS point cloud data to FBX mesh, then use Unity's Raycast APIs to convert FBX mesh to Terrain. Refer to this wiki: https://wiki.unity3d.com/index.php/Object2Terrain
-
-I sometimes download point cloud data from this site for some experiments on Unity: https://pointcloud.pref.shizuoka.jp/lasmap/ankenmap
-
-Note: Unreal Engine 4 supports "LiDAR Point Cloud" plugin that can import LAS data into a level on Unreal Engine.
