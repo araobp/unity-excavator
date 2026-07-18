@@ -46,18 +46,6 @@ This project is an achivement of my self-study on digital twin in my spare time.
 - [Standard Assets](https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-for-unity-2017-3-32351) (Deprecated => [Another host](https://github.com/jamschutz/Unity-Standard-Assets))
 - Optional: [Logicool Gamepad F310](https://www.logitechg.com/en-us/products/gamepads/f310-gamepad.940-000110.html)
 
-## Android support
-
-I have confirmed that the project names with bold fonts run on my Google Pixel4.
-
-### Coping with this error where Standard Assets are used with Unity 2019.4
-
-```
-Assets\Standard Assets\Utility\SimpleActivatorMenu.cs(11,16): error CS0619: 'GUIText' is obsolete: 'GUIText has been removed. Use UI.Text instead.'
-```
-
-Just remove "Assets\Utility\ForcedReset.cs" and "Assets\Utility\SimpleActivatorMenu.cs".
-
 ## Projects
 
 ### Vehicle operation
