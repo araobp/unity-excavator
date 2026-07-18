@@ -392,11 +392,11 @@ public class Excavator
 
         if (enable)
         {
-            mainCamera.rect = new Rect(0F, 0.5F, 0.333F, 0.5F);
-            operatorViewCamera.rect = new Rect(0.333F, 0.5F, 0.666F, 0.5F);
-            rearLeftCamera.rect = new Rect(0, 0, 0.333F, 0.5F);
-            rearCenterCamera.rect = new Rect(0.333F, 0F, 0.333F, 0.5F);
-            rearRightCamera.rect = new Rect(0.666F, 0F, 0.333F, 0.5F);
+            mainCamera.rect = new Rect(0F, 0.333F, 0.333F, 0.666F);
+            operatorViewCamera.rect = new Rect(0.333F, 0.333F, 0.666F, 0.666F);
+            rearLeftCamera.rect = new Rect(0, 0, 0.333F, 0.333F);
+            rearCenterCamera.rect = new Rect(0.333F, 0F, 0.333F, 0.333F);
+            rearRightCamera.rect = new Rect(0.666F, 0F, 0.333F, 0.333F);
         } else
         {
             mainCamera.rect = new Rect(0F, 0F, 0.5F, 1F);
