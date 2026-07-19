@@ -1,5 +1,9 @@
 # Excavator
 
+<img src="./excavator_unity6_1.jpg" width=500>
+
+<img src="./excavator_unity6_2.jpg" width=200>
+
 [Demo video](https://www.youtube.com/watch?v=0X4c5gxU6-A)
 
 ## Code
