@@ -64,5 +64,3 @@ I have applied [IK](../Excavator/jupyter/IK.ipynb) to bucket positioning for aut
 I attached Rigidbody and Colliders to the excavator with Gravity enabled.
 
 Regarding autonomous driving/construction, it is just about caliculation of the bucket's orbit by using Classical Dynamics.
-
-However, it will also be a good experiment to apply Unity ML-Agents to the caliculation: Physics vs Statistics.
