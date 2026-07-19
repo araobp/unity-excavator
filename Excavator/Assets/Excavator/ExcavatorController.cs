@@ -119,9 +119,8 @@ public class ExcavatorController : MonoBehaviour
     Image operationIndicator;
 
 
-    private void ProcessGamepadEvents(InputEvents inputEvents)
+    void Update()
     {
-
         bool modeChange = Gamepad.current != null && Gamepad.current.buttonEast.wasReleasedThisFrame;
 
         if (modeChange)
@@ -132,8 +131,11 @@ public class ExcavatorController : MonoBehaviour
             if (travel) travelGreen = 1F;  else operationGreen = 1F;
             travelIndicator.color = new Color(0, travelGreen, 0);
             operationIndicator.color = new Color(0, operationGreen, 0);
-        }
+        }        
+    }
 
+    private void ProcessGamepadEvents(InputEvents inputEvents)
+    {
         if (!travel)
         {
             float joystickLeftX = Gamepad.current != null ? Gamepad.current.leftStick.x.ReadValue() : 0f;
@@ -228,7 +230,7 @@ public class ExcavatorController : MonoBehaviour
     private LeverAngles rightTravelLeverAngles = new LeverAngles(0F, 0F);
     private LeverAngles leftTravelLeverAngles = new LeverAngles(0F, 0F);
 
-    void Update()
+    void FixedUpdate()
     {
         excavator.OrientHook();  // TODO: add hook operations
 

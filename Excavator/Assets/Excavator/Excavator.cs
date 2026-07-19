@@ -3,7 +3,8 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Geometry {
+public class Geometry
+{
 
     Transform swingAxis;
     Transform bodyBoomJoint;
@@ -22,7 +23,8 @@ public class Geometry {
 
     public float verticalAngle
     {
-        get {
+        get
+        {
             Vector3 turnVector = swingAxis.up;
             Vector3 boomVector = boomArmJoint.position - bodyBoomJoint.position;
             return Vector3.Angle(turnVector, boomVector);
@@ -97,7 +99,7 @@ public class DriveParams
 
     public float maxSpeed
     {
-        get { return _maxSpeed;  }
+        get { return _maxSpeed; }
     }
 
     public float creepSpeed
@@ -107,22 +109,22 @@ public class DriveParams
 
     public float initialAccel
     {
-        get { return _initialAccel;  }
+        get { return _initialAccel; }
     }
 
     public float deltaAccel
     {
-        get { return _deltaAccel;  }
+        get { return _deltaAccel; }
     }
 
     public float maxAccel
     {
-        get { return _maxAccel;  }
+        get { return _maxAccel; }
     }
 
     public float deltaDirection
     {
-        get { return _deltaSwing;  }
+        get { return _deltaSwing; }
     }
 }
 
@@ -363,7 +365,7 @@ public class Excavator
         transform.Find(swingAxisPath + "/RearCameraRight").gameObject.AddComponent<MirrorFlipCamera>();
         transform.Find(swingAxisPath + "/RearCameraCenter").gameObject.AddComponent<MirrorFlipCamera>();
         transform.Find(swingAxisPath + "/RearCameraLeft").gameObject.AddComponent<MirrorFlipCamera>();
- 
+
         bucket.AddComponent<MeshCollider>();
         bucket.GetComponent<MeshCollider>().convex = true;
         arm.AddComponent<MeshCollider>();
@@ -374,14 +376,13 @@ public class Excavator
         body.GetComponent<MeshCollider>().convex = true;
         cabin.AddComponent<MeshCollider>();
         cabin.GetComponent<MeshCollider>().convex = true;
-        
+
         leftTrack.AddComponent<BoxCollider>();
         var lt = leftTrack.GetComponent<BoxCollider>().size;
         leftTrack.GetComponent<BoxCollider>().size = new Vector3(lt.x * 4 / 5F, lt.y * 16 / 17F, lt.z);
         rightTrack.AddComponent<BoxCollider>();
         var rt = rightTrack.GetComponent<BoxCollider>().size;
         rightTrack.GetComponent<BoxCollider>().size = new Vector3(rt.x * 4 / 5F, rt.y * 16 / 17F, rt.z);
-        
     }
 
     public void EnableRearCameras(bool enable)
@@ -397,11 +398,15 @@ public class Excavator
             rearLeftCamera.rect = new Rect(0, 0, 0.333F, 0.333F);
             rearCenterCamera.rect = new Rect(0.333F, 0F, 0.333F, 0.333F);
             rearRightCamera.rect = new Rect(0.666F, 0F, 0.333F, 0.333F);
-        } else
+        }
+        else
         {
             mainCamera.rect = new Rect(0F, 0F, 0.5F, 1F);
             operatorViewCamera.rect = new Rect(0.5F, 0F, 0.5F, 1F);
         }
+
+        // Set the center of mass of the excavator's Rigidbody to a lower position for better stability
+        excavator.GetComponent<Rigidbody>().centerOfMass = new Vector3(0, -1.5f, 0); 
 
     }
 
@@ -435,7 +440,7 @@ public class Excavator
     private void OrientBucketCylinder()
     {
         OrientLinkage(armLinkageAxis, armLinkageTarget, arm.transform.right);
-        OrientLinkage(bucketLinkageAxis, bucketCylinder1Target,  arm.transform.forward);
+        OrientLinkage(bucketLinkageAxis, bucketCylinder1Target, arm.transform.forward);
         OrientHydraulicCylinder(bucketCylinderAxis1, bucketCylinder1Target, bucketCylinderAxis2, bucketCylinder2Target, boom.transform.right);
     }
 
@@ -573,7 +578,6 @@ public class Excavator
     }
 
     float accel = 0;
-    float accelInput = 0;
 
     // Call this method in Update()
     public void Move(float deltaRotation, float accel, DriveParams driveParams)
@@ -584,6 +588,13 @@ public class Excavator
         float force = driveParams.mass * accel;  // F = m * a
         rb.AddForceAtPosition(forwardDirection * force, transform.position, ForceMode.Force);
         Debug.Log($"Force: {driveParams.mass * accel}");
+
+        // --- Add speed limiting here ---
+        float maxSpeed = driveParams.maxSpeed; // Assuming maxSpeed exists in your DriveParams struct/class
+        if (rb.linearVelocity.magnitude > maxSpeed)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * maxSpeed;
+        }
 
     }
 
@@ -610,7 +621,8 @@ public class Excavator
                 if (angle > 0)
                 {
                     transform.Rotate(0, driveParams.deltaDirection, 0);
-                } else
+                }
+                else
                 {
                     transform.Rotate(0, -driveParams.deltaDirection, 0);
                 }
@@ -621,17 +633,18 @@ public class Excavator
                 forwardDirection = -forwardDirection;
             }
             float maxSpeed = driveParams.maxSpeed;
-            if (distance < 15F) maxSpeed = driveParams.creepSpeed;  // slow down range
+            if (distance < 15F) maxSpeed = driveParams.creepSpeed;  // slow down rang
             if (rb.linearVelocity.magnitude < maxSpeed && this.accel + driveParams.deltaAccel < driveParams.maxAccel)
             {
                 this.accel += driveParams.deltaAccel;
             }
             else
             {
-                this.accel -= driveParams.deltaAccel;
+                this.accel -= driveParams.deltaAccel / 4F;
             }
 
             float force = driveParams.mass * this.accel;  // F = m * a
+            Debug.Log($"accel = {this.accel}, force = {force}");
             rb.AddForceAtPosition(forwardDirection * force, transform.position, ForceMode.Force);
             Debug.Log($"Force: {driveParams.mass * this.accel}");
 
@@ -646,13 +659,13 @@ public class Excavator
         else return true;
     }
 
-    private RaycastHit raycastHit;
     private RaycastHit hit;
     private bool _useHook = false;
 
     public void OrientHook()
     {
-        if (_useHook) {
+        if (_useHook)
+        {
             Physics.Raycast(hookMainAxis.position, Vector3.down, out hit, 200F);
             hookMainAxis.LookAt(hit.point, hookMainAxis.up);
             hookMainAxis.Rotate(new Vector3(0F, 210F, 0F));
@@ -728,7 +741,7 @@ public class Excavator
 
     private bool coroutineIsRunning = false;
 
-    public IEnumerator Reset(float targetSwingAngle=0F, float targetBoomAngle=55F, float targetArmAngle=45F, float targetBucketAngle=60F)
+    public IEnumerator Reset(float targetSwingAngle = 0F, float targetBoomAngle = 55F, float targetArmAngle = 45F, float targetBucketAngle = 60F)
     {
         float t = 0F;
         float currentSwingAngle = swingAngle;
@@ -736,9 +749,9 @@ public class Excavator
         float currentArmAngle = armAngle;
         float currentBucketAngle = bucketAngle;
 
-        while(coroutineIsRunning)
+        while (coroutineIsRunning)
         {
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
         coroutineIsRunning = true;
@@ -750,7 +763,7 @@ public class Excavator
             boomAngle = Mathf.Lerp(currentBoomAngle, targetBoomAngle, t);
             armAngle = Mathf.Lerp(currentArmAngle, targetArmAngle, t);
             bucketAngle = Mathf.Lerp(currentBucketAngle, targetBucketAngle, t);
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
         coroutineIsRunning = false;
@@ -761,7 +774,7 @@ public class Excavator
 
         while (coroutineIsRunning)
         {
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
         coroutineIsRunning = true;
@@ -773,9 +786,9 @@ public class Excavator
 
         while (t < 1F)
         {
-            t += Time.deltaTime * 0.7F;
+            t += Time.deltaTime;
             bucketAngle = Mathf.Lerp(currentBucketAngle, startBucketAngle, t);
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
         accel = driveParams.initialAccel;
@@ -790,7 +803,7 @@ public class Excavator
             {
                 emergency = true;
             }
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
 
         if (!emergency)
@@ -822,7 +835,7 @@ public class Excavator
                 swingAngle = Mathf.Lerp(currentSwingAngle, p.D, t);
                 boomAngle = Mathf.Lerp(currentBoomAngle, Adash, t);
                 armAngle = Mathf.Lerp(currentArmAngle, Bdash, t);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
 
             currentBucketAngle = bucketAngle;
@@ -832,7 +845,7 @@ public class Excavator
             {
                 t += Time.deltaTime * 0.7F;
                 bucketAngle = Mathf.Lerp(currentBucketAngle, finishBucketAngle, t);
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
         }
 
