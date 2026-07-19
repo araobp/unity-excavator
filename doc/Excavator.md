@@ -1,5 +1,7 @@
 # Excavator
 
+An app developed in Unity 2018. Updated for Unity 6 (July 2026).
+
 <img src="./excavator_unity6_1.jpg" width=500>
 
 <img src="./excavator_unity6_2.jpg" width=200>
