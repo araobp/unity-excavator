@@ -118,7 +118,6 @@ public class ExcavatorController : MonoBehaviour
     Image travelIndicator;
     Image operationIndicator;
 
-
     void Update()
     {
         bool modeChange = Gamepad.current != null && Gamepad.current.buttonEast.wasReleasedThisFrame;
@@ -128,10 +127,10 @@ public class ExcavatorController : MonoBehaviour
             travel = !travel;
             float travelGreen = 0F;
             float operationGreen = 0F;
-            if (travel) travelGreen = 1F;  else operationGreen = 1F;
+            if (travel) travelGreen = 1F; else operationGreen = 1F;
             travelIndicator.color = new Color(0, travelGreen, 0);
             operationIndicator.color = new Color(0, operationGreen, 0);
-        }        
+        }
     }
 
     private void ProcessGamepadEvents(InputEvents inputEvents)
@@ -164,7 +163,8 @@ public class ExcavatorController : MonoBehaviour
                 inputEvents.boom = joystickRightY;
             }
 
-        } else
+        }
+        else
 
         {
             float joystickLeftY = Gamepad.current != null ? Gamepad.current.leftStick.y.ReadValue() : 0f;
@@ -235,52 +235,51 @@ public class ExcavatorController : MonoBehaviour
         excavator.OrientHook();  // TODO: add hook operations
 
         //--- Code for autonomous operations from this line ---
-        //if (Input.GetKey(KeyCode.Alpha1))
-        if (Keyboard.current != null && Keyboard.current.digit1Key.isPressed)
-        {
-            excavator.EnableCuttingEdges(false);
-            StartCoroutine(excavator.Reset());
-            GameObject target = GameObject.FindWithTag("Target1");
-            StartCoroutine(excavator.MoveToTarget(target, driveParams, 40F, 40F));
-        }
-        //if (Input.GetKey(KeyCode.Alpha2)) 
-        if (Keyboard.current != null && Keyboard.current.digit2Key.isPressed)
-        {
 
-            excavator.EnableCuttingEdges(false);
-            StartCoroutine(excavator.Reset());
-            GameObject target2 = GameObject.FindWithTag("Target2");
-            StartCoroutine(excavator.MoveToTarget(target2, driveParams, 40F, 40F));
-        }
-        //if (Input.GetKey(KeyCode.Alpha3))
-        if (Keyboard.current != null && Keyboard.current.digit3Key.isPressed)
+        if (!excavator.isInAutonomousDriving)
         {
-            excavator.EnableCuttingEdges(true);
-            StartCoroutine(excavator.Reset());
-            GameObject target3 = GameObject.FindWithTag("Target3");
-            StartCoroutine(excavator.MoveToTarget(target3, driveParams, 40F, 40F));
-        }
-        //if (Input.GetKey(KeyCode.Alpha4))
-        if (Keyboard.current != null && Keyboard.current.digit4Key.isPressed)
-        {
-            excavator.EnableCuttingEdges(false);
-            StartCoroutine(excavator.Reset());
-            GameObject target4 = GameObject.FindWithTag("Target4");
-            StartCoroutine(excavator.MoveToTarget(target4, driveParams, 50F, 50F));
-        }
-        //if (Input.GetKey(KeyCode.Alpha5))
-        if (Keyboard.current != null && Keyboard.current.digit5Key.isPressed)
-        {
-            excavator.EnableCuttingEdges(true);
-            StartCoroutine(excavator.Reset());
-            GameObject target5 = GameObject.FindWithTag("Target5");
-            StartCoroutine(excavator.MoveToTarget(target5, driveParams, 140F, 40F));
-        }
-        if (Keyboard.current != null && Keyboard.current.digit6Key.isPressed)
-        {
-            excavator.EnableCuttingEdges(true);
-            GameObject target6 = GameObject.FindWithTag("Target6");
-            StartCoroutine(excavator.MoveToTarget(target6, driveParams, 40F, 140F));
+            if (Keyboard.current != null && Keyboard.current.digit1Key.isPressed)
+            {
+                excavator.EnableCuttingEdges(false);
+                StartCoroutine(excavator.Reset());
+                GameObject target = GameObject.FindWithTag("Target1");
+                StartCoroutine(excavator.MoveToTarget(target, driveParams, 40F, 40F));
+            }
+            if (Keyboard.current != null && Keyboard.current.digit2Key.isPressed)
+            {
+
+                excavator.EnableCuttingEdges(false);
+                StartCoroutine(excavator.Reset());
+                GameObject target2 = GameObject.FindWithTag("Target2");
+                StartCoroutine(excavator.MoveToTarget(target2, driveParams, 40F, 40F));
+            }
+            if (Keyboard.current != null && Keyboard.current.digit3Key.isPressed)
+            {
+                excavator.EnableCuttingEdges(true);
+                StartCoroutine(excavator.Reset());
+                GameObject target3 = GameObject.FindWithTag("Target3");
+                StartCoroutine(excavator.MoveToTarget(target3, driveParams, 40F, 40F));
+            }
+            if (Keyboard.current != null && Keyboard.current.digit4Key.isPressed)
+            {
+                excavator.EnableCuttingEdges(false);
+                StartCoroutine(excavator.Reset());
+                GameObject target4 = GameObject.FindWithTag("Target4");
+                StartCoroutine(excavator.MoveToTarget(target4, driveParams, 50F, 50F));
+            }
+            if (Keyboard.current != null && Keyboard.current.digit5Key.isPressed)
+            {
+                excavator.EnableCuttingEdges(true);
+                StartCoroutine(excavator.Reset());
+                GameObject target5 = GameObject.FindWithTag("Target5");
+                StartCoroutine(excavator.MoveToTarget(target5, driveParams, 140F, 40F));
+            }
+            if (Keyboard.current != null && Keyboard.current.digit6Key.isPressed)
+            {
+                excavator.EnableCuttingEdges(true);
+                GameObject target6 = GameObject.FindWithTag("Target6");
+                StartCoroutine(excavator.MoveToTarget(target6, driveParams, 40F, 140F));
+            }
         }
 
         //--- Code for manual operations from this line ---
@@ -301,8 +300,8 @@ public class ExcavatorController : MonoBehaviour
             excavator.leftTravelLeverRotate(-leftTravelLeverAngles.upDown);
             excavator.rightTravelLeverRotate(-rightTravelLeverAngles.upDown);
 
-            excavator.rightPedalRotate(rightTravelLeverAngles.upDown*2F);
-            excavator.leftPedalRotate(leftTravelLeverAngles.upDown*2F);
+            excavator.rightPedalRotate(rightTravelLeverAngles.upDown * 2F);
+            excavator.leftPedalRotate(leftTravelLeverAngles.upDown * 2F);
 
             leftTravelLeverAngles.clear();
             rightTravelLeverAngles.clear();
@@ -375,8 +374,8 @@ public class ExcavatorController : MonoBehaviour
             excavator.rightTravelLeverRotate(rightTravelLeverAngles.upDown);
             excavator.leftTravelLeverRotate(leftTravelLeverAngles.upDown);
 
-            excavator.rightPedalRotate(-rightTravelLeverAngles.upDown*2F);
-            excavator.leftPedalRotate(-leftTravelLeverAngles.upDown*2F);
+            excavator.rightPedalRotate(-rightTravelLeverAngles.upDown * 2F);
+            excavator.leftPedalRotate(-leftTravelLeverAngles.upDown * 2F);
         }
 
     }

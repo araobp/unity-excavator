@@ -689,6 +689,13 @@ public class Excavator
         }
     }
 
+    public bool isInAutonomousDriving
+    {
+        get
+        {
+            return coroutineIsRunning;
+        }
+    }
 
     /**
      * Inverse Kinematic for swing, boom and arm.
@@ -831,10 +838,11 @@ public class Excavator
 
             while (t < 1F)
             {
-                t += Time.deltaTime * 0.3F;
+                t += Time.deltaTime;
                 swingAngle = Mathf.Lerp(currentSwingAngle, p.D, t);
                 boomAngle = Mathf.Lerp(currentBoomAngle, Adash, t);
                 armAngle = Mathf.Lerp(currentArmAngle, Bdash, t);
+                Debug.Log($"IK: swing={swingAngle}, boom={boomAngle}, arm={armAngle}, bucket={bucketAngle}");
                 yield return new WaitForFixedUpdate();
             }
 
@@ -843,7 +851,7 @@ public class Excavator
             t = 0;
             while (t < 1F)
             {
-                t += Time.deltaTime * 0.7F;
+                t += Time.deltaTime;
                 bucketAngle = Mathf.Lerp(currentBucketAngle, finishBucketAngle, t);
                 yield return new WaitForFixedUpdate();
             }

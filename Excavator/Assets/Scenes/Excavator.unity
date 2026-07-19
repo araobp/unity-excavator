@@ -245,14 +245,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12adbdaacbaa7a469af2239ab672f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2
-  creepSpeed: 1
-  initialAccel: 10
-  deltaAccel: 0.3
-  maxAccel: 38
-  deltaDirection: 1
+  maxSpeed: 1.5
+  creepSpeed: 0.5
+  initialAccel: 5
+  deltaAccel: 0.1
+  maxAccel: 20
+  deltaDirection: 0.5
   enableRearCameras: 0
-  useHook: 0
+  useHook: 1
 --- !u!1 &59483821
 GameObject:
   m_ObjectHideFlags: 0
