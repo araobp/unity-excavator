@@ -95,3 +95,7 @@ This project is an achivement of my self-study on digital twin in my spare time.
 
 - [VR goggle with PC as an input device](./doc/VR_Input.md)
 - [Drone remote controller for Android](./doc/DroneRemoteController.md) (Unity 6000.5.3f1, Latest update: July 12th, 2026)
+
+## Tips
+
+- [How to Wirelessly Transfer Unity Apps to Android via Wi-Fi from Mac (Build & Run)](./doc/Android.md)
