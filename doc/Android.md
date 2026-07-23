@@ -1,26 +1,27 @@
-# How to Wirelessly Transfer Unity Apps to Pixel 9a via Wi-Fi from Mac (Build & Run)
+# How to Wirelessly Transfer Unity Apps to Android Devices via Wi-Fi from Mac (Build & Run)
 
 ## Prerequisites
-* Your Mac and Pixel 9a must be connected to the **same Wi-Fi network**.
+* Your Mac and Android device must be connected to the **same Wi-Fi network**.
 * This process uses **Wi-Fi (Wireless ADB connection)** instead of Bluetooth.
 
 ---
 
-## 🛠️ Step 1: Prepare Your Pixel 9a (Android)
+## 🛠️ Step 1: Prepare Your Android Device
 
 1. **Enable Developer Options**
-   * Open **Settings** > **About phone** on your Pixel.
+   * Open **Settings** > **About phone** (or **About device**) on your phone.
    * Scroll to the bottom and tap **Build number** 7 times consecutively (enter your lock screen PIN/pattern if prompted).
+   * *Note: On some brands like Xiaomi/POCO, tap "OS Version" or "MIUI Version"; on Samsung, go to "Software information" first.*
 
 2. **Enable Debugging Features**
-   * Go back to **Settings** > **System** > **Developer options**.
+   * Go back to **Settings** > **System** > **Developer options** (or **Additional settings** > **Developer options**).
    * Turn ON **USB debugging**.
    * Turn ON **Wireless debugging**.
 
 3. **Check Connection Information**
    * Tap the **text label** of "Wireless debugging" to open its detailed settings screen.
    * Note down the **IP address and port** displayed on the screen (e.g., `192.168.1.5:43215`).
-   * ⚠️ **Note**: Do **not** close this screen or reconnect to Wi-Fi. The 5-digit port number changes dynamically every time you close the screen or toggle the setting. Keep this screen open and proceed to Step 2.
+   * ⚠️ **Note**: Do **not** close this screen. The 5-digit port number changes dynamically every time you exit this menu or cycle Wi-Fi. Keep this screen open and proceed to Step 2.
 
 ---
 
@@ -35,15 +36,15 @@
      cd ~/Library/Android/sdk/platform-tools/
      ```
 
-3. **Connect to Pixel 9a Wirelessly**
+3. **Connect to Android Wirelessly**
    * Run the following command using the IP address and port you noted in Step 1:
      ```bash
      ./adb connect 192.168.1.5:43215
      ```
-     * *Replace `192.168.1.5:43215` with the exact numbers shown on your Pixel's screen.*
+     * *Replace `192.168.1.5:43215` with the exact numbers shown on your Android screen.*
 
 4. **Allow Debugging on the Phone**
-   * A pop-up asking "Allow wireless debugging on this network?" will appear on your Pixel. Tap **Always allow** or **Allow**.
+   * A pop-up asking "Allow wireless debugging on this network?" will appear on your device. Tap **Always allow** or **Allow**.
    * Connection is successful when the Terminal displays `connected to ~`.
 
 ---
@@ -56,9 +57,9 @@
 
 2. **Select Your Device**
    * Click the drop-down menu next to **Run Device**.
-   * Select your connected **Pixel 9a** (or the corresponding IP address) from the list.
+   * Select your connected **Android Device** (or the corresponding IP address) from the list.
    * 💡 **Hint**: If your device is not listed, click the **Refresh** button on the right.
 
 3. **Execute Build and Run**
    * Click **Build And Run**.
-   * Choose a save destination for your APK file. Unity will compile the project and automatically transfer and launch the app on your Pixel 9a over Wi-Fi.
+   * Choose a save destination for your APK file. Unity will compile the project, then automatically transfer and launch the app on your phone over Wi-Fi.
