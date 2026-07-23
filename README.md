@@ -98,4 +98,4 @@ This project is an achivement of my self-study on digital twin in my spare time.
 
 ## Tips
 
-- [How to Wirelessly Transfer Unity Apps to Android(Pixel9a) via Wi-Fi from Mac (Build & Run)](./doc/Android.md)
+- [How to Wirelessly Transfer Unity Apps to Android Devices via Wi-Fi from Mac (Build & Run)](./doc/Android.md)
