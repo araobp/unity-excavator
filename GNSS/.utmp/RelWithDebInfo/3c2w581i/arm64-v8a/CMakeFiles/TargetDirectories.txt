@@ -1,0 +1,5 @@
+/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,262 @@
+The target system is: Android - 1 - aarch64
+The host system is: Darwin - 25.3.0 - arm64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang 
+Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D__BIONIC_NO_PAGE_SIZE_MACRO;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security;
+Id flags: -c;--target=aarch64-none-linux-android31 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+
+The C compiler identification is Clang, found in "/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/3.22.1-g37088a8/CompilerIdC/CMakeCCompilerId.o"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ 
+Build flags: -g;-DANDROID;-fdata-sections;-ffunction-sections;-funwind-tables;-fstack-protector-strong;-no-canonical-prefixes;-D__BIONIC_NO_PAGE_SIZE_MACRO;-D_FORTIFY_SOURCE=2;-Wformat;-Werror=format-security;;
+Id flags: -c;--target=aarch64-none-linux-android31 
+
+The output was:
+0
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+
+The CXX compiler identification is Clang, found in "/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/3.22.1-g37088a8/CompilerIdCXX/CMakeCXXCompilerId.o"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja cmTC_5e95f && [1/2] Building C object CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o
+Android (12470979, +pgo, -bolt, +lto, -mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: aarch64-none-linux-android31
+Thread model: posix
+InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin
+ (in-process)
+ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang" -cc1 -triple aarch64-none-linux-android31 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -resource-dir /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D __BIONIC_NO_PAGE_SIZE_MACRO -D _FORTIFY_SOURCE=2 -isysroot /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o -x c /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c
+clang -cc1 version 18.0.3 based upon LLVM 18.0.3 default target x86_64-apple-darwin25.3.0
+ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"
+ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking C executable cmTC_5e95f
+Android (12470979, +pgo, -bolt, +lto, -mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: aarch64-none-linux-android31
+Thread model: posix
+InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin
+ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /system/bin/linker64 -o cmTC_5e95f /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib -z max-page-size=16384 --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o
+
+
+
+Parsed C implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android]
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android]
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+  implicit include dirs: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja cmTC_5e95f && [1/2] Building C object CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o]
+  ignore line: [Android (12470979  +pgo  -bolt  +lto  -mlgo  based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+  ignore line: [Target: aarch64-none-linux-android31]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang" -cc1 -triple aarch64-none-linux-android31 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -resource-dir /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o -sys-header-deps -D ANDROID -D __BIONIC_NO_PAGE_SIZE_MACRO -D _FORTIFY_SOURCE=2 -isysroot /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o -x c /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang -cc1 version 18.0.3 based upon LLVM 18.0.3 default target x86_64-apple-darwin25.3.0]
+  ignore line: [ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking C executable cmTC_5e95f]
+  ignore line: [Android (12470979  +pgo  -bolt  +lto  -mlgo  based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+  ignore line: [Target: aarch64-none-linux-android31]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+  link line: [ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /system/bin/linker64 -o cmTC_5e95f /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib -z max-page-size=16384 --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld] ==> ignore
+    arg [--sysroot=/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-zmax-page-size=4096] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_5e95f] ==> ignore
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o] ==> obj [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+    arg [-zmax-page-size=16384] ==> ignore
+    arg [--build-id=sha1] ==> ignore
+    arg [--no-undefined-version] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [CMakeFiles/cmTC_5e95f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o] ==> obj [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o]
+  remove lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  remove lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+  implicit libs: [-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+  implicit objs: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o]
+  implicit dirs: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: /Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja cmTC_4df34 && [1/2] Building CXX object CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o
+Android (12470979, +pgo, -bolt, +lto, -mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: aarch64-none-linux-android31
+Thread model: posix
+InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin
+ (in-process)
+ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++" -cc1 -triple aarch64-none-linux-android31 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -resource-dir /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D __BIONIC_NO_PAGE_SIZE_MACRO -D _FORTIFY_SOURCE=2 -isysroot /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1 -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -fdeprecated-macro -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o -x c++ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp
+clang -cc1 version 18.0.3 based upon LLVM 18.0.3 default target x86_64-apple-darwin25.3.0
+ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"
+ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android
+ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include
+End of search list.
+[2/2] Linking CXX executable cmTC_4df34
+Android (12470979, +pgo, -bolt, +lto, -mlgo, based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)
+Target: aarch64-none-linux-android31
+Thread model: posix
+InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin
+ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /system/bin/linker64 -o cmTC_4df34 /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib -z max-page-size=16384 --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o
+
+
+
+Parsed CXX implicit include dir info from above output: rv=done
+  found start of include info
+  found start of implicit include info
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1]
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android]
+    add: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+  end of search list found
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1]
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android]
+  collapse include dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+  implicit include dirs: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld\.lld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command(s):/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja cmTC_4df34 && [1/2] Building CXX object CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [Android (12470979  +pgo  -bolt  +lto  -mlgo  based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+  ignore line: [Target: aarch64-none-linux-android31]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+  ignore line: [ (in-process)]
+  ignore line: [ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++" -cc1 -triple aarch64-none-linux-android31 -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=non-leaf -ffp-contract=on -fno-rounding-math -mconstructor-aliases -funwind-tables=2 -target-cpu generic -target-feature +neon -target-feature +v8a -target-feature +fix-cortex-a53-835769 -target-abi aapcs -debug-info-kind=constructor -dwarf-version=4 -debugger-tuning=gdb -fdebug-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -v -ffunction-sections -fdata-sections -fcoverage-compilation-dir=/Users/shiny/Documents/GitHub/unity-excavator/GNSS/.utmp/RelWithDebInfo/3c2w581i/arm64-v8a/CMakeFiles/CMakeTmp -resource-dir /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18 -dependency-file CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -D ANDROID -D __BIONIC_NO_PAGE_SIZE_MACRO -D _FORTIFY_SOURCE=2 -isysroot /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1 -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include -internal-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include -internal-externc-isystem /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include -Wformat -fdeprecated-macro -ferror-limit 19 -stack-protector 2 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -target-feature +outline-atomics -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o -x c++ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [clang -cc1 version 18.0.3 based upon LLVM 18.0.3 default target x86_64-apple-darwin25.3.0]
+  ignore line: [ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/local/include"]
+  ignore line: [ignoring nonexistent directory "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/include"]
+  ignore line: [#include "..." search starts here:]
+  ignore line: [#include <...> search starts here:]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/c++/v1]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/include]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include/aarch64-linux-android]
+  ignore line: [ /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/include]
+  ignore line: [End of search list.]
+  ignore line: [[2/2] Linking CXX executable cmTC_4df34]
+  ignore line: [Android (12470979  +pgo  -bolt  +lto  -mlgo  based on r522817c) clang version 18.0.3 (https://android.googlesource.com/toolchain/llvm-project d8003a456d14a3deb8054cdaa529ffbf02d9b262)]
+  ignore line: [Target: aarch64-none-linux-android31]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin]
+  link line: [ "/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld" --sysroot=/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -EL --fix-cortex-a53-843419 -z now -z relro -z max-page-size=4096 --hash-style=gnu --eh-frame-hdr -m aarch64linux -pie -dynamic-linker /system/bin/linker64 -o cmTC_4df34 /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31 -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android -L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib -z max-page-size=16384 --build-id=sha1 --no-undefined-version --fatal-warnings --no-undefined CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lm /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl -lc /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a -l:libunwind.a -ldl /Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/bin/ld.lld] ==> ignore
+    arg [--sysroot=/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot] ==> ignore
+    arg [-EL] ==> ignore
+    arg [--fix-cortex-a53-843419] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-zmax-page-size=4096] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [aarch64linux] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker64] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_4df34] ==> ignore
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o] ==> obj [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android]
+    arg [-L/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+    arg [-zmax-page-size=16384] ==> ignore
+    arg [--build-id=sha1] ==> ignore
+    arg [--no-undefined-version] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [CMakeFiles/cmTC_4df34.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lc++] ==> lib [c++]
+    arg [-lm] ==> lib [m]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a] ==> lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+    arg [-l:libunwind.a] ==> lib [-l:libunwind.a]
+    arg [-ldl] ==> lib [dl]
+    arg [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o] ==> obj [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o]
+  remove lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  remove lib [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/libclang_rt.builtins-aarch64-android.a]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android]
+  collapse library dir [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib] ==> [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+  implicit libs: [c++;m;-l:libunwind.a;dl;c;-l:libunwind.a;dl]
+  implicit objs: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtbegin_dynamic.o;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31/crtend_android.o]
+  implicit dirs: [/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/lib/clang/18/lib/linux/aarch64;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/31;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android;/Applications/Unity/Hub/Editor/2020.3.3f1/6000.5.3f1/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib]
+  implicit fwks: []
+
+

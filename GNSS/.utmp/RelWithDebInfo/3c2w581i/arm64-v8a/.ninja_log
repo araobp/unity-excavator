@@ -1,0 +1,3 @@
+# ninja log v5
+0	67	1784890865270405504	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	c17dcb7c40af1f7a
+67	122	1784890865317177882	/Users/shiny/Documents/GitHub/unity-excavator/GNSS/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/3c2w581i/obj/arm64-v8a/libswappywrapper.so	7f63cca36fe033d2
