@@ -1,4 +1,4 @@
-# VR google with PC as an input device
+# VR goggle with PC as an input device
 
 I've got a cheap VR goggle, but it has no input devices.
 
